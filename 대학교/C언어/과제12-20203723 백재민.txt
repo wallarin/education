@@ -1,0 +1,66 @@
+-------------------------------------------1------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+struct info {
+	char name[12];
+	int age;
+	char job[20];
+};
+typedef struct info info;
+
+void main()
+{
+	info one, one2;
+	FILE* f;
+
+	printf("자신의 이름 나이 직업을 입력하시오\n");
+	scanf_s("%s %d %s", one.name, 12, &one.age, one.job, 20);
+	if(fopen_s(&f, "info.bin", "wb") != 0) exit(1);
+	fwrite(&one, sizeof(info), 1, f);
+	fclose(f);
+
+	if (fopen_s(&f, "info.bin", "rb") != 0) exit(1);
+	fread(&one2, sizeof(info), 1, f);
+	fclose(f);
+	printf("이름 %s, 나이 %d, 직업 %s \n", one2.name, one2.age, one2.job);
+}
+-------------------------------------------2------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+struct info {
+	char name[12];
+	int age;
+	char job[20];
+};
+typedef struct info info;
+
+void main()
+{
+	info one;
+	FILE* f;
+
+	if (fopen_s(&f, "info.bin", "ab") != 0) exit(1);
+
+	printf("가족의 이름 나이 직업을 입력하시오\n");
+	scanf_s("%s %d %s", one.name, 12, &one.age, one.job, 20);
+	fwrite(&one, sizeof(info), 1, f);
+	
+	printf("가족의 다른 사람의 이름 나이 직업을 입력하시오\n");
+	scanf_s("%s %d %s", one.name, 12, &one.age, one.job, 20);
+	fwrite(&one, sizeof(info), 1, f);
+	fclose(f);
+
+	if (fopen_s(&f, "info.bin", "rb") != 0) exit(1);
+	fread(&one, sizeof(info), 1, f);
+	printf("이름 %s, 나이 %d, 직업 %s \n", one.name, one.age, one.job);
+	fread(&one, sizeof(info), 1, f);
+	printf("이름 %s, 나이 %d, 직업 %s \n", one.name, one.age, one.job);
+	fread(&one, sizeof(info), 1, f);
+	printf("이름 %s, 나이 %d, 직업 %s \n", one.name, one.age, one.job);
+	fclose(f);
+}
+-------------------------------------------3------------------------------------------------
+-------------------------------------------4------------------------------------------------
+-------------------------------------------5------------------------------------------------

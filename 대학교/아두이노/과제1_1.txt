@@ -1,0 +1,183 @@
+#define SEG_START 11  // 시작 글자 모양 (11번)
+
+// 7 Segment FND의 각 Segment 지정 : led 불이 켜지는 숫자 지정
+//                                                               a
+#define SEG_A 10        // Segment a             *******
+#define SEG_B 9         // Segment b           f *      * b
+#define SEG_C 3         // Segment c            *  g   *
+#define SEG_D 4         // Segment d           *******
+#define SEG_E 5         // Segment e        e *       * c
+#define SEG_F 6         // Segment f          *       *
+#define SEG_G 7         // Segment g        *******   * h(DP)
+#define SEG_H 2         // Segment h(DP)     d
+
+void fnd(unsigned char n) {   //display_number 함수를 지정 : 숫자모양 생성
+   switch (n) {
+     case 0:  // Number 0
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, HIGH);   
+       digitalWrite(SEG_C, HIGH);   
+       digitalWrite(SEG_D, HIGH);   
+       digitalWrite(SEG_E, HIGH);   
+       digitalWrite(SEG_F, HIGH);   
+       digitalWrite(SEG_G, LOW);   
+       digitalWrite(SEG_H, LOW);  
+       break;
+ case 1:  // Number 1
+       digitalWrite(SEG_A, LOW);  
+       digitalWrite(SEG_B, HIGH);   
+       digitalWrite(SEG_C, HIGH);   
+       digitalWrite(SEG_D, LOW);   
+       digitalWrite(SEG_E, LOW);  
+       digitalWrite(SEG_F, LOW);   
+       digitalWrite(SEG_G, LOW);  
+       digitalWrite(SEG_H, LOW);  
+       break;
+
+ 
+case 2:  // Number 2
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, HIGH);   
+       digitalWrite(SEG_C, LOW);   
+       digitalWrite(SEG_D, HIGH);   
+       digitalWrite(SEG_E, HIGH);   
+       digitalWrite(SEG_F, LOW);   
+       digitalWrite(SEG_G, HIGH);   
+       digitalWrite(SEG_H, LOW);   
+       break;
+
+    case 3:  // Number 3
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, HIGH);   
+       digitalWrite(SEG_C, HIGH);   
+       digitalWrite(SEG_D, HIGH);  
+       digitalWrite(SEG_E, LOW);   
+       digitalWrite(SEG_F, LOW );  
+       digitalWrite(SEG_G, HIGH);  
+       digitalWrite(SEG_H, LOW);  
+       break;
+
+     case 4:  // Number 4
+       digitalWrite(SEG_A, LOW);  
+       digitalWrite(SEG_B, HIGH);  
+       digitalWrite(SEG_C, HIGH);   
+       digitalWrite(SEG_D, LOW);  
+       digitalWrite(SEG_E, LOW);  
+       digitalWrite(SEG_F, HIGH );  
+       digitalWrite(SEG_G, HIGH);  
+       digitalWrite(SEG_H, LOW);   
+       break;
+
+
+ case 5:  // Number 5
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, LOW);  
+       digitalWrite(SEG_C, HIGH);  
+       digitalWrite(SEG_D, HIGH);  
+       digitalWrite(SEG_E, LOW);   
+       digitalWrite(SEG_F, HIGH);   
+       digitalWrite(SEG_G, HIGH);   
+       digitalWrite(SEG_H, LOW);   
+       break;
+     case 6:  // Number 6
+       digitalWrite(SEG_A, LOW);   
+       digitalWrite(SEG_B, LOW);   
+       digitalWrite(SEG_C, HIGH);  
+       digitalWrite(SEG_D, HIGH);  
+       digitalWrite(SEG_E, HIGH);   
+       digitalWrite(SEG_F, HIGH);   
+       digitalWrite(SEG_G, HIGH);  
+       digitalWrite(SEG_H, LOW);   
+       break;
+     case 7:  // Number 7
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, HIGH);   
+       digitalWrite(SEG_C, HIGH);  
+       digitalWrite(SEG_D, LOW);   
+       digitalWrite(SEG_E, LOW);   
+       digitalWrite(SEG_F, LOW);  
+       digitalWrite(SEG_G, LOW);   
+       digitalWrite(SEG_H, LOW);   
+       break;
+
+ case 8:  // Number 8
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, HIGH);  
+       digitalWrite(SEG_C, HIGH);   
+       digitalWrite(SEG_D, HIGH);   
+       digitalWrite(SEG_E, HIGH);  
+       digitalWrite(SEG_F, HIGH);   
+       digitalWrite(SEG_G, HIGH);   
+       digitalWrite(SEG_H, LOW);   
+       break;
+     case 9:   // Number 9
+       digitalWrite(SEG_A, HIGH);   
+       digitalWrite(SEG_B, HIGH);   
+       digitalWrite(SEG_C, HIGH);   
+       digitalWrite(SEG_D, LOW);  
+       digitalWrite(SEG_E, LOW); 
+       digitalWrite(SEG_F, HIGH);  
+       digitalWrite(SEG_G, HIGH);   
+       digitalWrite(SEG_H, LOW);   
+       break;
+     case 10:  // POINT
+       digitalWrite(SEG_A, LOW);   
+       digitalWrite(SEG_B, LOW);  
+       digitalWrite(SEG_C, LOW);   
+       digitalWrite(SEG_D, LOW);   
+       digitalWrite(SEG_E, LOW);  
+       digitalWrite(SEG_F, LOW);  
+       digitalWrite(SEG_G, LOW);   
+       digitalWrite(SEG_H, HIGH);   
+       break; 
+
+
+ case 11:  // MINUS
+       digitalWrite(SEG_A, LOW);   
+       digitalWrite(SEG_B, LOW);  
+       digitalWrite(SEG_C, LOW);   
+       digitalWrite(SEG_D, LOW);   
+       digitalWrite(SEG_E, LOW);  
+       digitalWrite(SEG_F, LOW);  
+       digitalWrite(SEG_G, HIGH);   
+       digitalWrite(SEG_H, LOW);   
+       break; 
+     case 12: // BLANK
+       digitalWrite(SEG_A, LOW);   
+       digitalWrite(SEG_B, LOW);  
+       digitalWrite(SEG_C, LOW);   
+       digitalWrite(SEG_D, LOW);   
+       digitalWrite(SEG_E, LOW);  
+       digitalWrite(SEG_F, LOW);  
+       digitalWrite(SEG_G, LOW);   
+       digitalWrite(SEG_H, LOW);   
+       break; 
+    }
+ }
+
+ void setup() 
+ {
+   pinMode(SEG_A, OUTPUT);     
+   pinMode(SEG_B, OUTPUT);     
+   pinMode(SEG_C, OUTPUT);     
+   pinMode(SEG_D, OUTPUT);     
+   pinMode(SEG_E, OUTPUT);     
+   pinMode(SEG_F, OUTPUT);     
+   pinMode(SEG_G, OUTPUT);     
+   pinMode(SEG_H, OUTPUT);
+ }
+void loop() {
+int r=0;
+
+fnd(r);
+
+while(1) {
+
+   while(!digitalRead(11));  // #11이 ‘LOW’일 때는 이 명령에서 순환 대기
+   r++;   //#11이  ‘HIGH’일 때 다음 명령 수행
+   fnd(r%10);
+
+   delay(300);
+} 
+}
+

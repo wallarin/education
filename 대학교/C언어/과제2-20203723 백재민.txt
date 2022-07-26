@@ -1,0 +1,103 @@
+------------------------------------1---------------------------------------
+
+#include <stdio.h>
+#define VOLUME(x,y) (3.14*(x)*(x)*(y))
+void main()
+{
+	int r, h;
+	double bupi;
+
+	printf("밑원의 반지름과 높이를 입력하시오\n");
+	scanf_s("%d %d", &r, &h);
+	bupi = VOLUME(r, h);
+
+	printf("부피 : %lf\n", bupi);
+}
+
+------------------------------------2---------------------------------------
+
+#include <stdio.h>
+
+int main()
+{
+	char c1, c2;
+
+	printf("문자 2개를 입력\n");
+	scanf_s("%c %c", &c1, 1, &c2, 1);
+	printf("그 다음 문자 : %c %c \n", ++c1, ++c2);
+	return 0;
+}
+------------------------------------3---------------------------------------
+
+#include <stdio.h>
+
+void main()
+{
+	double d1, d2;
+	int res;
+
+	printf("실수 2개를 입력하시오\n");
+	scanf_s("%lf %lf", &d1, &d2);
+
+	res = (int)d1 * (int)d2;
+	printf("결과 : %d \n", res);
+}
+------------------------------------4---------------------------------------
+
+#include <stdio.h>
+
+void main()
+{
+	int a, b, c, max;
+
+	printf("세 수를 입력하시오\n");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	max = a >= b ? (a >= c? a : c) : (b >= c? b : c);
+	printf("최대값은 : %d\n", max);
+}
+------------------------------------5---------------------------------------
+#include <stdio.h>
+
+void main()
+{
+	double kg, t, bmi;
+
+	printf("몸무게(kg)과 키(cm)를 입력하세요.\n");
+	scanf_s("%lf %lf", &kg, &t);
+	t = t / 100;
+	bmi = kg / (t * t);
+
+	printf("bmi는 %.2lf 입니다.", bmi);
+
+}
+------------------------------------6---------------------------------------
+
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+	int price = 0, cash, result, result2;
+	
+
+	printf("음식값을 입력하시오.\n");
+	scanf_s("%d",&price);
+	cash = price % 3000;
+	result = price - cash;
+	result2 = result / 3;
+
+	printf("A는 %d원 B는 %d원 C는 %d원을 지불하세요", result2+cash, result2, result2);
+}
+------------------------------------7---------------------------------------
+------------------------------------8---------------------------------------
+
+#include <stdio.h>
+
+void main()
+{
+	int m;
+	printf("임의의 달을 입력하세요.\n");
+	scanf_s("%d", &m);
+	printf(m > 6 ? "하반기입니다." : "상반기입니다.");
+}

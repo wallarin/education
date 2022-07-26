@@ -1,0 +1,11 @@
+127.0.0.1 - - [17/Jul/2022:00:09:25 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:26 +0900] "GET /toy/etc/addfood.do HTTP/1.1" 200 3633
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:26 +0900] "GET /toy/asset/css/toy.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:26 +0900] "GET /toy/asset/css/rateit.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:26 +0900] "GET /toy/asset/js/toy.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:26 +0900] "GET /toy/asset/css/bootstrap.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:26 +0900] "GET /toy/asset/js/jquery.rateit.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:27 +0900] "GET /toy/asset/css/star.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:27 +0900] "GET /toy/asset/css/delete.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:27 +0900] "GET /toy/asset/favicon.ico HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2022:00:09:37 +0900] "GET /toy/etc/food.do HTTP/1.1" 200 5744

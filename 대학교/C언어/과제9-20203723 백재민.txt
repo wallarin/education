@@ -1,0 +1,202 @@
+-------------------------------------------1------------------------------------------------
+#include <stdio.h>
+
+int cntNumber(char* p);
+
+void main()
+{
+	char s[100];
+
+	printf("숫자가 포함된 문자열을 입력하세요\n");
+
+	scanf_s("%s", s, 100);
+
+	printf("숫자개수: %d\n",cntNumber(s));
+}
+
+
+int cntNumber(char* p)
+{
+	int cnt = 0;
+
+	while (*p) 
+	{
+		if (*p >= '0' && *p <= '9')
+			cnt++;
+		p++;
+	}
+	return cnt;
+}
+-------------------------------------------2------------------------------------------------
+#include <stdio.h>
+
+void main()
+{
+	char s[100];
+	int i = 0;
+
+	printf("문자열을 입력하세요\n");
+
+	gets_s(s, 100);
+	
+	while (s[i])
+	{
+		printf("%c", s[i]);
+		i++;
+		if (i % 3 == 0)
+			printf("\n");
+	}
+}
+
+-------------------------------------------3------------------------------------------------
+#include <stdio.h>
+
+void strVowel(char* s1, char* s2);
+
+void main()
+{
+	char s[100], s0[100];
+
+	printf("문자열을 입력하세요\n");
+
+	gets_s(s, 100);
+
+	strVowel(s, s0);
+	puts(s0);
+}
+
+void strVowel(char* s1, char* s2)
+{
+	while (*s1)
+	{
+		if (*s1 == 'a' || *s1 == 'e' || *s1 == 'i' || *s1 == 'o' || *s1 == 'u') {
+			*s2 = *s1;
+			s2++;
+		}
+		s1++;
+	}
+	*s2 = '\0';
+}
+-------------------------------------------4------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+	char s[100];
+	int leng;
+
+	printf("문자열을 입력하세요\n");
+	gets_s(s, 100);
+
+	leng = strlen(s);
+	if (leng % 2 == 1) {
+		printf("%c\n", s[leng / 2]);
+	}
+	else {
+		printf("%c%c\n", s[(leng / 2) - 1], s[leng / 2]);
+	}
+}
+-------------------------------------------5------------------------------------------------
+#include <stdio.h>
+#include <string.h> 
+
+void reverse(char* s);
+
+void main()
+{
+	char s[100];
+	
+	printf("문자열을 입력하세요\n");
+	gets_s(s, 100);
+
+	reverse(s);
+}
+
+void reverse(char* s)
+{
+	int i;
+
+	for (i = strlen(s) - 1; i >= 0; i--)
+		printf("%c",s[i]);
+}
+-------------------------------------------6------------------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+void swapStr(char* s, char* s1);
+
+void main()
+{
+	char s[50] = "apple";
+	char s1[50] = "banana";
+	char t[50];
+
+	strcpy_s(t, s);
+	strcpy_s(s, s1);
+	strcpy_s(s1, t);
+
+	swapStr(s,s1);
+
+}
+
+void swapStr(char* s, char* s1) 
+{	
+	printf("%s,%s\n", s, s1);
+}
+
+-------------------------------------------7------------------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int convert_string(const void* a, const void* b)
+{
+    return strcmp((char*)a, (char*)b);
+}
+
+void main()
+{
+    char s[6][20];
+
+    for (int i = 0; i < 5; i++) {
+        scanf("%s", s[i]);
+    }
+
+    qsort(s, sizeof(s) / sizeof(s[0]), sizeof(s[0]), convert_string);
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%s ", s[i]);
+    }
+
+    printf("\n");
+
+}
+-------------------------------------------8------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+	int num = 0;
+	int atoi(const char* s1);
+	char s0[50] = "4356";
+	char s1[50] = "76843";
+	int num1 = 0;
+	int s2;
+
+	printf("%s\n", s0);
+
+	num = atoi(s0);
+
+	printf("%d\n\n", num);
+
+	printf("정수를 하나 입력하세요.\n");
+	scanf_s("%d", &s2);
+
+	num1 = atoi(s1);
+	printf("%p", s1);
+}

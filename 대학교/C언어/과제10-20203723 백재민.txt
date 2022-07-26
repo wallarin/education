@@ -1,0 +1,69 @@
+-------------------------------------------1------------------------------------------------
+#include <stdio.h>
+
+struct info {
+	char name[20];
+	int age;
+	char blood[4];
+};
+
+void main()
+{
+	struct info mine, *p;
+
+	printf("이름 나이 혈액형을 입력 하시오\n");
+
+	scanf_s("%s %d %s", mine.name, 20, &mine.age, mine.blood, 4);
+
+	p = &mine;
+
+	printf("이름 : %s\n", p->name);
+	printf("나이 : %d\n", p->age);
+	printf("혈액형 : %s\n", p->blood);
+}
+-------------------------------------------2------------------------------------------------
+#include <stdio.h>
+
+struct info {
+	char name[20];
+	char sub1[20];
+	double cre1;
+	char sub2[20];
+	double cre2;
+	char sub3[20];
+	double cre3;
+};
+
+typedef struct info info;
+double mean_st(info* p);
+
+void main() 
+{
+	info stu1 = {"홍길동", "C프로1", 3.5, "C프로2", 4.0, "JAVA", 3.7};
+	double mean;
+
+	mean = mean_st(&stu1);
+	printf("평균: %lf\n", mean);
+}
+
+double mean_st(info *p) {
+	double avg;
+
+	avg = (p->cre1 + p->cre2 + p->cre3) / 3.0;
+	return avg;
+}
+-------------------------------------------3------------------------------------------------
+-------------------------------------------4------------------------------------------------
+-------------------------------------------5------------------------------------------------
+#include <stdio.h>
+
+void main()
+{
+	struct fraction
+	{
+		int a;
+		int b;
+	} a = { 4,5 }, b = { 3,7 };
+
+	printf("%d/%d * %d/%d의 결과값은 : %d/%d\n", a.a, a.b, b.a, b.b, a.a* b.a, a.b* b.b);
+}

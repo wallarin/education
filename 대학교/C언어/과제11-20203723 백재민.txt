@@ -1,0 +1,105 @@
+-------------------------------------------1------------------------------------------------
+#include <stdio.h>
+
+void dbIA(int p[], int sz);
+void main()
+{
+	int aa[5] = { 1,2,3,4,5 };
+
+	dbIA(aa, 5);
+	for (int i = 0; i < 5; i++) {
+		printf("%d ", aa[i]);
+	}
+	
+}
+void dbIA(int p[], int sz)
+{
+	int i;
+
+	for (i = 0; i < sz; i++) {
+		p[i] = p[i] * 2;
+	}
+}
+-------------------------------------------2------------------------------------------------
+#include <stdio.h>
+void revPrint(int p[], int sz);
+
+void main()
+{
+	int aa[5] = { 1,2,3,4,5 };
+
+	revPrint(aa, 5);
+}
+
+void revPrint(int p[], int sz)
+{
+	int i;
+
+	for (i = sz - 1; i >= 0; i--) {
+		printf("%d ", p[i]);
+	}
+}
+-------------------------------------------3------------------------------------------------
+#include <stdio.h>
+
+void cutStr(char* original_str, int start, int cnt, char* sub_str);
+
+void main()
+{
+	char str[] = "asdfghkjlzxcbv";
+	char ret[100];
+
+	cutStr(str, 3, 5, ret);
+
+	puts(ret);
+}
+
+void cutStr(char* original_str, int start, int cnt, char* sub_str)
+{
+	int i, count = 0;
+
+	for (i = start; ; i++) {
+		*sub_str = original_str[i];
+		sub_str++;
+		count++;
+		if (count >= cnt) break;
+	}
+	*sub_str = '\0';
+}
+-------------------------------------------4------------------------------------------------
+#include <stdio.h>
+#include <math.h>
+
+int is_equal(struct tri* p1, struct tri* p2);
+struct tri {
+	int a;
+	int b;
+	int c;
+};
+
+struct tri tri;
+void main()
+{
+	tri.a = 10;
+	tri.b = 10;
+	tri.c = 10;
+
+	is_equal(&tri, &tri);
+
+	printf("값은? %f",&tri);
+}
+
+
+
+int is_equal(struct tri* p1, struct tri* p2)
+{
+	double s, result;
+	double a=0, b=0, c=0;
+	
+	s = (a + b + c) / 2;
+	result = sqrt(s * (s - a) * (s - b) * (s - c));
+
+	return result;
+}
+-------------------------------------------5------------------------------------------------
+-------------------------------------------6------------------------------------------------
