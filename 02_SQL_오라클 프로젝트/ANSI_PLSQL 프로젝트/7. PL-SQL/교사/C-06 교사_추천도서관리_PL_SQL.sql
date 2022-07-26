@@ -1,7 +1,24 @@
-set serverout on;
-set serverout off;
+-- 과목관련 교재 전체 조회 뷰
+create or replace view vwtblTextBook
+as
+select 
+    distinct sn.subname_seq as "과목번호",
+    sn.subname as "과목명",
+    tb.name as "교재명"
+from tblSubjectName sn
+    inner join tblSubjectTxt st 
+        on st.subname_seq = sn.subname_seq
+            inner join tblTextBook tb 
+                on st.txtbook_seq = tb.txtbook_seq
+                    order by sn.subname_seq;
 
--- 교사 과정 스케줄 조회 프로시저
+
+-- 과목관련 교재 전체 조회하기
+select * from vwtblTextBook;
+
+
+
+-- 내 강의스케줄 조회하기 프로시저
 create or replace procedure proct_Schedule (
     pt_name tblteacher.t_name%type,
     pt_password tblteacher.t_password%type,
@@ -40,6 +57,7 @@ exception
         presult := 0;
 end proct_Schedule;
 
+
 -- 내 강의스케줄 조회하기
 declare
     vresult number;
@@ -52,66 +70,77 @@ begin
     end if;
 end;
 
--- 특정 강의 선택 해당 강의 내 교육생 출결현황 프로시저
-create or replace procedure procattendall (
-    pcourse_seq tblSugang.course_seq%type,
+
+
+
+
+-- 내 강의스케줄 강의 선택 조회하기 프로시저
+create or replace procedure proct_csub (
+    pt_name tblteacher.t_name%type,
+    pt_password tblteacher.t_password%type,
+    p_course_seq tblCourse.course_seq%type,
     presult out number
 )
 is
-    p_sugang_seq tblSugang.sugang_seq%type;
-    p_m_name tblMember.m_name%type;
-    p_attend_a number;
-    p_attend_b number;
-    p_attend_c number;
-    p_attend_d number;
-    p_attend_e number;
-    p_attend_f number;
-    p_attend_g number;
+    psubname_seq tblCSub.subname_seq%type;
+    pcourse_neme tblCourseName.course_neme%type;
+    pc_start_date tblCourse.c_start_date%type;
+    pc_end_date tblCourse.c_end_date%type;
+    psubname tblSubjectName.subname%type;
+    pcsstart_date tblCSub.csstart_date%type;
+    pcsend_date tblCSub.csend_date%type;
+    proom_name tblRoom.room_name%type;
+    pcount number;
     
     cursor vcursor is select 
-    distinct s.sugang_seq,
-    m.m_name,
-    (select count(*) from tblattendance where attendance_type = '정상' and sugang_seq = s.sugang_seq) as 정상,
-    (select count(*) from tblattendance where attendance_type = '지각' and sugang_seq = s.sugang_seq) as 지각,
-    (select count(*) from tblattendance where attendance_type = '조퇴' and sugang_seq = s.sugang_seq) as 조퇴,
-    (select count(*) from tblattendance where attendance_type = '외출' and sugang_seq = s.sugang_seq) as 외출,
-    (select count(*) from tblattendance where attendance_type = '병가' and sugang_seq = s.sugang_seq) as 병가,
-    (select count(*) from tblattendance where attendance_type = '기타' and sugang_seq = s.sugang_seq) as 기타,
-    (select count(*) from tblattendance where attendance_type = '결석' and sugang_seq = s.sugang_seq) as 결석
-from tblcourse c
-    inner join tblcoursename cn
-        on c.cname_seq = cn.cname_seq
-            inner join tblsugang s
-                on c.course_seq = s.course_seq
-                    inner join tblmember m
-                        on s.member_seq = m.member_seq
-                            inner join tblattendance a
-                                on s.sugang_seq = a.sugang_seq
-                                    where c.course_seq = pcourse_seq;
+    distinct s.subname_seq as "과목번호",
+    n.course_neme as "과정명",
+    c.c_start_date as "과정시작일",
+    c.c_end_date as "과정종료일", 
+    sj.subname as "과목명",
+    s.csstart_date as "과목시작일",
+    s.csend_date as "과목종료일",
+    r.room_name "강의실명",
+    (select count(*) from tblSugang where course_seq = p_course_seq) as "수강 인원"
+from tblCourse c 
+    inner join tblCourseName n 
+        on c.cname_seq = n.cname_seq 
+        inner join tblCSub s 
+            on c.course_seq = s.course_seq 
+                inner join tblSubjectName sj 
+                    on s.subname_seq = sj.subname_seq 
+                        inner join tblRoom r 
+                            on c.room_seq = r.room_seq
+                                inner join tblSubjectTxt st 
+                                    on sj.subname_seq = st.subname_seq
+                                        where c.course_seq = p_course_seq and c.teacher_seq = 
+                                            (select teacher_seq from tblteacher where t_name = pt_name and t_password = pt_password)
+                                                order by s.csstart_date asc;
 begin
-	open vcursor;
-	dbms_output.put_line('==================================================================================================');
-    dbms_output.put_line('수강생 번호 | 수강생 이름  |  정상  | 지각 | 조퇴 | 외출 | 병가 | 기타 | 결석');
-	loop
-		fetch vcursor into p_sugang_seq, p_m_name, p_attend_a, p_attend_b, p_attend_c, p_attend_d, p_attend_e, p_attend_f, p_attend_g;
-		exit when vcursor%notfound;
-        dbms_output.put_line('    ' || p_sugang_seq || ' |      ' || p_m_name || '  | ' || p_attend_a || '    | ' || p_attend_b  || '    | ' || p_attend_c 
-        || '    | ' || p_attend_d || '    | ' || p_attend_e || '    | ' || p_attend_f || '    | ' || p_attend_g);
-	end loop;
-close vcursor;
-	presult := 1;
+    open vcursor;
+        dbms_output.put_line('=================================================================================================================================================================================');
+        dbms_output.put_line('과목번호 | ' || '                            과정명                           | ' || '과정시작일  | ' || '과정종료일  | ' || '      과목명        | ' || '과목시작일  | ' || '과목종료일  | ' || '   강의실명   | ' || '수강인원');
+        loop
+            fetch vcursor into psubname_seq, pcourse_neme, pc_start_date, pc_end_date, psubname, pcsstart_date, pcsend_date, proom_name, pcount;
+            exit when vcursor%notfound;
+            dbms_output.put_line('   ' || rpad(psubname_seq, 5, ' ') || ' | ' || rpad(pcourse_neme, 60, ' ') || ' |  ' || rpad(pc_start_date, 10, ' ')
+            || ' |  ' || rpad(pc_end_date, 10, ' ') || ' |  ' || rpad(psubname, 18, ' ') || ' |  ' || 
+            rpad(pcsstart_date, 10, ' ') || ' |  ' || rpad(pcsend_date, 10, ' ') || ' |    ' || rpad(proom_name, 10, ' ') || ' |    ' || rpad(pcount, 3, ' '));
+        end loop;
+        dbms_output.put_line('=================================================================================================================================================================================');
+    close vcursor;
+    presult := 1;
 exception
     when others then
         presult := 0;
-end procattendall;
+end proct_csub;
 
-set serverout on;
 
--- 특정 강의 선택 해당 강의 내 교육생 출결현황 조회하기
+-- 내 강의스케줄 강의 선택 조회하기
 declare
     vresult number;
 begin
-    procattendall(28, vresult);
+    proct_csub('최경숙', 2532102, 25, vresult);
     if vresult = 1 then
         dbms_output.put_line('조회 종료');
     else
@@ -119,200 +148,55 @@ begin
     end if;
 end;
 
--- 년도(year)로 검색하기 프로시저
-create or replace procedure procattendyear (
-    pcourse_seq tblSugang.course_seq%type,
-    pyear varchar2,
+
+
+-- 과목 번호 선택(과정 수강 수강생) 프로시저
+create or replace procedure proct_csa (
+    p_subname_seq tblCSub.subname_seq%type,
+    p_course_seq tblCourse.course_seq%type,
     presult out number
 )
 is
-    p_sugang_seq tblSugang.sugang_seq%type;
-    p_m_name tblMember.m_name%type;
-    p_attend_date tblAttendance.attend_date%type;
-    p_attendance_type tblAttendance.attendance_type%type;
+    p_name tblMember.m_name%type;
+    p_tel tblMember.m_tel%type;
+    p_registdate tblMember.m_registdate%type;
+    p_progress tblSugang.progress%type;
     
     cursor vcursor is select 
-    su.sugang_seq as "수강생 번호",
-    m.m_name as "수강생 이름",
-    ad.attend_date as "출석일",
-    ad.attendance_type as "상태"
-from tblSugang su 
-    inner join tblAttendance ad 
-        on su.sugang_seq = ad.sugang_seq 
-            inner join tblMember m 
-                on su.member_seq = m.member_seq 
-                    where su.course_seq = pcourse_seq and to_char(ad.attend_date, 'yyyy-mm-dd') like ('%' || pyear ||'%')
-                        order by ad.attend_date;
+    m.m_name "교육생 이름",
+    m.m_tel "전화번호",
+    m.m_registdate "등록일",
+    su.progress "수강상태"
+from tblCSub cs 
+    inner join tblCourse c 
+        on cs.course_seq = c.course_seq 
+            inner join tblSugang su 
+                on c.course_seq = su.course_seq 
+                    inner join tblMember m 
+                        on su.member_seq = m.member_seq
+                            where cs.subname_seq = p_subname_seq and c.course_seq = p_course_seq;
 begin
-	open vcursor;
-	dbms_output.put_line('==================================================================================================');
-    dbms_output.put_line('수강생 번호 | 수강생 이름  |    출석일    | 상태');
-	loop
-		fetch vcursor into p_sugang_seq, p_m_name, p_attend_date, p_attendance_type;
-		exit when vcursor%notfound;
-        dbms_output.put_line('    ' || p_sugang_seq || ' |      ' || p_m_name || '  | ' || p_attend_date || '    | ' || p_attendance_type);
-	end loop;
-close vcursor;
-	presult := 1;
+    open vcursor;
+    dbms_output.put_line('=================================================================================================================================================================================');
+    dbms_output.put_line('교육생 이름' || ' |    ' || '전화번호' || '   |    ' || '등록일' || '   |   ' || '수강상태');
+        loop
+            fetch vcursor into p_name, p_tel, p_registdate, p_progress;
+            exit when vcursor%notfound;
+            dbms_output.put_line('   ' || p_name || '  |  ' || p_tel || '  |  ' || p_registdate || '   |   ' || p_progress);
+        end loop;
+    close vcursor;
+    presult := 1;
 exception
     when others then
         presult := 0;
-end procattendyear;
+end proct_csa;
 
--- 년도(year)로 검색하기
+
+-- 과목 번호 선택(과정 수강 수강생) 조회하기
 declare
     vresult number;
 begin
-    procattendyear(28, 2022, vresult);
-    if vresult = 1 then
-        dbms_output.put_line('조회 종료');
-    else
-        dbms_output.put_line('예상치 못한 오류가 발생했습니다.');
-    end if;
-end;
-
--- 월(month)로 검색하기 프로시저
-create or replace procedure procattendmon (
-    pcourse_seq tblSugang.course_seq%type,
-    pyear varchar2,
-    pmonth varchar2,
-    presult out number
-)
-is
-    p_sugang_seq tblSugang.sugang_seq%type;
-    p_m_name tblMember.m_name%type;
-    p_attend_date tblAttendance.attend_date%type;
-    p_attendance_type tblAttendance.attendance_type%type;
-    
-    cursor vcursor is select 
-    su.sugang_seq as "수강생 번호",
-    m.m_name as "수강생 이름",
-    ad.attend_date as "출석일",
-    ad.attendance_type as "상태"
-from tblSugang su 
-    inner join tblAttendance ad 
-        on su.sugang_seq = ad.sugang_seq 
-            inner join tblMember m 
-                on su.member_seq = m.member_seq 
-                    where su.course_seq = pcourse_seq and to_char(ad.attend_date, 'yyyy-mm-dd') like (pyear ||'%'|| pmonth || '-%')
-                        order by ad.attend_date;
-begin
-	open vcursor;
-	dbms_output.put_line('==================================================================================================');
-    dbms_output.put_line('수강생 번호 | 수강생 이름  |    출석일    | 상태');
-	loop
-		fetch vcursor into p_sugang_seq, p_m_name, p_attend_date, p_attendance_type;
-		exit when vcursor%notfound;
-        dbms_output.put_line('    ' || p_sugang_seq || ' |      ' || p_m_name || '  | ' || p_attend_date || '    | ' || p_attendance_type);
-	end loop;
-close vcursor;
-	presult := 1;
-exception
-    when others then
-        presult := 0;
-end procattendmon;
-
--- 월(month)로 검색하기
-declare
-    vresult number;
-begin
-    procattendmon(28, 2022, 05, vresult);
-    if vresult = 1 then
-        dbms_output.put_line('조회 종료');
-    else
-        dbms_output.put_line('예상치 못한 오류가 발생했습니다.');
-    end if;
-end;
-
--- 일(day)로 검색하기 프로시저
-create or replace procedure procattendday (
-    pcourse_seq tblSugang.course_seq%type,
-    pyear varchar2,
-    pmonth varchar2,
-    pday varchar2,
-    presult out number
-)
-is
-    p_sugang_seq tblSugang.sugang_seq%type;
-    p_m_name tblMember.m_name%type;
-    p_attend_date tblAttendance.attend_date%type;
-    p_attendance_type tblAttendance.attendance_type%type;
-    pdate date := to_date(pyear || '-' || pmonth || '-' || pday, 'yyyy-mm-dd');
-    
-    cursor vcursor is select 
-    su.sugang_seq as "수강생 번호",
-    m.m_name as "수강생 이름",
-    ad.attend_date as "출석일",
-    ad.attendance_type as "상태"
-from tblSugang su 
-    inner join tblAttendance ad 
-        on su.sugang_seq = ad.sugang_seq 
-            inner join tblMember m 
-                on su.member_seq = m.member_seq 
-                    where su.course_seq = pcourse_seq and ad.attend_date = pdate -- to_char(attend_date, 'mm') = '05'
-                        order by ad.attend_date;
-                        --to_char(pyear ||'%'|| pmonth || '-%' || pday, 'yyyy-mm-dd')
-                        --(pyear ||'%'|| pmonth || '-%' || pday)
-begin
-   open vcursor;
-   dbms_output.put_line('==================================================================================================');
-    dbms_output.put_line('수강생 번호 | 수강생 이름  |    출석일    | 상태');
-   loop
-      fetch vcursor into p_sugang_seq, p_m_name, p_attend_date, p_attendance_type;
-      exit when vcursor%notfound;
-        dbms_output.put_line('    ' || p_sugang_seq || ' |      ' || p_m_name || '  | ' || p_attend_date || '    | ' || p_attendance_type);
-   end loop;
-close vcursor;
-   presult := 1;
-exception
-    when others then
-        presult := 0;
-end procattendday;
-
--- 일(day)로 검색하기
-declare
-    vresult number;
-begin
-    procattendday(28, 2022, 04, 1, vresult);
-    if vresult = 1 then
-        dbms_output.put_line('조회 종료');
-    else
-        dbms_output.put_line('예상치 못한 오류가 발생했습니다.');
-    end if;
-end;
-
--- 학생 개인 출결 조회하기 프로시저
-create or replace procedure procstuattend (
-    pnum tblAttendance.sugang_seq%type,
-    presult out number
-)
-is
-    p_attend_date tblAttendance.attend_date%type;
-    p_attendance_type tblAttendance.attendance_type%type;
-    
-	cursor vcursor is select 
-    attend_date as "출석일", attendance_type as "상태" from tblAttendance where sugang_seq = pnum;
-begin
-	open vcursor;
-	dbms_output.put_line('=========================================================================================================');
-    dbms_output.put_line(rpad('출석일', 10, ' ') || ' | ' || rpad('상태', 5, ' '));
-	loop
-		fetch vcursor into p_attend_date, p_attendance_type;
-		exit when vcursor%notfound;
-        dbms_output.put_line(rpad(p_attend_date, 10, ' ') || ' | ' || rpad(p_attendance_type, 5, ' '));
-	end loop;
-close vcursor;
-	presult := 1;
-exception
-    when others then
-        presult := 0;
-end procstuattend;
-
--- 학생 개인 출결 조회하기
-declare
-    vresult number;
-begin
-    procstuattend (184, vresult);
+    proct_csa(9, 25, vresult);
     if vresult = 1 then
         dbms_output.put_line('조회 종료');
     else
