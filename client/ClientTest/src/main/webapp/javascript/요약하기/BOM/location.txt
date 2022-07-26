@@ -1,0 +1,9 @@
+현재 창의 페이지와 관련된 행동이다.
+
+location.href > 현재 열린 주소를 읽어온다.
+location.href = 'https://naver.com' > 현재창에서 적혀있는 주소로 이동한다.
+
+location.host > 호스트의 정보를 가져온다.> 127.0.0.1:5500
+location.hostname > 호스트의 이름을 가져온다. > 127.0.0.1
+location.protocol > 프로토콜의 정보를 가져온다. > http:
+location.port > 포트번호를 가져온다. > 5500

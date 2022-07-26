@@ -1,0 +1,31 @@
+자바스크립트로 HTML 속성 제어하기 
+※ 주의할 점!! > 태그의 식별자나 속성은 조작하면 안된다. / HTML속성명이 복합어로 되어있으면 캐멀표기법으로 작성해야한다.
+
+텍스트박스 값 조작
+txt1.value = '테스트' > 쓰기
+txt1.value > 읽기
+
+텍스트박스 사이즈 조작
+txt1.size = 50;
+
+읽기 전용으로 전환
+txt1.readOnly = true;
+
+
+
+
+하나의 버튼으로 스위치처럼 ON / OFF를 표현할 수 있다. > 이러한 ON/OFF 같은 기능을 토글버튼이라고 한다.
+if (btn1.value == 'ON') {
+	document.body.bgColor = 'white'; > 버튼의 값이 ON이면 body의 배경색을 흰색으로 변경
+	btn1.value = 'OFF'; > 그와 동시에 btn1의 value값을 OFF로 변경
+} else {
+	document.body.bgColor = 'black';
+	btn1.value = 'ON';
+}
+
+
+
+
+
+window.screen.availWidth > 모니터의 가로 크기
+window.screen.availHeight > 모니터의 세로 크기

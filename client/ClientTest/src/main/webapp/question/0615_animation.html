@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e4f03f4c6c.js" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'GmarketSansMedium';
+            background-color: #f7f7f7;
+            text-align: center;
+            margin-top: 150px;
+            font-size: 1.5rem;
+            color: #777;
+        }
+        
+        #bird {
+            margin: 20px auto;
+            width: 200px;
+            height: 140px;
+            background-image: url(images/fly.png);
+            transition: transform 5s;
+            /* background-repeat: no-repeat; */
+        }
+
+        #speed select {
+            font-family: 'GmarketSansMedium';
+            color: #777;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>새 날개짓</h1>
+    <div id="bird"></div>
+    <div id="speed">새의 속도: &nbsp;
+        <select id="selec">
+            <option value="300">느림</option>
+            <option value="100" selected>보통</option>
+            <option value="60">빠름</option>
+            <option value="10">아주빠름</option>
+        </select>
+    </div>
+
+    <script>
+
+        const bird = document.getElementById('bird');
+        let x = 0;
+        let timer = 0;
+        let speed = 100;
+
+        timer = setInterval(() => {
+            bird.style.backgroundPosition = x + 'px 0px';
+            x -= 200;
+        }, speed);
+
+        document.getElementById('selec').onchange = function() {
+            clearInterval(timer);
+            timer = setInterval(() => {
+                bird.style.backgroundPosition = x + 'px 0px';
+                x -= 200;
+                if (document.getElementById('selec').value == 10) {
+                    bird.style.transform = 'translate(0px, -450px)'; 
+                } else {
+                    bird.style.transform = 'translate(0px, 0px)';
+                }
+            }, event.srcElement.value);
+        };
+
+    </script>
+    
+</body>
+</html>

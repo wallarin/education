@@ -1,0 +1,37 @@
+text-align: center; ==> 중앙정렬
+text-align: left; ==> 왼쪽정렬
+text-align: right; ==> 오른쪽정렬
+text-align: justify; ==> 양쪽정렬
+text-align: initial; ==> 기본값정렬
+
+text-decoration: none; ==> 장식 없음
+text-decoration: underline; ==> 밑줄
+text-decoration: overline; ==> 윗줄
+text-decoration: line-through; ==> 취소선
+
+text-shadow: 2px 2px 2px #888 ==> 글자에 그림자를 표시한다.
+
+
+line-height: 수치; ==> 줄의 간격을 수치만큼 벌린다.
+word-spacing: 수치; ==> 단어간의 간격을 벌린다.
+letter-spacing: 수치; ==> 문자간의 간격을 벌린다.
+text-indent: 수치; ==> 문단 들여쓰기
+
+
+
+
+=============================================================
+
+color: 색상명 ==> 글자를 해당 색으로 변경한다.
+
+font-style: italic; ==> 이태릭체로 변환한다.
+
+font-family: '궁서체', '맑은 고딕'; ==> 궁서체로 폰트를 지정 만약 궁서체가 없으면 맑은 고딕으로 지정
+
+
+font-size: 1px ==> 글자 크기를 지정한다.(px, em, rem)
+
+font-weight ==> 글자의 굵기를 지정한다. (bold > 굵게 / normal > 보통)
+
+font-variant: small-caps; ==> 대문자는 크게 소문자는 작은 대문자로 바꾸어주는 속성이다.
+

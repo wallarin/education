@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //객체
+        const obj1 = new Object(); //빈 객체를 생성
+        //const obj1 = {};
+
+        obj1.name = '이름'; // 프로퍼티 추가
+        obj1.hello = function() {
+            console.log('Hello');
+        }
+
+        const obj2 = {
+            name: '이름',
+            hello: function() {
+                console.log('Hello');
+            }
+        }
+
+        const user1 = {
+            name: '홍길동',
+            age : 20
+        };
+
+        const user2 = {
+            name: '아무개',
+            ago: 22 //age가 오타가 발생해도 알아차리기 힘들다..
+        }
+
+
+
+        //생성자 함수
+        //- 자바의 생성자와 유사
+
+
+        //생성자 함수의 이름은 파스칼 표기법으로 작성한다.(대문자로 시작) > 대부분의 사람들이 이렇게 작성...
+
+        
+
+        //new가 실행된 후 빈 object가 하나 생성 된다. > const user3 = {};
+        //전역 함수내에서 this는 window 객체를 참조한다.
+        //생성자 함수내에서 this는 방금 생성된 객체를 참조한다.
+        function User(name, age) {
+            this.name = name;
+            this.age = age;
+            this.info = function() {
+                console.log(this.name);
+            }
+        };
+
+        //평소 함수 호출할 때 처럼 호출했다..
+        // window.num = 100; //전역변수를 생성해버린거다..
+        // console.log(name,age);
+        // console.log(window.name, window.age);
+        
+        
+        //생성자 함수는 절대로 일반 함수처럼 호출하면 안된다!!!!!
+        // User('홍길동', 20);
+
+        //생성자 함수는 new 연산자와 같이 사용한다.
+        const user3 = new User('홍길동', 20);
+        console.log(user3);
+
+
+        const user4 = new User('아무개', 22);
+        console.log(user4);
+
+
+        //new == {} == object > new로 생성된 객체는 모두 object라서 자료형으로 인정 받을 수가 없다..
+
+        const now = new Date();
+        const list = new Array();
+
+
+        console.log(typeof user3, user3.constructor.name); //생성자 이름을 물어본것이다. > 자바에서 클래스를 확인하는 것과 유사하다.
+        console.log(typeof user4, user4.constructor.name);
+        console.log(typeof now, now.constructor.name);
+        console.log(typeof list, list.constructor.name);
+
+    </script>
+    
+</body>
+</html>

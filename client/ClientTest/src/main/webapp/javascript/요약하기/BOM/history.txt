@@ -1,0 +1,3 @@
+history.back(); > 뒤로가기(이전페이지) 기능
+history.forward(); > 앞으로가기(다음페이지) 기능
+history.go(-2); > 2페이지 전으로 뒤로가기 기능

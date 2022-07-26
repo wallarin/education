@@ -1,0 +1,23 @@
+bom이란? 태그의 name을 붙인 뒤 그 name을 이용해서 접근 후 조작하는 자바스크립트 방식 중 하나이다.
+정해진 구조 순서대로만 접근이 가능하다.
+
+
+===========================================
+<준비단계>
+
+<form name ="formtag">
+	<input type="text" name="txt1">
+	<input type="button" name="btn1">
+</form>
+
+>>>> 텍스트 박스안의 value값 넣기
+window.document.formtag.txt1.value = '테스트';
+> window는 생략이 가능하다!
+
+================================================================================
+
+document.formtag.btn1.onclick = m1(); > 버튼을 클릭했을때 함수 안의 이벤트가 발생
+
+function m1() {
+	alert('클릭했습니다');
+}

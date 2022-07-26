@@ -1,0 +1,29 @@
+<h1>외부 링크</h1>
+<a href="http://www.naver.com">네이버로 이동합니다.</a>
+
+<h1>내부 링크</h1>
+<a href="ex10_list.html">열번째 예제</a>
+
+<h1>새창으로 열기 형태</h1>
+<a href="ex10_list.html" target="_blank">열번째 예제</a>
+
+
+
+
+
+
+<input>
+    - 인라인 태그
+    - 단독 태그
+    - input.type: 입력 컨트롤 종류 지정
+    - input.name: 식별자. HTML에서 사용
+    - input.id: 식별자. CSS,JavaScript에서 사용
+    - input.class: 식별자. CSS, JavaScript에서 사용
+    - input.size: 길이(문자 개수)
+    - input.maxlength: 최대 입력 길이(문자 개수) + 유효성 검사
+    - input.value: 컨트롤의 입력값(현재 입력값)
+    - input.readonly: 읽기 전용(전원 ON) > 서버 전송 가능
+    - input.disabled: 비활성화(전원 OFF) > 서버 전송 불가능
+    - input.accesskey: 바로가기(Alt + 조합키)
+    - input.autofocus: 자동 포커스
+    - input.autocomplete: 자동 완성 끄기

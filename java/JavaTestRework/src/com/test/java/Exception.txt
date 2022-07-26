@@ -1,0 +1,29 @@
+try{
+	업무적인 코드
+	> 참일 때의 값
+} catch (Exception e) { //Exception 대신에 발생하는 오류의 이름을 넣어서 내가 원하는 문자열로 변환 출력이 가능하다.(예측이 가능한 경우에만) 
+	> 거짓일때의 값
+}
+
+
+원하는 곳마다 각각 사용이 가능하지만 번거롭다..
+>> 오류 부분에 대해 인지하고 있는경우 try문에 catch문을 여러개를 감싸 각각의 오류 부분에 대해
+따로따로 문자열 출력이 가능하다.
+
+예시))
+} catch (ArithmeticException e) {
+			System.out.println("0으로 나누기");
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("배열 첨자 오류");	
+		} catch (ClassCastException e) {
+			System.out.println("형변환 오류");
+		} catch (Exception e) { //Exception e 는 에러메시지의 부모이다.
+			System.out.println("예외 처리");
+		}
+
+
+
+throws Exception은 메소드 옆에서 선언
+throw new Exception은 조건문 안에서 선언한다.
+> 두 가지 모두 하는 일은 에러의 책임을 메인 메소드로 미루는 역할을 한다.
+> 미루지 않으려면 try{}catch(){}문으로 예외에 대한 처리를 해주어야 한다.

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: #8fd1d8;
+        }
+
+        #main {
+            width: 569px;
+            margin: 0px auto;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #4e4e4e;
+            font-size: 3rem;
+        }
+
+        #tape {
+            width: 569px;
+            height: 359px;
+            background-image: url(images/tape.png);
+            background-repeat: no-repeat;
+
+            position: relative;
+        }
+
+        #lefthole {
+            position: absolute;
+            left: 125px;
+            top: 119px;
+        }
+
+        #righthole {
+            position: absolute;
+            left: 362px;
+            top: 119px;
+        }
+
+        #lefthole, #righthole {
+            animation-name: key-hole;
+            animation-duration: 1.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes key-hole {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        #line {
+            width: 133px;
+            height: 64px;
+            background-image: url(images/tapeline.png);
+            background-position: -50px 0px;
+            position: absolute;
+            left: 218px;
+            top: 127px;
+
+            animation-name: key-line;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes key-line {
+            from { background-position: -50px, 0px; }
+            to { background-position: 7px, 0px;}
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/e4f03f4c6c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="main">
+        <h1><i class="fas fa-headphones-alt"></i> Music</h1>
+        <div id="tape">
+            <img id="lefthole" src="images/tapehole.png">
+            <img id="righthole" src="images/tapehole.png">
+            <div id="line"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

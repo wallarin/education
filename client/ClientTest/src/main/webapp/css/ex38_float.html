@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        span:nth-child(1) {
+            color: red; 
+            float:left;
+        }
+        span:nth-child(2) {
+            color: #ffd400; 
+            float: left;
+        }
+        span:nth-child(3) {
+            color: blue; 
+            float: left;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            /* display: inline-block; */
+            color: white;
+            float: left; /* 요소들이 인라인의 성질을 가지게 된다. */
+        }
+
+        #box1 { background-color: red;}
+        #box2 { background-color: orange;}
+        #box3 { background-color: yellow;}
+        #box4 { background-color: green;}
+        #box5 { background-color: blue;}
+        #box6 { background-color: navy;}
+        #box7 { background-color: purple;}
+
+        /* div간의 공백 없애기 CASE 1 */
+        /* #list { font-size: 0; }
+
+        #list > .box {
+            font-size: 1rem;
+        } */
+
+        /* <div style='clear: both;'></div> 랑 같은 방법 */
+        #list::after {
+            content: '';
+            display: block;
+            clear: both;
+            /* 클리어 태그는 블럭태그에서만 사용 가능하다. */
+        }
+
+        #list {
+            width: 700px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut <span>suscipit</span> repellat, rem aperiam iure officiis <span>tempora</span> odit dignissimos tenetur sequi ab quos <span>doloribus</span> nisi cumque magni ad reprehenderit consequatur?</p>
+
+
+    <hr>
+
+    <!-- div#box$.box*7 -->
+    <div id="list">
+        <div id="box1" class="box">빨</div>
+        <div id="box2" class="box">주</div>
+        <div id="box3" class="box">노</div>
+        <div id="box4" class="box">초</div>
+        <div id="box5" class="box">파</div>
+        <div id="box6" class="box">남</div>
+        <div id="box7" class="box">보</div>
+    </div>
+
+    <h1>다른 내용들..</h1>
+
+</body>
+</html>

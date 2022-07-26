@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #text span {
+            color: white;
+            font-size: 7rem;
+            font-family: Arial;
+            display: inline-block;
+            
+        }
+
+        #text {
+            text-align: center;
+            margin-top: 400px;
+            font-variant: small-caps;
+        }
+
+        .fab {
+            color: yellow;
+        }
+
+        .ani {
+            transform: scale(50, 50);
+            opacity: 0;
+
+            animation-name: key-text;
+            animation-duration: .5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes key-text {
+            0% {
+                transform: scale(50, 50);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1, 1);
+                opacity: 1;
+            }
+        }
+
+        #text span:nth-child(2) { animation-delay: .15s;}
+        #text span:nth-child(3) { animation-delay: .3s;}
+        #text span:nth-child(4) { animation-delay: .45s;}
+        #text span:nth-child(5) { animation-delay: .6s;}
+        #text span:nth-child(6) { animation-delay: .75s;}
+        #text span:nth-child(7) { animation-delay: 1.05s;}
+        #text span:nth-child(8) { animation-delay: 1.2s;}
+        #text span:nth-child(9) { animation-delay: 1.35s;}
+        #text span:nth-child(10) { animation-delay: 1.5s;}
+        #text span:nth-child(11) { animation-delay: 1.5s;}
+        #text span i:first-child { animation-delay: 1.65s;}
+
+    </style>
+    <script src="https://kit.fontawesome.com/e4f03f4c6c.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: black;">
+
+    <div id="text">
+        <span class="ani">H</span>
+		<span class="ani">e</span>
+		<span class="ani">l</span>
+		<span class="ani">l</span>
+		<span class="ani">o</span>
+		<span class="ani">!</span>
+		<span class="ani"></span>
+		<span class="ani">H</span>
+		<span class="ani">T</span>
+		<span class="ani">M</span>
+		<span class="ani">L</span>
+        <span><i class="fab fa-html5 ani"></i></span>
+    </div>
+    
+</body>
+</html>

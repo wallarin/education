@@ -1,0 +1,7 @@
+다단 구조
+일정 개수 만큼으로 내용물을 분할해서 나타낸다.
+p {
+    column-count: 3; > 분할할 개수
+    column-gap: 20px; > 영역간의 거리
+    column-rule: 1px dashed gray; > 영역간의 선 표시
+}

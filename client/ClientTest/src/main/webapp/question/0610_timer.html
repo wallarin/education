@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        input[name="txt"] {
+            display: block;
+            border: 0px solid black;
+            text-align: center;
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            font-size: 7rem;
+            font-weight: bold;
+            color: #555;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 시작할때부터 value를 10으로 넣어놓으면 화면상에서 10초부터 시작하는 것으로 보인다. -->
+    <input type="text" name="txt" readonly value="10">
+
+    <div>
+        10초후 구글사이트로 이동합니다.<br>
+        이동을 원하지 않으면 esc키를 누르세요.
+    </div>
+
+    <script>
+
+        var n = 10;
+        var timer = setInterval(m1, 1000);
+
+        function m1() {
+            n--;
+            document.all.txt.value = n;
+
+            if (n == 0) {
+                clearInterval(timer);
+                location.href = "https://google.com";
+            }
+
+        }
+
+        onkeydown = m2;
+
+        function m2() {
+            if (event.keyCode == 27) {
+                clearInterval(timer);
+                document.body.bgColor = "aqua";
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

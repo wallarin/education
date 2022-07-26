@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .house {
+            width: 1200px;
+            height: 150px;
+            border: 1px solid black;
+            font-weight: bold;
+            font-size: 4em;
+            text-align: center;
+        }
+
+        #box1 > div { 
+            border: 3px solid black;
+            background-color: tomato; 
+            width: 100px;
+            height: 100px;
+            margin-top: 45px;
+            border-radius: 50%;
+            transition-duration: 6s;
+        }
+
+        #box2 > div { 
+            border: 3px solid black;
+            background-color: gold; 
+            width: 100px;
+            height: 100px;
+            margin-top: 45px;
+            border-radius: 50%;
+            transition-duration: 4s;
+        }
+
+        #box3 > div { 
+            border: 3px solid black;
+            background-color: orange; 
+            width: 100px;
+            height: 100px;
+            margin-top: 45px;
+            border-radius: 50%;
+            transition-duration: 5s;
+        }
+
+        #box4 > div { 
+            border: 3px solid black;
+            background-color: greenyellow; 
+            width: 100px;
+            height: 100px;
+            margin-top: 45px;
+            border-radius: 50%;
+            transition-duration: 6.5s;
+        }
+
+        #box5 > div { 
+            border: 3px solid black;
+            background-color: cornflowerblue; 
+            width: 100px;
+            height: 100px;
+            margin-top: 45px;
+            border-radius: 50%;
+            transition-duration: 4.5s;
+        }
+
+        #main:hover .house > div {
+            margin-left: 1095px;
+            transform: rotate(5400deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="main" style="width: 1200px; margin: 0 auto;">
+        <div id="box1" class="house">
+            <div>A</div>
+        </div>
+        <div id="box2" class="house">
+            <div>B</div>
+        </div>
+        <div id="box3" class="house">
+            <div>C</div>
+        </div>
+        <div id="box4" class="house">
+            <div>D</div>
+        </div>
+        <div id="box5" class="house">
+            <div>E</div>
+        </div>
+    </div>
+
+</body>
+</html>

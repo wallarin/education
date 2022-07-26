@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #main {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .item {
+            border: 1px solid black;
+            width: 300px;
+            height: 150px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .item input {
+            display: none;
+        }
+
+        .item label {
+            float: left;
+            display: block;
+            background-color: #eee;
+            height: 115px;
+            width: 100px;
+            text-align: center;
+            padding-top: 35px;
+            font-variant: small-caps;
+            font-weight: bold;
+            font-size: 3rem;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            cursor: pointer;
+        }
+
+        .item .disc {
+            width: 150px;
+            height: 150px;
+            background-position: center center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: 0px 120px;
+        }
+
+        .item::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #disc1 { 
+            border-radius: 50%;
+            background-image: url(images/lp01.png); 
+        }
+
+        #disc2 {
+            border-radius: 50%;
+            background-image: url(images/lp02.png); 
+        }
+
+        #disc3 { 
+            border-radius: 50%;
+            background-image: url(images/lp03.png); 
+        }
+
+        #disc4 { 
+            border-radius: 50%;
+            background-image: url(images/lp04.png); 
+        }
+
+        input[type=radio]:checked+label {
+            background-color: tomato;
+            color: white;
+        }
+
+        input[type=radio]:checked+label+div {
+            transition: linear;
+            transition: 1000s all;
+            transform: rotate(360000deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <h1>Music</h1>
+        <div class="item">
+            <input type="radio" name="rb" id="rb1">
+            <label for="rb1">Play</label>
+            <div class="disc" id="disc1"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb2">
+            <label for="rb2">Play</label>
+            <div class="disc" id="disc2"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb3">
+            <label for="rb3">Play</label>
+            <div class="disc" id="disc3"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb4">
+            <label for="rb4">Play</label>
+            <div class="disc" id="disc4"></div>
+        </div>
+    </div>		
+    
+</body>
+</html>

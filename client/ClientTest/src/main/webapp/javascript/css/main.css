@@ -1,0 +1,114 @@
+
+/* webapp > javascript > css > main.css */
+
+/* 수업용 공통 css */
+
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 업무할때는 하는게 좋다! 와일드카드 태그를 사용하면 느려진다. ㅠㅠ
+* {
+    padding: 0;
+    margin: 0;
+}
+*/
+
+/* PCDATA를 가질 수 있는 태그들 */
+body, h1, h2, h3, h4, h5, h6, div, span, p, ul, ol, li, dl, dt, dd, table, th, td, input, textarea, option, fieldset {
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: #444;
+}
+
+body, div, span, p, ul, ol, li, dl, dt, dd, table, th, td, input, textarea, option, fieldset {
+    font-size: 18px;
+    line-height: 1.6rem;
+}
+
+/* 단일 라인 클래스는 의외로 우리를 힘들게 할 수 있다.. */
+.box {
+    border: 1px solid black;
+}
+
+.box.small {
+    width: 100px;
+    height: 100px;
+}
+
+.box.medium {
+    width: 200px;
+    height: 200px;
+}
+
+.box.large {
+    width: 350px;
+    height: 350px;
+}
+
+.box.red {
+    background-color: tomato;
+}
+
+.box.blue {
+    background-color: cornflowerblue;
+}
+
+.box.yellow {
+    background-color: gold;
+}
+
+.box.margin-5 {
+    margin: 5px;
+}
+
+.box.margin-10 {
+    margin: 10px;
+}
+
+.box.margin-20 {
+    margin: 20px;
+}
+
+.box.padding-5 {
+    padding: 5px;
+}
+
+.box.padding-10 {
+    padding: 10px;
+}
+
+.box.padding-20 {
+    padding: 20px;
+}
+
+.table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid grey;
+    padding: 5px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: tomato;
+}
+
+input, select, textarea {
+    /* outline: none !important; */
+    /* important는 어떤 선택자도 다 이긴다.. */
+    outline: none;
+}
+
+input[type=text], input[type=password], textarea {
+    padding: 3px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        form input { 
+            margin: 7px; 
+            color: #777;
+            font-weight: bold;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form name="form2">
+        <input type="button" value="서울시 강남구 역삼동" name="btn1">
+        <input type="button" value="서울시 강남구 대치동" name="btn2">
+        <input type="button" value="서울시 강남구 도곡동" name="btn3">
+    </form>
+
+    <script>
+
+        document.form2.btn1.onclick = m1;
+        document.form2.btn2.onclick = m2;
+        document.form2.btn3.onclick = m3;
+
+        function m1() {
+            window.opener.form1.zipnumber.value = '06232';
+            window.opener.form1.address.value = '서울시 강남구 역삼동';
+            window.opener.form1.addressdetail.focus();
+            window.close();
+        }
+
+        function m2() {
+            window.opener.form1.zipnumber.value = '06291';
+            window.opener.form1.address.value = '서울시 강남구 대치동';
+            window.opener.form1.addressdetail.focus();
+            window.close();
+        }
+
+        function m3() {
+            window.opener.form1.zipnumber.value = '06267';
+            window.opener.form1.address.value = '서울시 강남구 도곡동';
+            window.opener.form1.addressdetail.focus();
+            window.close();
+        }
+
+    </script>
+
+</body>
+</html>

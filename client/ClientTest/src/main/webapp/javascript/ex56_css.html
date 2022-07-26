@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {
+            /* border: 1px solid black; */
+            display: flex;
+            width: 630px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            
+            margin: 0 auto;
+
+            transform: translate(0px, -100px) ;
+        }
+
+        #menu img {
+            transition: .5s all;
+        }
+
+        main {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+    </style>
+
+    <script>
+
+        // const item = document.getElementById('menu').children;
+        // alert(item);
+
+
+        //<body onload="">
+        //- <body> 태그가 브라우저에 의해서 실행되고 난 직후
+        function init() {
+            const item = document.getElementById('menu').children;
+            alert(item);
+        }
+
+        // 상단 script 이용시 사용방법
+        // window.onload = function() {}; > 코드가 짧아서 가장 많이 사용한다.
+        // window.document.onload = function() {};
+        // window.document.body.onload = function() {};
+
+        let olditem = null;
+
+        window.onload = function() {
+            const item = document.getElementById('menu').children;
+            
+            for(let i=0; i<item.length; i++) {
+                
+                item[i].onclick = function(event) {
+                    
+                    if (olditem != null) { //누군가 열려있다면??
+                        olditem.style.transform = 'translate(0px, 0px)';
+                    }
+
+                    if(event.target != olditem) {
+                        event.target.style.transform = 'translate(0px, 90px)';
+                        olditem = event.target;
+                    } else {
+                        event.target.style.transform = 'translate(0px, 0px)';
+                        olditem = null;
+                    }
+                };
+                
+            }
+        };
+
+
+    </script>
+
+</head>
+<!-- <body onload="init();"> -->
+<body>
+
+    <nav id="menu">
+        <img src="images/rect_icon01.png">
+        <img src="images/rect_icon02.png">
+        <img src="images/rect_icon03.png">
+        <img src="images/rect_icon04.png">
+        <img src="images/rect_icon05.png">
+    </nav>
+
+    <main>
+        <h1>Title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo laudantium eligendi illum consequatur impedit modi aliquid provident, architecto dolorum maiores explicabo est repudiandae numquam. Aperiam totam eveniet labore necessitatibus temporibus.
+        </p>
+        <p>
+            Nam omnis minus excepturi illo id molestias eligendi atque quo alias reiciendis saepe, temporibus nisi officia voluptatum beatae libero provident similique magni, quam accusantium inventore sint, ipsam architecto iste. Est.
+        </p>
+        <p>
+            Esse distinctio ab rerum dolore in reiciendis explicabo nostrum molestias et dignissimos doloremque obcaecati voluptatibus neque, sed, quas hic ad quis totam fuga mollitia ipsam consectetur! Quas ab commodi totam?
+        </p>
+        <p>
+            Eligendi eius, consequatur ad officia perspiciatis ea doloribus ullam consectetur quo saepe nihil quod tenetur et aut animi dolorum sapiente maxime earum cumque dolorem eos ex esse laboriosam? Culpa, ipsum?
+        </p>
+        <p>
+            Pariatur in ad suscipit distinctio non ducimus dolorum corporis rem dolor? Totam optio unde a excepturi quasi, exercitationem magni fugit, soluta debitis neque, illum sapiente numquam officiis eius recusandae voluptas.
+        </p>
+        <p>
+            Totam sint, perferendis excepturi quod, iste delectus deleniti harum illum soluta dolores iure sequi minus deserunt repellendus eveniet dicta itaque vitae molestias. Saepe nulla tempore numquam sapiente praesentium nam veritatis?
+        </p>
+        <p>
+            Soluta, quos? Architecto molestias ut ratione? Dolorem architecto, optio repudiandae ea ipsa voluptatibus quia distinctio aut illo quaerat? Est nesciunt vero hic laborum officia enim facilis suscipit odit quas rerum.
+        </p>
+        <p>
+            Magnam, ipsa ab! Perspiciatis, placeat ab animi magni hic suscipit voluptate, aliquid temporibus iure blanditiis dicta provident porro eveniet inventore nulla a sint, nemo quas maiores veniam natus sunt. Doloribus.
+        </p>
+        <p>
+            Nisi numquam harum velit explicabo aliquid, blanditiis veritatis fugit, itaque temporibus rem delectus unde, similique asperiores eos est voluptas ullam tempora maiores. Ab optio dignissimos modi nulla in. Hic, fuga.
+        </p>
+        <p>
+            Repellat, nemo sapiente molestiae minus quibusdam non sequi quaerat architecto cum, ratione expedita in et ipsa impedit autem, est eius ab deserunt consectetur similique. Labore quia illo praesentium hic et.
+        </p>
+    </main>
+
+</body>
+</html>

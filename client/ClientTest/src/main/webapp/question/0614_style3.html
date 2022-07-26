@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #oh {
+            border: 1px solid black;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="images/face10.png" id="oh">
+
+    <script>
+
+        var oh = document.getElementById('oh');
+
+        oh.style.left = '530px';
+        oh.style.top = '200px';
+
+        oh.onmouseover = function() {
+
+            var ox = parseInt(oh.style.left);
+            var oy= parseInt(oh.style.top);
+            
+            if ((parseInt(event.clientX) >= ox + 60) && parseInt(event.clientX) <= ox + 120) {
+                oh.style.left = ox - 60 + "px";
+            }
+            
+            if ((parseInt(event.clientX) <= ox + 60) && parseInt(event.clientX) >= ox) {
+                oh.style.right = ox + 60 + "px";
+            }
+        };
+
+    </script>
+    
+</body>
+</html>

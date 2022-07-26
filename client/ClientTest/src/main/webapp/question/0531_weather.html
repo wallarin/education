@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #content {
+            font-size: .7em;
+        }
+
+        h5 {
+            font-size: 1.1em;
+        }
+
+        #weather {
+            border: 1px solid gray;
+            width: 500px;
+            height: 210px;
+            padding: 0px 20px;
+        }
+
+        .date {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .smalldate {
+            font-size: .7em;
+            font-weight: normal;
+            color: #b3b3b3;
+        }
+
+        .wicon {
+            display: block;
+            background-image: url(images/icon.png);
+            width: 34px;
+            height: 34px;
+            background-size: 238px 204.34px;
+            margin-top: 10px;
+        }
+
+        .cloudrain {
+            background-position: 100px 342px;
+            /* border: 1px solid black; */
+        }
+
+        .cloud {
+            background-position: 135px 32px;
+        }
+
+        .shysun {
+            background-position: 204px 32px;
+        }
+
+        .rain {
+            background-position: 100px 32px;
+        }
+
+        #today {
+            display: inline-block;
+            width: 36px;
+            /* float: left; */
+            text-align: center;
+            background-color: #00c63c;
+            color: white;
+            font-size: .7em;
+            font-weight: bold;
+            padding: 1px;
+            border-radius: 10px;
+        }
+
+        .day.start {
+            display: inline-block;
+            border-right: 1px solid #e7e7e7;
+            padding: 0px 25px 0px 5px;
+        }
+
+        .day.other {
+            display: inline-block;
+            border-right: 1px solid #e7e7e7;
+            margin-left: 15px;
+            padding-right: 25px;
+            /* border: 1px solid black; */
+        }
+
+        .day.last {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .percent {
+            color: #b3b3b3;
+            float: left;
+            margin-left: 35px;
+            padding: 10px 5px 10px 5px;
+        }
+
+        .temp {
+            font-weight: bold;
+            /* border: 1px solid black; */
+            width: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        .rainblue {
+            color: #60c1f0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Naver Weather</h1>
+
+    <div id="content">
+        <div id="weather">
+            <h5>주간날씨</h5>
+            <div id="thursday" class="day start"><span class="date">목</span>
+                <span id="today">오늘</span>
+                <div class="wicon cloudrain"><span class="percent rainblue">70%</span></div>
+                <div class="wicon cloudrain"><span class="percent rainblue">60%</span></div>
+                <div class="temp">21°/25°</div>
+            </div>
+            <div id="friday" class="day other">
+                <div class="date">
+                    <span>금</span>
+                    <span class="smalldate">내일</span>
+                </div>
+                <div class="wicon cloudrain"><span class="percent rainblue">60%</span></div>
+                <div class="wicon cloud"><span class="percent">30%</span></div>
+                <div class="temp">21°/28°</div>
+            </div>
+            <div id="thursday" class="day other">
+                <div class="date">
+                    <span>토</span>
+                    <span class="smalldate">모레</span>
+                </div>
+                <div class="wicon cloud"><span class="percent">30%</span></div>
+                <div class="wicon shysun"><span class="percent">30%</span></div>
+                <div class="temp">21°/29°</div>
+            </div>
+            <div id="thursday" class="day other">
+                <div class="date">
+                    <span>일</span>
+                    <span class="smalldate">6.28.</span>
+                </div>
+                <div class="wicon shysun"><span class="percent">30%</span></div>
+                <div class="wicon rain"><span class="percent rainblue">60%</span></div>
+                <div class="temp">21°/31°</div>
+            </div>
+            <div id="thursday" class="day last">
+                <div class="date">
+                    <span>월</span>
+                    <span class="smalldate">6.29</span>
+                </div>
+                <div class="wicon shysun"><span class="percent">30%</span></div>
+                <div class="wicon rain"><span class="percent rainblue">60%</span></div>
+                <div class="temp">21°/29°</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

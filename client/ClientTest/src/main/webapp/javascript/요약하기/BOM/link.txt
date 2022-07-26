@@ -1,0 +1,14 @@
+document.linkname > 으로는 link에 접근할 수 없다.
+
+//1번 방식
+document.links[0] > 링크중 0번째에 접근
+
+//2번 방식
+document.links['linkname'] > name이 'linkname'인 link에 접근이
+
+
+
+.href = 'URL' > 링크의 'URL'을 변경한다.
+.target = '_blank' > 링크를 새 창으로 띄운다.
+.title = '도움말' > 링크의 풍선 도움말을 변경한다.
+.textContent = '값' > 링크에 표시된 글자를 '값'으로 변경한다.

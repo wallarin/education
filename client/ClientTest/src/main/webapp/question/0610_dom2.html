@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            color: #777;
+            font-weight: bold;
+        }
+
+        fieldset {
+            padding: 15px;
+            width: 150px;
+        }
+
+        fieldset div {
+            margin-bottom: 5px;
+        }
+
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 300px;
+        }
+
+        #tbl1 td, #tbl1 th {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>테이블</h1>
+
+    <fieldset>
+        <legend>색상 입력</legend>
+        <div>색상 &nbsp;&nbsp;&nbsp;: <input type="color" id="colorbox"></div>
+        <div>색상명 : <input type="text" size="15px"></div>
+        <input type="button" value="추가하기" id="btn1">
+    </fieldset>
+
+    <table id="tbl1">
+        <tr>
+            <th>색상명</th>
+            <th>코드값</th>
+        </tr>
+        <tr>
+            <td>노랑</td>
+            <td bgcolor="#FFFF00">#FFFF00</td>
+        </tr>
+        <tr>
+            <td>풀색</td>
+            <td bgcolor="#ACEF12">#ACEF12</td>
+        </tr>
+    </table>
+
+    <script>
+
+        
+
+    </script>
+    
+</body>
+</html>

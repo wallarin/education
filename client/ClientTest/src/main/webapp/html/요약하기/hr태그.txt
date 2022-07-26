@@ -1,0 +1,7 @@
+<hr> 속성
+1. size : 선의 두께
+2. width : 선의 너비(픽셀-절대크기, %-상대크기)
+3. align : 수평 정렬
+4. color : 선의 색상
+5. noshade : 그림자 유무
+6. title : 풍선도움말(topltip, hover text)

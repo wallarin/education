@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+
+        #box {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            margin: 50px;
+
+            /* 
+            
+                모서리 둥글기
+                - border-radius: px, %
+                - 단축의 1/2 = 최대값
+
+            */
+            /* border-radius: 100%; */
+
+            /* border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px; */
+
+            border-radius: 30px;
+            padding: 15px;
+        }
+
+        body { margin-bottom: 100px; }
+
+        #txt-search {
+            border: 1px solid #777;
+            border-radius: 50px;
+            padding: 3px 10px;
+            outline: none;
+            color: #555;
+        }
+
+        #btn-search {
+            border: 1px solid #777;
+            border-radius: 50px;
+            padding: 3px 10px;
+        }
+
+        /* .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+        } */
+
+        #btn-search i {
+            font-size: 2em;
+            color: tomato;
+        }
+
+        #list > img {
+            border-radius: 50%;
+        }
+
+        /* 폰트 아이콘 사용 이유 : 크기와 색상을 마음대로 지정할 수 있어서 */
+
+    </style>
+    <script src="https://kit.fontawesome.com/e4f03f4c6c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div id="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id unde consequatur ex neque sit autem architecto, maiores at perspiciatis, consectetur mollitia a iste nisi voluptas, eos labore? Aspernatur, omnis beatae!</div>
+
+    <hr>
+
+    <h1>검색</h1>
+    <input type="text" id="txt-search" placeholder="검색어를 입력하세요">
+    <button id="btn-search">
+        <!-- <span class="material-symbols-outlined">search</span>     -->
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Search
+    </button>
+
+    <hr>
+
+    <div id="list">
+        <img src="images/dog01.jpg" alt="">
+        <img src="images/dog02.jpg" alt="">
+        <img src="images/dog03.jpg" alt="">
+        <img src="images/dog04.jpg" alt="">
+        <img src="images/dog05.jpg" alt="">
+    </div>
+
+</body>
+</html>

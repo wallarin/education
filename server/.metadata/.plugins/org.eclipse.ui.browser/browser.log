@@ -1,0 +1,217 @@
+
+6월 20, 2022 15:34:06.38 NEW SESSION
+6월 20, 2022 15:34:06.38 [17508:19016:0620/153406.024:ERROR:device_event_log_impl.cc(214)] [15:34:06.024] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 20, 2022 15:34:06.38 [17508:19016:0620/153406.025:ERROR:device_event_log_impl.cc(214)] [15:34:06.025] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 20, 2022 15:35:03.788 [17508:9916:0620/153503.788:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 21, 2022 09:37:11.725 NEW SESSION
+6월 21, 2022 09:37:11.725 [4036:8516:0621/093711.723:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 21, 2022 10:03:15.835 [12724:4392:0621/100315.835:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 21, 2022 10:43:27.353 NEW SESSION
+6월 21, 2022 10:43:27.353 [17884:16392:0621/104327.351:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 21, 2022 15:07:36.262 [5828:17844:0621/150736.262:ERROR:device_event_log_impl.cc(214)] [15:07:36.262] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 15:07:36.264 [5828:17844:0621/150736.264:ERROR:device_event_log_impl.cc(214)] [15:07:36.264] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 15:08:33.951 [5828:15036:0621/150833.950:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 21, 2022 16:10:26.782 NEW SESSION
+6월 21, 2022 16:10:26.782 [2732:18980:0621/161026.781:ERROR:device_event_log_impl.cc(214)] [16:10:26.781] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 16:10:26.782 [2732:18980:0621/161026.782:ERROR:device_event_log_impl.cc(214)] [16:10:26.782] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 16:11:24.221 [2732:912:0621/161124.220:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 21, 2022 21:32:35.957 NEW SESSION
+6월 21, 2022 21:32:35.957 [3400:13700:0621/213235.956:ERROR:device_event_log_impl.cc(214)] [21:32:35.956] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 21:32:35.958 [3400:13700:0621/213235.957:ERROR:device_event_log_impl.cc(214)] [21:32:35.957] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 21:33:33.776 [3400:9120:0621/213333.776:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 21, 2022 21:41:22.885 [3400:13700:0621/214122.884:ERROR:device_event_log_impl.cc(214)] [21:41:22.884] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+6월 21, 2022 21:41:22.889 [3400:13700:0621/214122.888:ERROR:device_event_log_impl.cc(214)] [21:41:22.889] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+6월 21, 2022 22:22:35.794 [3400:13700:0621/222235.794:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+6월 21, 2022 22:22:35.796     at Hn.contentType (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:279896)
+6월 21, 2022 22:22:35.796     at new ve (devtools://devtools/bundled/devtools-frontend/front_end/models/bindings/bindings.js:1:55723)
+6월 21, 2022 22:22:35.796     at Le.resourceAdded (devtools://devtools/bundled/devtools-frontend/front_end/models/bindings/bindings.js:1:54984)
+6월 21, 2022 22:22:35.797     at Vn.dispatchEventToListeners (devtools://devtools/bundled/devtools-frontend/front_end/core/common/common.js:1:18605)
+6월 21, 2022 22:22:35.797     at Gn.addRequest (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:294366)
+6월 21, 2022 22:22:35.798     at Vn.onRequestFinished (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:286236)
+6월 21, 2022 22:22:35.798     at te.dispatchEventToListeners (devtools://devtools/bundled/devtools-frontend/front_end/core/common/common.js:1:18605)
+6월 21, 2022 22:22:35.799     at de.finishNetworkRequest (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:107119)
+6월 21, 2022 22:22:35.800     at de.loadingFinished (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:102609)
+6월 21, 2022 22:22:35.801     at g.dispatch (devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js:1:7307)", source: devtools://devtools/bundled/devtools-frontend/front_end/core/host/host.js (1)
+6월 21, 2022 22:22:35.967 [3400:13700:0621/222235.967:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+6월 21, 2022 22:22:35.968     at Hn.contentType (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:279896)
+6월 21, 2022 22:22:35.968     at new ve (devtools://devtools/bundled/devtools-frontend/front_end/models/bindings/bindings.js:1:55723)
+6월 21, 2022 22:22:35.968     at Le.resourceAdded (devtools://devtools/bundled/devtools-frontend/front_end/models/bindings/bindings.js:1:54984)
+6월 21, 2022 22:22:35.968     at Vn.dispatchEventToListeners (devtools://devtools/bundled/devtools-frontend/front_end/core/common/common.js:1:18605)
+6월 21, 2022 22:22:35.968     at Gn.addRequest (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:294366)
+6월 21, 2022 22:22:35.968     at Vn.onRequestFinished (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:286236)
+6월 21, 2022 22:22:35.969     at te.dispatchEventToListeners (devtools://devtools/bundled/devtools-frontend/front_end/core/common/common.js:1:18605)
+6월 21, 2022 22:22:35.969     at de.finishNetworkRequest (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:107119)
+6월 21, 2022 22:22:35.969     at de.loadingFinished (devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js:1:102609)
+6월 21, 2022 22:22:35.969     at g.dispatch (devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js:1:7307)", source: devtools://devtools/bundled/devtools-frontend/front_end/core/host/host.js (1)
+6월 21, 2022 23:30:47.387 [17272:11108:0621/233047.386:ERROR:device_event_log_impl.cc(214)] [23:30:47.386] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 23:30:47.387 [17272:11108:0621/233047.387:ERROR:device_event_log_impl.cc(214)] [23:30:47.386] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 21, 2022 23:31:45.94 [17272:13528:0621/233145.094:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 22, 2022 09:19:32.394 NEW SESSION
+6월 22, 2022 09:19:32.394 [16408:6336:0622/091932.393:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 14:07:34.515 [3840:8236:0622/140734.514:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 14:17:08.457 [3840:12844:0622/141708.455:ERROR:device_event_log_impl.cc(214)] [14:17:08.456] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+6월 22, 2022 14:30:49.348 [6876:18344:0622/143049.347:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 14:32:56.147 [18084:8156:0622/143256.146:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 15:17:40.105 [14352:14188:0622/151740.103:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 16:19:24.219 [11776:3600:0622/161924.218:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 17:42:44.749 [14180:18616:0622/174244.748:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 22, 2022 17:56:53.255 NEW SESSION
+6월 22, 2022 17:56:53.256 [5692:17712:0622/175653.254:ERROR:device_event_log_impl.cc(214)] [17:56:53.254] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 22, 2022 17:56:53.256 [5692:17712:0622/175653.254:ERROR:device_event_log_impl.cc(214)] [17:56:53.255] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 22, 2022 17:57:50.377 [5692:8616:0622/175750.376:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 18:21:53.564 [5692:17712:0622/182153.563:ERROR:device_event_log_impl.cc(214)] [18:21:53.563] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+6월 22, 2022 23:17:34.79 NEW SESSION
+6월 22, 2022 23:17:34.79 [336:16012:0622/231734.076:ERROR:device_event_log_impl.cc(214)] [23:17:34.076] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 22, 2022 23:18:31.799 [336:8508:0622/231831.798:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 22, 2022 23:24:19.727 [336:16012:0622/232419.726:ERROR:device_event_log_impl.cc(214)] [23:24:19.725] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+6월 23, 2022 08:58:15.993 NEW SESSION
+6월 23, 2022 08:58:15.995 [4752:16672:0623/085815.988:ERROR:device_event_log_impl.cc(214)] [08:58:15.989] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 08:58:15.996 [4752:16672:0623/085815.990:ERROR:device_event_log_impl.cc(214)] [08:58:15.991] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 08:59:13.648 [4752:6624:0623/085913.648:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 23, 2022 09:19:03.675 NEW SESSION
+6월 23, 2022 09:19:03.676 [3000:11572:0623/091903.674:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 23, 2022 10:24:40.111 [4252:6012:0623/102440.110:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 23, 2022 11:17:36.255 [11888:11752:0623/111736.254:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 23, 2022 12:46:37.811 NEW SESSION
+6월 23, 2022 12:46:37.811 [16796:12076:0623/124637.809:ERROR:device_event_log_impl.cc(214)] [12:46:37.810] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 12:46:37.811 [16796:12076:0623/124637.811:ERROR:device_event_log_impl.cc(214)] [12:46:37.811] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 12:47:34.632 [16796:7104:0623/124734.632:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 23, 2022 15:18:43.806 [18756:13188:0623/151843.804:ERROR:device_event_log_impl.cc(214)] [15:18:43.805] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 15:18:43.807 [18756:13188:0623/151843.806:ERROR:device_event_log_impl.cc(214)] [15:18:43.807] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 15:19:41.500 [18756:19756:0623/151941.498:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 23, 2022 16:29:47.857 [11204:9328:0623/162947.856:ERROR:device_event_log_impl.cc(214)] [16:29:47.856] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 16:29:47.858 [11204:9328:0623/162947.858:ERROR:device_event_log_impl.cc(214)] [16:29:47.858] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 16:30:45.586 [11204:8312:0623/163045.586:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 23, 2022 17:05:09.597 [11552:8928:0623/170509.596:ERROR:device_event_log_impl.cc(214)] [17:05:09.596] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 17:05:09.598 [11552:8928:0623/170509.598:ERROR:device_event_log_impl.cc(214)] [17:05:09.597] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 17:06:07.146 [11552:14788:0623/170607.146:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 23, 2022 21:55:11.171 NEW SESSION
+6월 23, 2022 21:55:11.171 [14048:12264:0623/215511.170:ERROR:device_event_log_impl.cc(214)] [21:55:11.169] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 21:55:11.173 [14048:12264:0623/215511.171:ERROR:device_event_log_impl.cc(214)] [21:55:11.171] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 21:56:08.762 [14048:6724:0623/215608.761:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 23, 2022 23:51:45.591 [9408:17112:0623/235145.590:ERROR:device_event_log_impl.cc(214)] [23:51:45.591] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 23, 2022 23:51:45.592 [9408:17112:0623/235145.591:ERROR:device_event_log_impl.cc(214)] [23:51:45.592] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+6월 24, 2022 09:54:31.10 NEW SESSION
+6월 24, 2022 09:54:31.10 [8956:10884:0624/095431.008:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 24, 2022 10:13:28.736 [8956:3612:0624/101328.735:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+FNh3lnuYm9Te9tMZ8MaHTvxc2/tysE13NRpwMQbZVk='), or a nonce ('nonce-...') is required to enable inline execution. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+6월 24, 2022 10:13:28.736 ", source: data:text/html;charset=utf-8,%3C!doctype%20html%3E%3Chtml%20lang=%22ko%22%3E%3Chead%3E%3Ctitle%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/title%3E%3Cstyle%20type=%22text/css%22%3Ebody%20%7Bfont-family:Tahoma,Arial,sans-serif;%7D%20h1,%20h2,%20h3,%20b%20%7Bcolor:white;background-color:%23525D76;%7D%20h1%20%7Bfont-size:22px;%7D%20h2%20%7Bfont-size:16px;%7D%20h3%20%7Bfont-size:14px;%7D%20p%20%7Bfont-size:12px;%7D%20a%20%7Bcolor:black;%7D%20.line%20%7Bheight:1px;background-color:%23525D76;border:none;%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Ch1%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/h1%3E%3Chr%20class=%22line%22%20/%3E%3Cp%3E%3Cb%3E%ED%83%80%EC%9E%85%3C/b%3E%20%EC%83%81%ED%83%9C%20%EB%B3%B4%EA%B3%A0%3C/p%3E%3Cp%3E%3Cb%3E%EB%A9%94%EC%8B%9C%EC%A7%80%3C/b%3E%20%EC%9A%94%EC%B2%AD%EB%90%9C%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%5B&%2347;favicon.ico%5D%EC%9D%80(%EB%8A%94)%20%EA%B0%80%EC%9A%A9%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Cp%3E%3Cb%3E%EC%84%A4%EB%AA%85%3C/b%3E%20Origin%20%EC%84%9C%EB%B2%84%EA%B0%80%20%EB%8C%80%EC%83%81%20%EB%A6%AC%EC%86%8C%EC%8A%A4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%98%84%EC%9E%AC%EC%9D%98%20representation%EC%9D%84%20%EC%B0%BE%EC%A7%80%20%EB%AA%BB%ED%96%88%EA%B1%B0%EB%82%98,%20%EA%B7%B8%EA%B2%83%EC%9D%B4%20%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80%EB%A5%BC%20%EB%B0%9D%ED%9E%88%EB%A0%A4%20%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Chr%20class=%22line%22%20/%3E%3Ch3%3EApache%20Tomcat/8.5.78%3C/h3%3E%3C/body%3E%3C/html%3E (1)
+6월 24, 2022 10:13:31.704 [8956:3612:0624/101331.704:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+FNh3lnuYm9Te9tMZ8MaHTvxc2/tysE13NRpwMQbZVk='), or a nonce ('nonce-...') is required to enable inline execution. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+6월 24, 2022 10:13:31.705 ", source: data:text/html;charset=utf-8,%3C!doctype%20html%3E%3Chtml%20lang=%22ko%22%3E%3Chead%3E%3Ctitle%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/title%3E%3Cstyle%20type=%22text/css%22%3Ebody%20%7Bfont-family:Tahoma,Arial,sans-serif;%7D%20h1,%20h2,%20h3,%20b%20%7Bcolor:white;background-color:%23525D76;%7D%20h1%20%7Bfont-size:22px;%7D%20h2%20%7Bfont-size:16px;%7D%20h3%20%7Bfont-size:14px;%7D%20p%20%7Bfont-size:12px;%7D%20a%20%7Bcolor:black;%7D%20.line%20%7Bheight:1px;background-color:%23525D76;border:none;%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Ch1%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/h1%3E%3Chr%20class=%22line%22%20/%3E%3Cp%3E%3Cb%3E%ED%83%80%EC%9E%85%3C/b%3E%20%EC%83%81%ED%83%9C%20%EB%B3%B4%EA%B3%A0%3C/p%3E%3Cp%3E%3Cb%3E%EB%A9%94%EC%8B%9C%EC%A7%80%3C/b%3E%20%EC%9A%94%EC%B2%AD%EB%90%9C%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%5B&%2347;favicon.ico%5D%EC%9D%80(%EB%8A%94)%20%EA%B0%80%EC%9A%A9%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Cp%3E%3Cb%3E%EC%84%A4%EB%AA%85%3C/b%3E%20Origin%20%EC%84%9C%EB%B2%84%EA%B0%80%20%EB%8C%80%EC%83%81%20%EB%A6%AC%EC%86%8C%EC%8A%A4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%98%84%EC%9E%AC%EC%9D%98%20representation%EC%9D%84%20%EC%B0%BE%EC%A7%80%20%EB%AA%BB%ED%96%88%EA%B1%B0%EB%82%98,%20%EA%B7%B8%EA%B2%83%EC%9D%B4%20%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80%EB%A5%BC%20%EB%B0%9D%ED%9E%88%EB%A0%A4%20%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Chr%20class=%22line%22%20/%3E%3Ch3%3EApache%20Tomcat/8.5.78%3C/h3%3E%3C/body%3E%3C/html%3E (1)
+6월 24, 2022 12:32:38.568 [18972:12536:0624/123238.567:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 24, 2022 14:08:44.750 [1356:11924:0624/140844.749:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 24, 2022 17:05:39.981 [1356:9028:0624/170539.980:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+FNh3lnuYm9Te9tMZ8MaHTvxc2/tysE13NRpwMQbZVk='), or a nonce ('nonce-...') is required to enable inline execution. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+6월 24, 2022 17:05:39.981 ", source: data:text/html;charset=utf-8,%3C!doctype%20html%3E%3Chtml%20lang=%22ko%22%3E%3Chead%3E%3Ctitle%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/title%3E%3Cstyle%20type=%22text/css%22%3Ebody%20%7Bfont-family:Tahoma,Arial,sans-serif;%7D%20h1,%20h2,%20h3,%20b%20%7Bcolor:white;background-color:%23525D76;%7D%20h1%20%7Bfont-size:22px;%7D%20h2%20%7Bfont-size:16px;%7D%20h3%20%7Bfont-size:14px;%7D%20p%20%7Bfont-size:12px;%7D%20a%20%7Bcolor:black;%7D%20.line%20%7Bheight:1px;background-color:%23525D76;border:none;%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Ch1%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/h1%3E%3Chr%20class=%22line%22%20/%3E%3Cp%3E%3Cb%3E%ED%83%80%EC%9E%85%3C/b%3E%20%EC%83%81%ED%83%9C%20%EB%B3%B4%EA%B3%A0%3C/p%3E%3Cp%3E%3Cb%3E%EB%A9%94%EC%8B%9C%EC%A7%80%3C/b%3E%20%EC%9A%94%EC%B2%AD%EB%90%9C%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%5B&%2347;jsp&%2347;gallery&%2347;images&%2347;1.png%5D%EC%9D%80(%EB%8A%94)%20%EA%B0%80%EC%9A%A9%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Cp%3E%3Cb%3E%EC%84%A4%EB%AA%85%3C/b%3E%20Origin%20%EC%84%9C%EB%B2%84%EA%B0%80%20%EB%8C%80%EC%83%81%20%EB%A6%AC%EC%86%8C%EC%8A%A4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%98%84%EC%9E%AC%EC%9D%98%20representation%EC%9D%84%20%EC%B0%BE%EC%A7%80%20%EB%AA%BB%ED%96%88%EA%B1%B0%EB%82%98,%20%EA%B7%B8%EA%B2%83%EC%9D%B4%20%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80%EB%A5%BC%20%EB%B0%9D%ED%9E%88%EB%A0%A4%20%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Chr%20class=%22line%22%20/%3E%3Ch3%3EApache%20Tomcat/8.5.78%3C/h3%3E%3C/body%3E%3C/html%3E (1)
+6월 24, 2022 17:05:41.348 [1356:9028:0624/170541.348:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+FNh3lnuYm9Te9tMZ8MaHTvxc2/tysE13NRpwMQbZVk='), or a nonce ('nonce-...') is required to enable inline execution. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+6월 24, 2022 17:05:41.349 ", source: data:text/html;charset=utf-8,%3C!doctype%20html%3E%3Chtml%20lang=%22ko%22%3E%3Chead%3E%3Ctitle%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/title%3E%3Cstyle%20type=%22text/css%22%3Ebody%20%7Bfont-family:Tahoma,Arial,sans-serif;%7D%20h1,%20h2,%20h3,%20b%20%7Bcolor:white;background-color:%23525D76;%7D%20h1%20%7Bfont-size:22px;%7D%20h2%20%7Bfont-size:16px;%7D%20h3%20%7Bfont-size:14px;%7D%20p%20%7Bfont-size:12px;%7D%20a%20%7Bcolor:black;%7D%20.line%20%7Bheight:1px;background-color:%23525D76;border:none;%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Ch1%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/h1%3E%3Chr%20class=%22line%22%20/%3E%3Cp%3E%3Cb%3E%ED%83%80%EC%9E%85%3C/b%3E%20%EC%83%81%ED%83%9C%20%EB%B3%B4%EA%B3%A0%3C/p%3E%3Cp%3E%3Cb%3E%EB%A9%94%EC%8B%9C%EC%A7%80%3C/b%3E%20%EC%9A%94%EC%B2%AD%EB%90%9C%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%5B&%2347;jsp&%2347;gallery&%2347;images&%2347;rect_icon10.png.png%5D%EC%9D%80(%EB%8A%94)%20%EA%B0%80%EC%9A%A9%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Cp%3E%3Cb%3E%EC%84%A4%EB%AA%85%3C/b%3E%20Origin%20%EC%84%9C%EB%B2%84%EA%B0%80%20%EB%8C%80%EC%83%81%20%EB%A6%AC%EC%86%8C%EC%8A%A4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%98%84%EC%9E%AC%EC%9D%98%20representation%EC%9D%84%20%EC%B0%BE%EC%A7%80%20%EB%AA%BB%ED%96%88%EA%B1%B0%EB%82%98,%20%EA%B7%B8%EA%B2%83%EC%9D%B4%20%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80%EB%A5%BC%20%EB%B0%9D%ED%9E%88%EB%A0%A4%20%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Chr%20class=%22line%22%20/%3E%3Ch3%3EApache%20Tomcat/8.5.78%3C/h3%3E%3C/body%3E%3C/html%3E (1)
+6월 24, 2022 17:05:42.260 [1356:9028:0624/170542.259:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+FNh3lnuYm9Te9tMZ8MaHTvxc2/tysE13NRpwMQbZVk='), or a nonce ('nonce-...') is required to enable inline execution. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+6월 24, 2022 17:05:42.260 ", source: data:text/html;charset=utf-8,%3C!doctype%20html%3E%3Chtml%20lang=%22ko%22%3E%3Chead%3E%3Ctitle%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/title%3E%3Cstyle%20type=%22text/css%22%3Ebody%20%7Bfont-family:Tahoma,Arial,sans-serif;%7D%20h1,%20h2,%20h3,%20b%20%7Bcolor:white;background-color:%23525D76;%7D%20h1%20%7Bfont-size:22px;%7D%20h2%20%7Bfont-size:16px;%7D%20h3%20%7Bfont-size:14px;%7D%20p%20%7Bfont-size:12px;%7D%20a%20%7Bcolor:black;%7D%20.line%20%7Bheight:1px;background-color:%23525D76;border:none;%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Ch1%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/h1%3E%3Chr%20class=%22line%22%20/%3E%3Cp%3E%3Cb%3E%ED%83%80%EC%9E%85%3C/b%3E%20%EC%83%81%ED%83%9C%20%EB%B3%B4%EA%B3%A0%3C/p%3E%3Cp%3E%3Cb%3E%EB%A9%94%EC%8B%9C%EC%A7%80%3C/b%3E%20%EC%9A%94%EC%B2%AD%EB%90%9C%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%5B&%2347;jsp&%2347;gallery&%2347;images&%2347;puzzle.png.png%5D%EC%9D%80(%EB%8A%94)%20%EA%B0%80%EC%9A%A9%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Cp%3E%3Cb%3E%EC%84%A4%EB%AA%85%3C/b%3E%20Origin%20%EC%84%9C%EB%B2%84%EA%B0%80%20%EB%8C%80%EC%83%81%20%EB%A6%AC%EC%86%8C%EC%8A%A4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%98%84%EC%9E%AC%EC%9D%98%20representation%EC%9D%84%20%EC%B0%BE%EC%A7%80%20%EB%AA%BB%ED%96%88%EA%B1%B0%EB%82%98,%20%EA%B7%B8%EA%B2%83%EC%9D%B4%20%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80%EB%A5%BC%20%EB%B0%9D%ED%9E%88%EB%A0%A4%20%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Chr%20class=%22line%22%20/%3E%3Ch3%3EApache%20Tomcat/8.5.78%3C/h3%3E%3C/body%3E%3C/html%3E (1)
+6월 24, 2022 17:05:42.741 [1356:9028:0624/170542.740:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+FNh3lnuYm9Te9tMZ8MaHTvxc2/tysE13NRpwMQbZVk='), or a nonce ('nonce-...') is required to enable inline execution. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+6월 24, 2022 17:05:42.741 ", source: data:text/html;charset=utf-8,%3C!doctype%20html%3E%3Chtml%20lang=%22ko%22%3E%3Chead%3E%3Ctitle%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/title%3E%3Cstyle%20type=%22text/css%22%3Ebody%20%7Bfont-family:Tahoma,Arial,sans-serif;%7D%20h1,%20h2,%20h3,%20b%20%7Bcolor:white;background-color:%23525D76;%7D%20h1%20%7Bfont-size:22px;%7D%20h2%20%7Bfont-size:16px;%7D%20h3%20%7Bfont-size:14px;%7D%20p%20%7Bfont-size:12px;%7D%20a%20%7Bcolor:black;%7D%20.line%20%7Bheight:1px;background-color:%23525D76;border:none;%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Ch1%3EHTTP%20%EC%83%81%ED%83%9C%20404%20%E2%80%93%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EC%9D%8C%3C/h1%3E%3Chr%20class=%22line%22%20/%3E%3Cp%3E%3Cb%3E%ED%83%80%EC%9E%85%3C/b%3E%20%EC%83%81%ED%83%9C%20%EB%B3%B4%EA%B3%A0%3C/p%3E%3Cp%3E%3Cb%3E%EB%A9%94%EC%8B%9C%EC%A7%80%3C/b%3E%20%EC%9A%94%EC%B2%AD%EB%90%9C%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%5B&%2347;jsp&%2347;gallery&%2347;images&%2347;placeimg_500_200_people.jpg.png%5D%EC%9D%80(%EB%8A%94)%20%EA%B0%80%EC%9A%A9%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Cp%3E%3Cb%3E%EC%84%A4%EB%AA%85%3C/b%3E%20Origin%20%EC%84%9C%EB%B2%84%EA%B0%80%20%EB%8C%80%EC%83%81%20%EB%A6%AC%EC%86%8C%EC%8A%A4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%98%84%EC%9E%AC%EC%9D%98%20representation%EC%9D%84%20%EC%B0%BE%EC%A7%80%20%EB%AA%BB%ED%96%88%EA%B1%B0%EB%82%98,%20%EA%B7%B8%EA%B2%83%EC%9D%B4%20%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80%EB%A5%BC%20%EB%B0%9D%ED%9E%88%EB%A0%A4%20%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%3C/p%3E%3Chr%20class=%22line%22%20/%3E%3Ch3%3EApache%20Tomcat/8.5.78%3C/h3%3E%3C/body%3E%3C/html%3E (1)
+6월 24, 2022 18:02:27.858 [6012:7836:0624/180227.858:ERROR:device_event_log_impl.cc(214)] [18:02:27.857] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 24, 2022 18:02:27.859 [6012:7836:0624/180227.859:ERROR:device_event_log_impl.cc(214)] [18:02:27.858] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 24, 2022 18:03:25.816 [6012:18168:0624/180325.816:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 24, 2022 19:02:54.483 [6012:7836:0624/190254.483:ERROR:device_event_log_impl.cc(214)] [19:02:54.451] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+6월 24, 2022 19:02:54.729 [6012:7836:0624/190254.729:ERROR:device_event_log_impl.cc(214)] [19:02:54.729] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+6월 24, 2022 23:52:40.408 [6012:2952:0624/235240.407:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 24, 2022 23:52:40.892 [6012:7836:0624/235240.891:ERROR:device_event_log_impl.cc(214)] [23:52:40.889] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+6월 24, 2022 23:52:41.542 [6012:7836:0624/235241.541:ERROR:device_event_log_impl.cc(214)] [23:52:41.542] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+6월 25, 2022 24:08:42.271 NEW SESSION
+6월 25, 2022 24:08:42.271 [17084:14892:0625/000842.269:ERROR:device_event_log_impl.cc(214)] [00:08:42.268] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 25, 2022 24:08:42.271 [17084:14892:0625/000842.270:ERROR:device_event_log_impl.cc(214)] [00:08:42.269] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 25, 2022 24:09:40.80 [17084:15788:0625/000940.079:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 25, 2022 24:21:08.248 [7008:11576:0625/002108.247:ERROR:device_event_log_impl.cc(214)] [00:21:08.247] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 25, 2022 24:21:08.250 [7008:11576:0625/002108.250:ERROR:device_event_log_impl.cc(214)] [00:21:08.249] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 25, 2022 24:22:06.40 [7008:15256:0625/002206.040:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 26, 2022 24:48:36.97 NEW SESSION
+6월 26, 2022 24:48:36.97 [10684:14216:0626/004836.095:ERROR:device_event_log_impl.cc(214)] [00:48:36.095] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 26, 2022 24:48:36.98 [10684:14216:0626/004836.095:ERROR:device_event_log_impl.cc(214)] [00:48:36.096] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 26, 2022 24:49:33.426 [10684:3060:0626/004933.426:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 26, 2022 20:37:39.891 NEW SESSION
+6월 26, 2022 20:37:39.892 [7160:2740:0626/203739.890:ERROR:device_event_log_impl.cc(214)] [20:37:39.890] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 26, 2022 20:37:39.892 [7160:2740:0626/203739.891:ERROR:device_event_log_impl.cc(214)] [20:37:39.892] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 26, 2022 20:38:36.672 [7160:8820:0626/203836.670:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 26, 2022 23:00:48.968 [4316:8012:0626/230048.967:ERROR:device_event_log_impl.cc(214)] [23:00:48.967] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 26, 2022 23:00:48.968 [4316:8012:0626/230048.968:ERROR:device_event_log_impl.cc(214)] [23:00:48.967] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 26, 2022 23:01:46.843 [4316:13812:0626/230146.843:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 27, 2022 09:33:29.101 NEW SESSION
+6월 27, 2022 09:33:29.101 [11304:4824:0627/093329.099:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 10:18:58.305 [13460:1968:0627/101858.305:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 11:15:28.164 [7788:12504:0627/111528.164:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 11:38:47.757 [3136:7572:0627/113847.756:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 11:51:22.677 [9468:3748:0627/115122.676:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 12:14:25.801 [728:17420:0627/121425.801:ERROR:device_event_log_impl.cc(214)] [12:14:25.802] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 27, 2022 12:14:25.803 [728:17420:0627/121425.803:ERROR:device_event_log_impl.cc(214)] [12:14:25.803] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+6월 27, 2022 12:15:22.595 [728:4304:0627/121522.594:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 12:26:18.357 [728:17420:0627/122618.356:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 27, 2022 12:26:33.350 [728:17420:0627/122633.349:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 27, 2022 12:27:03.104 [728:17420:0627/122703.103:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 27, 2022 14:07:19.583 [1740:3056:0627/140719.583:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 27, 2022 16:03:55.688 [4952:17976:0627/160355.688:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 28, 2022 09:19:37.197 NEW SESSION
+6월 28, 2022 09:19:37.197 [7456:10076:0628/091937.193:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 28, 2022 09:25:41.590 [18396:8800:0628/092541.589:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 28, 2022 14:40:45.484 NEW SESSION
+6월 28, 2022 14:40:45.484 [14072:19576:0628/144045.480:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+6월 29, 2022 09:31:20.747 NEW SESSION
+6월 29, 2022 09:31:20.747 [1052:13652:0629/093120.745:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+7월 04, 2022 09:14:31.408 NEW SESSION
+7월 04, 2022 09:14:31.408 [5932:16248:0704/091431.405:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 04, 2022 13:12:16.35 [5932:2852:0704/131216.034:ERROR:device_event_log_impl.cc(214)] [13:12:16.034] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+7월 04, 2022 14:14:31.408 [5932:5032:0704/141431.407:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 04, 2022 14:16:54.271 [5932:2852:0704/141654.271:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+7월 05, 2022 23:25:56.399 NEW SESSION
+7월 05, 2022 23:25:56.399 [7260:7948:0705/232556.397:ERROR:device_event_log_impl.cc(214)] [23:25:56.397] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 05, 2022 23:25:56.400 [7260:7948:0705/232556.398:ERROR:device_event_log_impl.cc(214)] [23:25:56.398] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 05, 2022 23:26:54.61 [7260:14280:0705/232654.060:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+7월 06, 2022 09:15:38.844 NEW SESSION
+7월 06, 2022 09:15:38.844 [6236:10020:0706/091538.843:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 06, 2022 09:32:37.594 [6236:4352:0706/093237.594:ERROR:CONSOLE(1)] "Refused to apply inline style because it violates the following Content Security Policy directive: "default-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-4Su6mBWzEIFnH4pAGMOuaeBrstwJN4Z3pq/s1Kn4/KQ='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. Note also that 'style-src' was not explicitly set, so 'default-src' is used as a fallback.
+7월 06, 2022 09:32:37.595 ", source: data:text/plain,%C3%AD%E2%84%A2%C2%8D%C3%AA%C2%B8%C2%B8%C3%AB%C2%8F%E2%84%A2 (1)
+7월 06, 2022 12:33:14.212 [6236:13208:0706/123314.212:ERROR:mcs_client.cc(756)] Received close command, resetting connection.
+7월 06, 2022 14:15:38.852 [6236:7928:0706/141538.851:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 06, 2022 14:58:39.345 [1868:17820:0706/145839.345:ERROR:device_event_log_impl.cc(214)] [14:58:39.345] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 06, 2022 14:58:39.346 [1868:17820:0706/145839.346:ERROR:device_event_log_impl.cc(214)] [14:58:39.346] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 06, 2022 14:59:37.311 [1868:14704:0706/145937.310:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 06, 2022 20:54:50.200 [1868:19036:0706/205450.199:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 06, 2022 20:54:50.899 [1868:17820:0706/205450.899:ERROR:device_event_log_impl.cc(214)] [20:54:50.897] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+7월 06, 2022 20:54:52.163 [1868:17820:0706/205452.162:ERROR:device_event_log_impl.cc(214)] [20:54:52.162] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+7월 06, 2022 21:19:07.91 [1868:17820:0706/211907.090:ERROR:device_event_log_impl.cc(214)] [21:19:07.070] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+7월 06, 2022 21:19:07.325 [1868:17820:0706/211907.325:ERROR:device_event_log_impl.cc(214)] [21:19:07.321] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+7월 06, 2022 23:36:20.849 NEW SESSION
+7월 06, 2022 23:36:20.849 [1348:14112:0706/233620.847:ERROR:device_event_log_impl.cc(214)] [23:36:20.848] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 06, 2022 23:36:20.850 [1348:14112:0706/233620.849:ERROR:device_event_log_impl.cc(214)] [23:36:20.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 06, 2022 23:37:18.303 [1348:8804:0706/233718.303:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+7월 08, 2022 10:35:03.806 NEW SESSION
+7월 08, 2022 10:35:03.806 [1984:14620:0708/103503.803:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 08, 2022 11:39:28.903 [1984:8500:0708/113928.902:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+7월 08, 2022 15:35:03.814 [1984:3088:0708/153503.813:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+7월 19, 2022 12:27:24.659 NEW SESSION
+7월 19, 2022 12:27:24.659 [16580:10948:0719/122724.657:ERROR:device_event_log_impl.cc(214)] [12:27:24.657] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 19, 2022 12:27:24.660 [16580:10948:0719/122724.658:ERROR:device_event_log_impl.cc(214)] [12:27:24.658] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+7월 19, 2022 12:28:22.449 [16580:9964:0719/122822.448:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 19, 2022 17:28:22.457 [16580:12852:0719/172822.456:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

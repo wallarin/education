@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #cat {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            transition: 1s all;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="images/catty01.png" id="cat">
+
+    <script>
+
+        const cat = document.getElementById('cat');
+        //처음에 고양이가 순간이동을 했었는데 그 이유는 css에서 left값과 top값이 없어서였다..
+
+        // window.onload = function() {
+        //     cat = document.getElementById('cat')
+        // }
+
+        window.onclick = function(event) {
+            cat.style.left = event.clientX - 75 + 'px';
+            cat.style.top = event.clientY - 75 + 'px';
+        }
+
+    </script>
+    
+</body>
+</html>

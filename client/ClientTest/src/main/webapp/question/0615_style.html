@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        body {
+            color: #777;
+            margin: 40px;
+            font-size: 1.3rem;
+            font-family: 'GmarketSansMedium';
+        }
+
+        #textbox {
+            color: #777;
+            width: 100%;
+            font-size: 3em;
+            outline: none;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>제목입니다.</h1>
+    <input type="text" id="textbox">
+    <hr>
+    <h2>다른 내용입니다.</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo omnis animi eaque dolore repudiandae debitis? Sint aspernatur placeat mollitia, aliquid hic quisquam quos quia culpa corporis doloremque velit maiores et ab. Minus in ducimus iure dignissimos, cum ratione eos ipsum eveniet labore, alias fugiat itaque tempora. Ut, dolorum. Quasi, adipisci!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vel nesciunt eum reiciendis mollitia aliquid, suscipit pariatur? Laboriosam itaque dolorem rem assumenda voluptatibus a sit molestiae molestias laudantium explicabo, eligendi, consequuntur commodi animi beatae ratione iusto autem aliquam eveniet deserunt ut eos quae, maxime eaque. Non, incidunt possimus. Quas, tenetur!
+    </p>
+    <p>
+        Quas dolorem nihil quibusdam illum repellendus, quis obcaecati voluptas at voluptatum ex voluptate adipisci numquam aliquid nam eum modi aperiam sunt? Accusantium aperiam veniam quaerat eaque impedit commodi repellat sunt blanditiis, enim similique vel labore quos facilis reprehenderit deserunt, eligendi officia nobis ducimus dicta illo. Omnis dolor maxime illum consequatur.
+    </p>
+    <p>
+        Eveniet autem vero aliquam iste provident blanditiis repellendus illum consequatur consectetur distinctio quasi, illo pariatur laborum delectus quo recusandae. Quo animi obcaecati assumenda aperiam mollitia beatae voluptate consequuntur expedita voluptatum quasi dolore provident, unde repudiandae cumque eius incidunt natus vero laudantium dolor aliquam dolorem quia suscipit optio. Accusantium, ut provident.
+    </p>
+
+    <script>
+
+        document.getElementById('textbox').onkeydown = function() {
+
+				setTimeout(function() {
+					document.body.style.transform = 'translate(5px, 10px)';
+				}, 5);
+				setTimeout(function() {
+					document.body.style.transform = "translate(0px, 0px)";
+				}, 20);
+                
+        };
+
+    </script>
+    
+</body>
+</html>

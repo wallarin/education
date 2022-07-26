@@ -1,0 +1,9 @@
+border: 1px solid black; ==> 선굵기 / 직선 / 선색상
+
+
+border-width: 1px; ==> 테두리 선 굵기 지정
+border-style ==> 테두리의 모양 지정 (solid, dotted, dashed)
+
+
+
+outline은 객체 영역에 포함이 되지 않는다.

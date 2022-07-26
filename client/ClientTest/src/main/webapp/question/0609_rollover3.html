@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        form {
+            border: 1px solid black;
+            width: 560px;
+            margin: 30px 0px 5px 30px;
+        }
+
+        form > img {
+            padding: 5px 0px 5px 5px;
+        }
+
+        #txt1 {
+            margin-left: 30px;
+            width: 550px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            border : 0px;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form name="form1">
+        <img src="images/img01.jpg" name="img1">
+        <img src="images/img02.jpg" name="img2">
+        <img src="images/img03.jpg" name="img3">
+        <br>
+    </form>
+    <input type="text" name="txt1" id="txt1" readonly>
+
+    <script>
+
+        var img1 = document.images["img1"];
+        var img2 = document.images["img2"];
+        var img3 = document.images["img3"];
+
+        img1.onmouseover = changeimg;
+        img2.onmouseover = changeimg;
+        img3.onmouseover = changeimg;
+
+        img1.onmouseout = resetimg;
+        img2.onmouseout = resetimg;
+        img3.onmouseout = resetimg;
+
+        function changeimg() {
+            if (event.target.name == "img1") {
+                document.images["img1"].src = "images/img04.jpg"
+                document.all.txt1.value = "'스키'타는 사람이 '당근'으로 변했습니다.";
+            } else if (event.target.name == "img2") {
+                document.images["img2"].src = "images/img05.jpg"
+                document.all.txt1.value = "'해바라기'가 '피망'으로 변했습니다.";
+            } else if (event.target.name == "img3") {
+                document.images["img3"].src = "images/img06.jpg"
+                document.all.txt1.value = "'나무'가 '개'가 됐습니다.";
+            }
+        }
+
+        function resetimg() {
+            if (event.target.name == "img1") {
+                document.images["img1"].src = "images/img01.jpg"
+                document.all.txt1.value = "";
+            } else if (event.target.name == "img2") {
+                document.images["img2"].src = "images/img02.jpg"
+                document.all.txt1.value = "";
+            } else if (event.target.name == "img3") {
+                document.images["img3"].src = "images/img03.jpg"
+                document.all.txt1.value = "";
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

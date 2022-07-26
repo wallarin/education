@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h1 {
+            color: #777;
+        }
+
+        #tbl1 {
+            border: 1px solid gray;
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        #tbl1 td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        #tbl1 td:first-child {
+            background-color: #DEDEDE;
+            text-align: center;
+            color: #777;
+            width: 100px;
+            font-weight: bold;
+        }
+
+        input {
+            border: 1px solid gray;
+            color: #777;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form name="form1">
+        <h1>우편 번호 검색</h1>
+        <table id="tbl1">
+            <tr>
+                <td>우편번호</td>
+                <td>
+                    <input type="text" readonly style="width: 60px" name="zipnumber">
+                    <input type="button" name="search" value="우편번호검사하기">
+                </td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" readonly style="width: 98%" name="address"></td>
+            </tr>
+            <tr>
+                <td>상세주소</td>
+                <td><input type="text" style="width: 98%" name="addressdetail"></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+
+        document.form1.search.onclick = m1;
+
+        function m1() {
+            window.open("0609_search.html", "child", "width=300, height=200");
+        }
+
+    </script>
+    
+</body>
+</html>

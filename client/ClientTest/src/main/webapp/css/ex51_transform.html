@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #mainmenu > img, #footmenu > img {
+            transition: .7s all;
+        }
+
+        #mainmenu {
+            border: 0px solid black;
+            width: 630px;
+            /* font-size: 0; */ /* 이미지 사이의 공백 없애기 */
+            margin: 0 auto;
+            transform: translate(0px, -100px);
+        }
+        
+        #mainmenu > img {
+            float: left; /* 이미지 사이의 공백 없애기 > float로 없애면 안의 내용물들이 바깥으로 나가진다. 그래서 clear를 사용하면 해결*/
+        }
+
+        #mainmenu::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /*
+        #mainmenu:hover {
+            transform: translate(0px, -10px);
+        }
+        */
+
+        #mainmenu > img:hover {
+            transform: translate(0px, 90px);
+        }
+
+
+
+
+        #footmenu {
+            border: 0px solid black;
+            width: 630px;
+            /* margin: 0 auto; position으로 인해 의미가 없어짐 */
+            position: fixed;
+            /* margin: 0 auto;
+            left: 0;
+            right: 0; */
+            left: calc(50% - 315px);
+            /* bottom: -90px; */
+            bottom: 0;
+
+            transform: translate(0px, 90px);
+
+        }
+        
+        #footmenu > img {
+            float: left;
+        }
+
+        #footmenu::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #footmenu > img:hover {
+            transform: translate(0px, -90px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="mainmenu">
+        <img src="images/rect_icon01.png">
+        <img src="images/rect_icon02.png">
+        <img src="images/rect_icon03.png">
+        <img src="images/rect_icon04.png">
+        <img src="images/rect_icon05.png">
+    </nav>
+
+    <nav id="footmenu">
+        <img src="images/rect_icon01.png">
+        <img src="images/rect_icon02.png">
+        <img src="images/rect_icon03.png">
+        <img src="images/rect_icon04.png">
+        <img src="images/rect_icon05.png">
+    </nav>
+
+</body>
+</html>

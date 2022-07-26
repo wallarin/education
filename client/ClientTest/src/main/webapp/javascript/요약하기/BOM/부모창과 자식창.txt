@@ -1,0 +1,21 @@
+부모창에서 자식창을 열기
+
+var child;
+
+document.form1.btn1.onclick = function() {
+	child = open('자식.html > 자식의 파일이름', 'child > 새 창으로 연다.', 'width=500 height=300 > 자식창의 크기를 결정한다.', 'left=' + (window.screen.availWidth - 500) + 'top=400 > 화면을 기준으로 열릴 위치를 지정'
+};
+
+document.form1.btn2.onclick = function() {
+	child.close(); > 자식창을 닫기
+};
+
+
+자식의 요소에 접근하기
+ex) 텍스트박스가 있다고 가정
+child.document.form1.childtextbox.value = document.form1.parenttextbox.value;
+> 자식의 텍스트박스에 부모의 텍스트 박스에 있는 값을 넘겨라..! > 마치 아이디 중복검사 처럼
+
+자식에서 부모의 요소에 접근하기
+opener.document.form1.parenttextbox.value = document.form1.childtextbox.value;
+> 부모의 텍스트박스에 자식의 텍스트 박스의 값을 넘긴다.

@@ -1,0 +1,8 @@
+접근시에는 배열로 저장되있어서 방번호로 접근한다.
+document.images > 문서내의 모든 <img>태그 접근
+document.links > 문서내의 모든 <a href=""> 태그 접근
+document.anchors > 문서내의 모든 <a name=""> 태그 접근
+document.forms > 문서내의 모든 <form> 태그 접근
+document.forms[index].elements > 문서내의 특정 폼 태그 내의 모든 입력 요소 태그를 접근.
+
+document.all > 문서상의 모든 태그를 접근한다. But 비표준방식이다.

@@ -1,0 +1,50 @@
+현재 시각 얻어서 변수에 담기
+var nowtime = new Date();
+결과값: Sun Jun 19 2022 16:45:25 GMT+0900 (한국 표준시)
+
+현재 시각의 년도 얻기
+nowtime.getFullYear() > 결과값: 2022
+
+현재 시각의 월 얻기
+nowtime.getMonth() > 결과값: 5 (6월 -1이 반환됨 주의!)
+
+현재 시각의 일(며칠) 얻기
+nowtime.getDate() > 결과값 : 19
+
+현재 시각의 요일얻기
+nowtiem.getDay() > 결과값: 0 ( 일(0) ~ 토(6) )
+
+현재 시각의 시 얻기
+nowtiem.getHours() > 결과값: 16
+
+현재 시각의 분 얻기
+nowtiem.getMinutes() > 결과값: 45
+
+현재 시각의 초 얻기
+nowtiem.getSeconds() > 결과값: 25
+
+현재 시각의 밀리초(틱값) 얻기
+nowtime.getTime() > 결과값: 1655624999896
+
+현재 시각의 년 / 월 / 일 / 시 / 분 / 초 얻기
+nowtime.toLocaleString() > 2022. 6. 19. 오후 4:45:25
+
+현재 시각의 년 / 월 / 일 얻기
+nowtime.toLocaleDateString() > 2022. 6. 19.
+
+현재 시각의 시 / 분 / 초 얻기
+nowtime.toLocaleTimeString() > 오후 4:45:25
+
+
+특정 시각으로 변경하기
+
+setFullYear(년) > 년도를 바꾼다.
+setMonth(월) > 월을 바꾼다.
+setDate(일) > 일을 바꾼다.
+
+>>> new Date(년, 월, 일, 시, 분, 초); > 로도 변경이 가능하다.
+
+
+특정 시각에 시간 더하기(시각 반환)
+var 기념일 = new Date();
+기념일.setTime(nowtime.getTime() + ( N일 * 24시간 * 60분 * 60초 * 1000)

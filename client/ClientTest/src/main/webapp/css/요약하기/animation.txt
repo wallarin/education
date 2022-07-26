@@ -1,0 +1,29 @@
+대상에게
+
+animation-name: 키이름;
+animation-duration: 시간; ==> 재생되는 시간을 지정한다.
+animation-
+animation-delay: 시간 ==> 시작 지연시간;
+animation-fill-mode: forwards; ==> 애니매이션 종료후의 상태를 바꾼 상태로 유지
+animation-timing-function: 값; ==> transfrom 처럼 가속도를 제어한다.
+animation-iteration-count: infinite; ==> 계속 반복한다.
+
+
+animation-direction: alternate; ==> 대상을 정방향과 역방향으로 번갈아가면서 재생한다.
+animation-direction: normal; ==> 대상을 정방향으로 재생한다.
+animation-direction: reverse; ==> 대상을 역방향으로 재생한다.
+
+
+@keyframes 키이름 {
+    from {
+        변화 전 속성값;
+    } to {
+        변화 후 속성값
+    }
+
+    N% { 값; }
+    NN% { 값; }
+    NN% { 값; }
+    NN% { 값; }
+    ==> 진행을 %로 지정이 가능하다.
+}

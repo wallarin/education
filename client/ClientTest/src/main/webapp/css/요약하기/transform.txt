@@ -1,0 +1,7 @@
+위치변형 - translate()
+크기(배율) - scale()
+회전 - rotate()
+왜곡(비틀기) - skew()
+사용자 정의 - matrix()
+
+transform-origin: rotate시에 회전의 기준을 잡는 속성이다.

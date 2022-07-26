@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        @font-face {
+            font-family: 'SF_HambakSnow';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        .txt {
+            /* background-color: yellow; */
+
+            
+            /* 텍스트 색상, 전경색(Fore Color) */
+            /* color: red; */
+            /*color: #444444;  #333333 ~ #555555 */
+
+            /* 44AAFF */
+            /* color:#4AF; */
+
+            color: #444;
+
+            /* 텍스트 정렬(수평 정렬) */
+            text-align: left;
+
+            /* 텍스트 크기 */
+            /* 10pt ~ 11pt 많이 사용 */
+            /* 12px ~ 16px 많이 사용 */
+            /* em은 소수점으로 표현하는게 대부분 요즘에는 휴대폰 시장이 커지면서 아주 많이 사용된다. */
+            font-size: 16px;
+
+            /* 
+            
+                HTML 수치 표현법
+                1. 숫자(px, 문자수, 셀병합)
+                2. 백분율(%)
+
+                CSS 수치 표현법(1, 2, 3, 4, 10은 반드시 기억)
+                - 수치 데이터는 반드시 단위 표기를 해야 한다.(단위 생략 불가능)
+                1. pt: 포인트(글꼴), 절대값, 1/72인치
+                2. px: 픽셀(크기, 여백, 위치, 글꼴 등), 절대값 > 세밀하게 할 수 있어서 많이 사용한다.
+                3. em: 기본 글꼴 크기 기준으로 하는 상대 크기(%), 상대값, 알파벳 대문자 M의 높이를 100%으로 기준하는 상대 크기. 상속을 받음 > 브라우저 마다 정해진 값을 기준으로 커진다. 10px -> 1em, 20px -> 2em
+                4. rem: em과 동일. 상속을 안 받음
+                10. %: 백분율(크기, 여백, 위치, 정렬 등..) 상대값
+                -----------------------------------------------------------------------------------------------------------------------
+                5. ex: 알파벳 소문자 x의 높이를 100%으로 기준하는 상대 크기 > 대부분 이것보다 em이 더 잘쓰임 가끔 사용하는곳도 존재
+                6. mm: 밀리미터
+                7. cm: 센티미터
+                8. in: 인치
+                9. pc: 파이카(12pt) > 옛날에 많이 사용
+                11. 기타 등등..
+
+            */
+
+            /* 
+                줄간격 
+                - %, em(rem)
+                - px
+                - 1.4em ~ 1.8em
+            */
+            line-height: 1.56em;
+
+            /* 스타일 nomarl, italic 기억 */
+            font-style: normal;
+            
+            /* 두께(normal, bold) */
+            font-weight: normal;
+
+            /* 단어 간격(스페이스 크기) */
+            word-spacing: 0.2em;
+
+            /* 자간(문자 간격) */
+            letter-spacing: -1px;
+
+            /* 꾸밈(none, underline, overline, line-through) */
+            text-decoration: none;
+
+            /* 
+                글꼴
+                - 페이지의 폰트는 서버측 폰트를 사용하는 것이 아니라, 브라우저가 동작 중인 컴퓨터의 폰트를 사용한다.
+
+                폰트 예약어
+                - 폰트의 종류를 나타내는 용어
+                - -apple-system, BlinkMacSystemFont, sans-serif
+                1. serif: 획 끝에 장식이 있는 폰트(궁서체, 바탕체)
+                2. sans-serif: 획 끝에 장식이 없는 폰트(돋움체, 고딕체)
+                3. monospace: 문자폭이 균일(궁서, 궁서체(O))
+                4. cursive: 장식체
+                5. fantasy: 장식체
+
+                웹폰트
+                - 폰트를 서버로부터 다운로드 받아서 사용하는 기술
+                - 사용 기간은 일시적 > 서핑 중에 해당 페이지에서만 적용
+                - 자체 제작(*.eof ..)
+                - 서비스 업체를 사용
+
+             */
+            font-family: 'SF_HambakSnow', 'Jua', '맑은 고딕', monospace;
+
+        }
+        
+        p {
+            /* 들여쓰기 */
+            text-indent: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>텍스트 관련 속성</h1>
+
+    <p>(서울=연합뉴스) 이대희 정성조 기자 = 음주운전이나 음주측정 거부를 반복한 운전자를 가중처벌하는 도로교통법(일명 윤창호법)이 헌법에 어긋난다는 헌법재판소의 판단이 나왔다.
+    반복된 음주운전에 대한 가중 처벌이 위헌이라는 작년 결정에 이어 재차 위헌 판단이 내려진 것이다.
+    헌재는 26일 재판관 7대2의 의견으로 도로교통법 148조2의 1항 관련 조항이 위헌이라고 결정했다.
+    이 조항은 음주운전과 음주측정 거부를 혼합해 두 차례 이상 하거나, 음주측정 거부를 두 차례 이상 한 이에게 2∼5년 징역형이나 1천만∼2천만원의 벌금형에 처하도록 규정하고 있다.
+    다수 의견 재판관들은 이 조항이 '책임과 형벌 간의 비례원칙'을 위반했다고 판단했다.
+    이들은 "음주운전 금지규정 위반 또는 음주 측정거부 전력을 가중 요건으로 삼으면서도 형의 선고나 유죄의 확정판결을 요구하지 않는 데다가 시간적 제한도 두지 않은 채 가중처벌을 하고 있다"며 "과거 위반행위 이후 상당히 오랜 시간이 지나 음주운전 금지규정을 위반한 사람에게 책임에 비해 과도한 형벌을 규정하고 있다"고 지적했다.
+    또 "반복 위반했다 하더라도 죄질을 일률적으로 평가하기 어려운 다양한 유형이 있고 경중의 폭이 넓으므로, 형사상 책임주의 원칙에 따라 법정형의 폭도 개별성에 맞춰 설정돼야 한다"며 "그러나 이 조항은 하한을 징역 2년 또는 벌금 1천만원으로 일률적으로 엄하게 처벌하고 있다"고 했다.</p>
+
+    <p class="txt">(서울=연합뉴스) 이대희 정성조 기자 = 음주운전이나 음주측정 거부를 반복한 운전자를 가중처벌하는 도로교통법(일명 윤창호법)이 헌법에 어긋난다는 헌법재판소의 판단이 나왔다.
+    반복된 음주운전에 대한 가중 처벌이 위헌이라는 작년 결정에 이어 재차 위헌 판단이 내려진 것이다.
+    헌재는 26일 재판관 7대2의 의견으로 도로교통법 148조2의 1항 관련 조항이 위헌이라고 결정했다.
+    이 조항은 음주운전과 음주측정 거부를 혼합해 두 차례 이상 하거나, 음주측정 거부를 두 차례 이상 한 이에게 2∼5년 징역형이나 1천만∼2천만원의 벌금형에 처하도록 규정하고 있다.
+    다수 의견 재판관들은 이 조항이 '책임과 형벌 간의 비례원칙'을 위반했다고 판단했다.
+    이들은 "음주운전 금지규정 위반 또는 음주 측정거부 전력을 가중 요건으로 삼으면서도 형의 선고나 유죄의 확정판결을 요구하지 않는 데다가 시간적 제한도 두지 않은 채 가중처벌을 하고 있다"며 "과거 위반행위 이후 상당히 오랜 시간이 지나 음주운전 금지규정을 위반한 사람에게 책임에 비해 과도한 형벌을 규정하고 있다"고 지적했다.
+    또 "반복 위반했다 하더라도 죄질을 일률적으로 평가하기 어려운 다양한 유형이 있고 경중의 폭이 넓으므로, 형사상 책임주의 원칙에 따라 법정형의 폭도 개별성에 맞춰 설정돼야 한다"며 "그러나 이 조항은 하한을 징역 2년 또는 벌금 1천만원으로 일률적으로 엄하게 처벌하고 있다"고 했다.</p>
+
+    <p>(서울=연합뉴스) 이대희 정성조 기자 = 음주운전이나 음주측정 거부를 반복한 운전자를 가중처벌하는 도로교통법(일명 윤창호법)이 헌법에 어긋난다는 헌법재판소의 판단이 나왔다.
+    반복된 음주운전에 대한 가중 처벌이 위헌이라는 작년 결정에 이어 재차 위헌 판단이 내려진 것이다.
+    헌재는 26일 재판관 7대2의 의견으로 도로교통법 148조2의 1항 관련 조항이 위헌이라고 결정했다.
+    이 조항은 음주운전과 음주측정 거부를 혼합해 두 차례 이상 하거나, 음주측정 거부를 두 차례 이상 한 이에게 2∼5년 징역형이나 1천만∼2천만원의 벌금형에 처하도록 규정하고 있다.
+    다수 의견 재판관들은 이 조항이 '책임과 형벌 간의 비례원칙'을 위반했다고 판단했다.
+    이들은 "음주운전 금지규정 위반 또는 음주 측정거부 전력을 가중 요건으로 삼으면서도 형의 선고나 유죄의 확정판결을 요구하지 않는 데다가 시간적 제한도 두지 않은 채 가중처벌을 하고 있다"며 "과거 위반행위 이후 상당히 오랜 시간이 지나 음주운전 금지규정을 위반한 사람에게 책임에 비해 과도한 형벌을 규정하고 있다"고 지적했다.
+    또 "반복 위반했다 하더라도 죄질을 일률적으로 평가하기 어려운 다양한 유형이 있고 경중의 폭이 넓으므로, 형사상 책임주의 원칙에 따라 법정형의 폭도 개별성에 맞춰 설정돼야 한다"며 "그러나 이 조항은 하한을 징역 2년 또는 벌금 1천만원으로 일률적으로 엄하게 처벌하고 있다"고 했다.</p>
+
+    <hr>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis consequuntur voluptatem ducimus obcaecati architecto eos ullam tenetur nam? Voluptatum qui, quibusdam voluptates sed veniam, eius delectus enim vel culpa facilis non laboriosam soluta fuga debitis sit, necessitatibus a maiores iure dolore minus neque error accusantium alias asperiores. Ducimus unde voluptatibus ea consectetur temporibus laboriosam iusto. Exercitationem labore numquam id reiciendis molestiae atque modi recusandae, ab deleniti asperiores iure ratione ullam molestias quaerat distinctio unde dolores culpa aperiam neque impedit architecto dolor nobis quod tempora! Expedita alias et, ipsam numquam non accusamus eligendi ex error corporis ad perspiciatis tenetur vero ut?</p>
+
+    <p class="txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis consequuntur voluptatem ducimus obcaecati architecto eos ullam tenetur nam? Voluptatum qui, quibusdam voluptates sed veniam, eius delectus enim vel culpa facilis non laboriosam soluta fuga debitis sit, necessitatibus a maiores iure dolore minus neque error accusantium alias asperiores. Ducimus unde voluptatibus ea consectetur temporibus laboriosam iusto. Exercitationem labore numquam id reiciendis molestiae atque modi recusandae, ab deleniti asperiores iure ratione ullam molestias quaerat distinctio unde dolores culpa aperiam neque impedit architecto dolor nobis quod tempora! Expedita alias et, ipsam numquam non accusamus eligendi ex error corporis ad perspiciatis tenetur vero ut?</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis consequuntur voluptatem ducimus obcaecati architecto eos ullam tenetur nam? Voluptatum qui, quibusdam voluptates sed veniam, eius delectus enim vel culpa facilis non laboriosam soluta fuga debitis sit, necessitatibus a maiores iure dolore minus neque error accusantium alias asperiores. Ducimus unde voluptatibus ea consectetur temporibus laboriosam iusto. Exercitationem labore numquam id reiciendis molestiae atque modi recusandae, ab deleniti asperiores iure ratione ullam molestias quaerat distinctio unde dolores culpa aperiam neque impedit architecto dolor nobis quod tempora! Expedita alias et, ipsam numquam non accusamus eligendi ex error corporis ad perspiciatis tenetur vero ut?</p>
+
+</body>
+</html>

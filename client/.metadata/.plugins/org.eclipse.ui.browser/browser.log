@@ -1,0 +1,67 @@
+
+5월 23, 2022 14:04:48.30 NEW SESSION
+5월 23, 2022 14:04:48.30 [16276:8156:0523/140448.029:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 15:05:53.349 [3240:9556:0523/150553.349:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 15:11:12.798 [12872:14112:0523/151112.797:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 15:14:27.855 [9080:7652:0523/151427.855:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 15:43:55.478 [4260:540:0523/154355.478:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 16:18:46.229 [4260:10808:0523/161846.229:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:46.737 [4260:10808:0523/161846.737:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:46.737 [4260:10808:0523/161846.737:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:48.198 [4260:10808:0523/161848.197:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:50.213 [4260:10808:0523/161850.213:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:55.147 [4260:10808:0523/161855.146:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:55.708 [4260:10808:0523/161855.707:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:57.949 [4260:10808:0523/161857.948:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:18:59.147 [4260:10808:0523/161859.147:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:19:00.213 [4260:10808:0523/161900.213:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2022 16:32:18.21 [6456:3824:0523/163218.020:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 17:07:26.360 [3324:4704:0523/170726.360:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 23, 2022 17:37:08.835 [10976:1424:0523/173708.834:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 24, 2022 09:12:04.714 NEW SESSION
+5월 24, 2022 09:12:04.714 [15112:1460:0524/091204.712:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 09:19:02.981 [5512:576:0524/091902.980:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 09:33:14.679 [12900:14400:0524/093314.679:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 10:03:42.178 [3112:12060:0524/100342.178:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 10:08:56.137 [17092:9836:0524/100856.137:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 10:46:39.948 [14556:15740:0524/104639.947:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 10:48:50.904 [12248:9428:0524/104850.903:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 11:04:39.516 [11628:13052:0524/110439.515:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 11:11:09.15 [3400:568:0524/111109.015:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 11:17:25.239 [416:6468:0524/111725.238:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 11:22:16.946 [780:8220:0524/112216.945:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 11:32:44.677 [16696:15400:0524/113244.677:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:16:30.355 [13232:13816:0524/121630.354:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:21:11.601 [2776:10192:0524/122111.600:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:23:20.711 [9636:11744:0524/122320.711:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:28:53.454 [3340:11920:0524/122853.454:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:39:48.180 [1432:14272:0524/123948.180:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:43:08.583 [10024:7872:0524/124308.583:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 12:49:13.723 [12120:15236:0524/124913.723:ERROR:device_event_log_impl.cc(214)] [12:49:13.723] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 12:49:13.724 [12120:15236:0524/124913.724:ERROR:device_event_log_impl.cc(214)] [12:49:13.723] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 12:50:06.774 [14760:18232:0524/125006.774:ERROR:device_event_log_impl.cc(214)] [12:50:06.774] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 12:50:06.776 [14760:18232:0524/125006.774:ERROR:device_event_log_impl.cc(214)] [12:50:06.775] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 13:33:07.812 [3260:14872:0524/133307.812:ERROR:device_event_log_impl.cc(214)] [13:33:07.812] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 13:33:07.813 [3260:14872:0524/133307.813:ERROR:device_event_log_impl.cc(214)] [13:33:07.813] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 13:34:05.248 [3260:14528:0524/133405.248:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 13:46:32.576 [18328:13280:0524/134632.575:ERROR:device_event_log_impl.cc(214)] [13:46:32.575] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 13:46:32.576 [18328:13280:0524/134632.576:ERROR:device_event_log_impl.cc(214)] [13:46:32.576] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 24, 2022 13:47:29.423 [18328:17288:0524/134729.422:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 14:06:46.342 [8040:6092:0524/140646.340:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 14:13:53.436 [11376:4020:0524/141353.436:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 15:03:58.695 [4268:9520:0524/150358.695:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 15:28:53.489 [13372:4016:0524/152853.489:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 15:30:54.953 [6800:15728:0524/153054.951:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 15:36:05.73 [15448:19192:0524/153605.073:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 24, 2022 16:09:14.162 [12940:9996:0524/160914.162:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 25, 2022 09:16:20.761 NEW SESSION
+5월 25, 2022 09:16:20.761 [16684:16876:0525/091620.760:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 09:27:42.667 [2588:15352:0525/092742.667:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 10:15:28.873 [18084:3012:0525/101528.873:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 10:47:46.274 [13876:17356:0525/104746.274:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 11:04:28.545 [180:17508:0525/110428.545:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 12:10:29.630 [15992:14996:0525/121029.629:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 12:26:44.674 [15992:2244:0525/122644.674:ERROR:device_event_log_impl.cc(214)] [12:26:44.572] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 25, 2022 14:20:54.570 [12804:9168:0525/142054.570:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

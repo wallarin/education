@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>숫자 키패드를 누르면 숫자가 추가됩니다. Backspace, Delete 키를 이용해 마지막 값을 삭제 할 수 있습니다.</h3>
+
+    <div id="main">
+    </div>
+    
+    <script>
+
+        //Backspace.keyCode(8) Delete.keyCode(46);
+
+        var main = document.getElementById('main');
+
+        onkeydown = m1;
+
+        function m1() {
+            // alert(event.keyCode);
+            if (event.keyCode >= 96 && event.keyCode <= 105) {
+                main.innerHTML += '<img src="images/' + (event.keyCode - 96) + '.png">';
+            } else if (event.keyCode >= 48 && event.keyCode <= 57) {
+                main.innerHTML += '<img src="images/' + (event.keyCode - 48) + '.png">';
+            } else if (event.keyCode == 8 || event.keyCode == 46) {
+                main.removeChild(main.lastChild);
+                // 마지막 자식을 삭제하는 코드 완성!
+            }
+        }
+
+        
+
+    </script>
+
+</body>
+</html>

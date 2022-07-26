@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+            박스 모델
+            1. border
+            2. width, height
+
+        */
+
+        #box2 {
+            border-color: orange;
+            background-color: bisque;
+
+            /* 
+
+                *** 일반적으로 태그의 높이는 상대 크기를 지정할 수 없다.
+
+                <div>
+                - 블럭 태그 
+                - 너비 : 100%
+                - 높이 : 내용물 크기만큼
+
+                너비, 높이
+                - width, height
+                - 단위 > px(절댓값), %(상대값)
+
+            */
+
+            width: 200px;
+            /* height: 100px; */
+            height: auto;
+        }
+
+        .box {
+            border: 10px solid black;
+        }
+
+        /* 
+            *** 박스 모델은 width, height는 블럭태그에만 적용이 가능하다.
+            *** 인라인 태그 중 일부는 적용이 가능하다.(처음부터 영역이 눈에 보이는 태그들)
+
+            블럭태그 
+            - 너비: 100% 
+            -높이: 내용물만큼
+
+            인라인 태그 
+            - 너비: 내용물
+            - 높이: 내용물 
+
+        */
+
+        #div1 {
+            background-color: red;
+            color:white;
+            width:200px;
+            height: 200px;
+        }
+        
+        #span1 {
+            background-color: blue;
+            color:white;
+            width:200px;
+            height: 200px
+        }
+
+        #word {
+            /* display: inline-block; */
+            width: 200px;
+            height: 200px;
+            color: red;
+            background-color: antiquewhite;
+        }
+
+        #cat01 {
+            width: 100px;
+            height: 100px;
+        }
+
+        #txt1 {
+            width: 200px;
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>박스 모델</h1>
+
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2상자2</div>
+    <div id="box3" class="box">상자3</div>
+    
+    <h1>블럭 태그</h1>
+    <div id="div1">블럭 태그</div>
+
+    <h1>인라인 태그</h1>
+    <sapn id="span1">인라인 태그</sapn>
+
+    <h1>문단</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi reprehenderit quos sint nesciunt, obcaecati, molestiae, natus a architecto sit labore inventore voluptatum assumenda pariatur itaque! Sequi, possimus? Natus sequi omnis facere molestias suscipit. Necessitatibus dignissimos labore officia nostrum quis cumque unde autem consequatur dolores aperiam, rerum accusantium aliquam. Reprehenderit, voluptas ullam libero magni doloremque amet harum at sit aspernatur explicabo voluptate, nulla nobis quaerat assumenda quasi dolorem eius? Repellat accusamus enim nam sunt laboriosam aperiam quisquam consequuntur ea expedita? Sapiente debitis beatae odio rem <span id="word" class="words">excepturi</span> asperiores. Minus temporibus atque, exercitationem, consectetur adipisci pariatur rerum iusto dignissimos numquam omnis molestiae quod nam laborum voluptatum distinctio provident voluptatem laboriosam neque earum reprehenderit ipsum a ut optio quas! Esse fugiat similique pariatur facere! Illum sed recusandae accusamus. Consequatur nam doloribus autem. Eligendi doloribus praesentium enim a dolores provident! Delectus iusto itaque laudantium quo vero. Fugiat laboriosam voluptatem vel tempore tenetur repellat iure quos, praesentium autem ratione, similique accusamus incidunt commodi corporis ab. Velit natus est voluptatibus illum accusamus ipsam obcaecati quasi placeat, reiciendis blanditiis? Esse impedit ab, nam iusto facere, itaque ducimus assumenda ipsa laborum tempore saepe deleniti doloribus illo. Veritatis sequi autem, recusandae suscipit quos quae blanditiis dolorem quaerat. Distinctio, quidem a.</p>
+
+
+    <hr>
+
+    앞의 내용
+    <img src="images/cat01.jpg" id="cat01">
+    뒤의 내용
+
+    <hr>
+
+    이름: <input type="text" id="txt1"> 님
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

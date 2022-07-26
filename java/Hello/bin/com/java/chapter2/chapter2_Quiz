@@ -1,0 +1,101 @@
+[2-1] 다음 표의 빈 칸에 8개의 기본형(primitive type)을 알맞은 자리에 넣으시오.
+크 기
+종 류 	1 byte  2 byte  4 byte  8 byte
+논리형 boolean
+문자형 			 char		
+정수형 	byte	 short	  int	 long
+실수형					float	double
+
+[2-2] 주민등록번호를 숫자로 저장하고자 한다 이 값을 저장하기 위해서는 어떤 자료형(data type)을 선택해야 할까? 
+regNo라는 이름의 변수를 선언하고 자신의 주민등록번호로 초기화 하는 한 줄의 코드를 적으시오.
+
+long regNo = 9003151329433L;
+> long형은 초기화시에 L을 꼭 붙이자!!
+
+[2-3] 다음의 문장에서 리터럴 변수 상수 키워드를 적으시오.
+int i = 100;
+long l =100L;
+final float PI = 3.14f;
+- 리터럴 	: 100, 100L, 3.14f
+- 변수		: i, l
+- 키워드	: int, long, final, float
+- 상수		: PI
+
+[2-4] 다음 중 기본형(primitive type)이 아닌 것은?  b
+a. int
+b. Byte > byte / Byte 로 적으면 참조형이 되어 버린다.
+c. double
+d. boolean
+
+[2-5] 다음 문장들의 출력결과를 적으세요 오류가 있는 문장의 경우 괄호 안에 '오류' 라고 적으시오.
+System.out.println(“1” + “2”) → ( 12 ) 
+System.out.println(true + “”) → ( true )
+System.out.println(‘A' + 'B') → ( 131 )
+System.out.println('1' + 2) → ( 51 )
+System.out.println('1' + '2') → ( 99 )
+System.out.println('J' + “ava”) → ( Java )
+System.out.println(true + null) → ( 오류 )
+
+[2-6] 다음 중 키워드가 아닌 것은? (모두 고르시오)
+a. if
+b. True > true
+c. NULL > null
+d. Class > class
+e. System > x
+
+[2-7] 다음 중 변수의 이름으로 사용할 수 있는 것은 모두 고르시오 ? ( a,d,e,g )
+a. $ystem
+b. channel#5 X > 특수문자는 _와 $만 가능하다.
+c. 7eleven X > 숫자로 시작해서는 안된다.
+d. If
+e. 자바
+f. new X> 예약어 사용 금지
+g. $MAX_NUM
+h. hello@com  X > 특수문자는 _와 $만 가능하다.
+
+[2-8] 참조형 변수(reference type)와 같은 크기의 기본형(primitive type)은? (모두 고르시오) a,d
+a. int
+b. long > 8byte
+c. short > 2byte
+d. float
+e. double > 8byte
+> 참조형 변수는 모두 4byte 이다.
+
+[2-9] 다음 중 형변환을 생략할 수 있는 것은? (모두 고르시오) 
+byte b = 10;
+char ch = 'A';
+int i = 100;
+long l = 1000L;
+
+a. b = (byte)i; > int형의 byte가 더 커서 생략 불가능
+b. ch = (char)b; > 두 값의 출력 범위가 달라서 불가능하다 char = 0~65535까지 byte = -128 ~ 127
+c. short s = (short)ch; > 두 값의 출력 범위가 달라서 불가능하다 short = -32768 ~ 32767
+d. float f = (float)l;
+e. i = (int)ch;
+
+[2-10] char 타입의 변수에 저장될 수 있는 정수 값의 범위는? (10진수로 적으시오)
+0~65535
+
+[2-11] 다음중 변수를 잘못 초기화 한 것은? (모두 고르시오)  a,b,c,d
+a. byte b = 256; > 127을 넘어서 불가능
+b. char c = ''; > 반드시 ' ' 안에 값이 들어가야한다.
+c. char answer = 'no'; > char는 한번에 두개의 문자를 저장할 수 없다
+d. float f = 3.14 > float는 접미사로 f를 붙여야한다 > 3.14f
+e. double d = 1.4e3f; > double로 선언된 값에 float값을 넣는것이라 가능하다.!
+
+[2-12] 다음 중 main메서드의 선언부로 알맞은 것은? (모두 고르시오) a,b,c,e
+a. public static void main(String[] args)
+b. public static void main(String args[]) > 배열은 String이나 args 둘 중 어디에 써도 된다.
+c. public static void main(String[] arv) > args가 아닌 다른 이름을 써도 무방하다.
+d. public void static main(String[] args) X > void의 위치는 main 앞에 위치되어야 한다.
+e. static public void main(String[] args) > static과 public의 위치가 바뀌어도 무방하다.
+
+[2-13] 다음 중 타입과 기본값이 잘못 연결된 것은? (모두 고르시오) c,e,f
+a. boolean - false > O
+b. char - '\u0000' > O
+c. float - 0.0 > X 0.0f 로 입력하면 가능하다.
+d. int - 0 > O
+e. long - 0 > X 0L이면 가능하다.
+f. String - "" > X 참조형 타입의 기본값은 null이다.
+
+

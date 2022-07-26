@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family: 'EarlyFontDiary';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+        #main {
+            border: 1px solid #777;
+            width: 865px;
+            padding: 10px;
+            margin: 30px;
+        }
+
+        textarea {
+            font-family: 'EarlyFontDiary';
+            font-size: 1rem;
+        }
+
+        input[type="button"] {
+            font-weight: bold;
+            font-family: 'EarlyFontDiary';
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <textarea name="tbox1" cols="90" rows="10"></textarea>
+        <hr>
+        <textarea name="tbox2" cols="90" rows="10">
+네, 낮동안에도 찬바람이 강하게 불고있습니다.
+때문에 체감상 느껴지는 온도는 현재기온보다 2~3도가량 낮게 나타나고 있는데요.
+남부해안지역과 제주도를 중심으로는 강풍주의보도 이어지고 있기 때문에 시설물 피해 없도록 주의하셔야겠습니다.
+쌀쌀했던 어제보다도 기온이 더 오르지 못하고있습니다.
+현재기온 서울 7.3도, 대전 9.3도, 부산 6.8도로 이맘때 평년수준을 밑돌고있고요. 
+찬바람이 더해지면서 체감상 느껴지는 날씨는 더 쌀쌀합니다.
+꽃샘추위는 내일 절정을 보이겠습니다. 
+        </textarea>
+        <input type="button" name="btn1" value="시작">
+        <input type="button" name="btn2" value="정지">
+    </div>
+
+    <script>
+
+        var timer = 0;
+        var length = 0;
+
+        document.all.btn1.onclick = m1;
+
+        function m1() {
+            if (timer == 0) {
+                timer = setInterval(f1, 50);
+            }
+        }
+
+        function f1() {
+            document.all.tbox1.value = document.all.tbox2.value.substr(0, length);
+            length++;
+            if (length == document.all.tbox2.length) {
+                clearInterval(timer);
+            }
+        }
+
+
+        document.all.btn2.onclick = m2;
+
+        function m2() {
+            clearInterval(timer);
+            timer = 0;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+transition: .ns all; > transform의 변형시간을 n초의 시간만큼 보여주며 변형시킨다.
+
+
+
+transition-timing-function: linear; ==> 일정한 속도로 움직인다.
+transition-timing-function: ease; ==> 처음과 끝은 느리게 중간은 빠르게 움직인다.
+transition-timing-function: ease-in; ==> 처음은 느리게 갈수록 점점 빨라진다.
+transition-timing-function: ease-out; ==> 처음은 빠르고 갈수록 점점 느려진다.
+transition-timing-function: ease-in-out; ==> ease와 유사하지만 ease보다 완만하게 움직인다.

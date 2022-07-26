@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        img {
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+
+    <script>
+
+        let max = 1;
+        let fisrtimg
+
+        window.onmousedown = function(event) {
+
+            let num = parseInt(Math.random() * 10) + 1;
+
+            if (num < 10) {
+                num = '0' + num;
+            }
+            
+            if (max <= 10) {
+                let pic = document.createElement('img');
+                pic.setAttribute('src', `images/m${num}.png`);
+
+                pic.style.left = event.clientX - 75 + 'px';
+                pic.style.top = event.clientY - 75 + 'px';
+
+                document.body.appendChild(pic);
+                max++;
+
+                if (max == 10) {
+                    document.body.removeChild(document.body.firstChild);
+                    max--;
+                    return
+                }
+            } 
+        }
+
+    </script>
+    
+</body>
+</html>

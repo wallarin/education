@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            width: 860px;
+            margin: 0 auto;
+        }
+
+        #main {
+            margin-top: 30px;
+        }
+
+        #main div > div {
+            border: 10px solid black;
+            margin-right: -10px;
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+        }
+        
+        #box1 > div > img {
+            width: 150px;
+            height: 150px;
+            transform: translate(-150px, 0px);
+            transition: .5s all;
+        }
+
+        #box1 > div:hover > img {
+            transform: translate(0px, 0px);
+        }
+
+        #box2 > div > img {
+            width: 150px;
+            height: 150px;
+            opacity: 0;
+            transition: .5s all;
+        }
+
+        #box2 > div:hover > img {
+            opacity: 1;
+        }
+
+        #box3 > div > img {
+            width: 150px;
+            height: 150px;
+            transform: scale(0, 0);
+            transition: .5s all;
+        }
+
+        #box3 > div:hover > img {
+            transform: scale(1, 1);
+        }
+
+        #box4 > div > img {
+            width: 150px;
+            height: 150px;
+            transform: translate(0px, -150px) rotate(0deg);
+            /* 처음에 transform을 따로따로 적어서 적용이 안되는거였다.. ㅠ */
+            opacity: 0;
+            transition: .5s all;
+            display: block;
+        }
+
+        #box4 > div:hover > img {
+            transform: translate(0px, 0px) rotate(360deg);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id ="box1">
+            <div><img src="images/rect_icon01.png"></div>
+            <div><img src="images/rect_icon02.png"></div>
+            <div><img src="images/rect_icon03.png"></div>
+            <div><img src="images/rect_icon04.png"></div>
+            <div><img src="images/rect_icon05.png"></div>
+        </div>
+        <div id ="box2">
+            <div><img src="images/rect_icon01.png"></div>
+            <div><img src="images/rect_icon02.png"></div>
+            <div><img src="images/rect_icon03.png"></div>
+            <div><img src="images/rect_icon04.png"></div>
+            <div><img src="images/rect_icon05.png"></div>
+        </div>
+        <div id ="box3">
+            <div><img src="images/rect_icon01.png"></div>
+            <div><img src="images/rect_icon02.png"></div>
+            <div><img src="images/rect_icon03.png"></div>
+            <div><img src="images/rect_icon04.png"></div>
+            <div><img src="images/rect_icon05.png"></div>
+        </div>
+        <div id ="box4">
+            <div><img src="images/rect_icon01.png"></div>
+            <div><img src="images/rect_icon02.png"></div>
+            <div><img src="images/rect_icon03.png"></div>
+            <div><img src="images/rect_icon04.png"></div>
+            <div><img src="images/rect_icon05.png"></div>
+        </div>
+    </div>
+
+</body>
+</html>

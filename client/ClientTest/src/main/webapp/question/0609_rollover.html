@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            margin: 30px;
+            width: 1300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form name="form1">
+        <img src="images/cat01.jpg" name="cat1">
+        <img src="images/cat02.jpg" name="cat2">
+        <img src="images/cat03.jpg" name="cat3">
+        <img src="images/cat04.jpg" name="cat4">
+        <img src="images/cat05.jpg" name="cat5">
+    </form>
+
+    <script>
+
+        document.images["cat1"].onmouseover = changeimg;
+        document.images["cat2"].onmouseover = changeimg;
+        document.images["cat3"].onmouseover = changeimg;
+        document.images["cat4"].onmouseover = changeimg;
+        document.images["cat5"].onmouseover = changeimg;
+
+        document.images["cat1"].onmouseout = resetimg;
+        document.images["cat2"].onmouseout = resetimg;
+        document.images["cat3"].onmouseout = resetimg;
+        document.images["cat4"].onmouseout = resetimg;
+        document.images["cat5"].onmouseout = resetimg;
+
+        function changeimg() {
+            if(event.target.name == "cat1") {
+                document.images["cat1"].src = "images/dog01.jpg"
+            } else if(event.target.name == "cat2") {
+                document.images["cat2"].src = "images/dog02.jpg"
+            } else if(event.target.name == "cat3") {
+                document.images["cat3"].src = "images/dog03.jpg"
+            } else if(event.target.name == "cat4") {
+                document.images["cat4"].src = "images/dog04.jpg"
+            } else if(event.target.name == "cat5") {
+                document.images["cat5"].src = "images/dog05.jpg"
+            }
+        }
+
+        function resetimg() {
+            if(event.target.name == "cat1") {
+                document.images["cat1"].src = "images/cat01.jpg"
+            } else if(event.target.name == "cat2") {
+                document.images["cat2"].src = "images/cat02.jpg"
+            } else if(event.target.name == "cat3") {
+                document.images["cat3"].src = "images/cat03.jpg"
+            } else if(event.target.name == "cat4") {
+                document.images["cat4"].src = "images/cat04.jpg"
+            } else if(event.target.name == "cat5") {
+                document.images["cat5"].src = "images/cat05.jpg"
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

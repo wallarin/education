@@ -1,0 +1,118 @@
+Java + JDBC + Oracle
+
+주소록 관리 프로그램
+1. 등록하기
+2. 읽기
+3. 수정하기
+4. 삭제하기
+
+
+DB
+- tblAddress
+
+
+자바 계층 구조
+- 메인 클래스(main())
+	1. 전체 흐름 통제 코드
+	2. 업무 조작 코드
+	3. JDBC
+	4. 입력 코드
+	5. 출력 코드
+	
+- 메인 클래스(main()) 생성
+	1. 전체 흐름 통제 코드
+	2. 업무 코드 > 다른 클래스에게 위임
+	
+- 업무 클래스(Service)
+	1. 업무 코드 담당
+	2. 파트별 실제 담당자
+		ex) MemberService.java
+			AdministratorService.java
+			AuthService.java
+			BoardService.java
+	3. 출력 업무 코드
+	4. JDBC 조작 업무 코드
+			
+- 출력 클래스(View)
+	1. 화면 출력 코드 담당
+	
+- DB 클래스(DAO, Data Access Object)
+	1. JDBC 코드 담당
+
+
+
+
+
+파일 생성
+
+1. Main.java
+	- 전체 흐름 통제
+	
+2. Service.java
+	- 읽기/쓰기/수정/삭제로 다 나누기에는 너무 업무가 작다.
+	- 주소록 관리 실제 담당자(실세)
+	
+3. View.java
+	- 출력 담당
+	
+4. DAO.java
+	- DB 담당
+
+5. Address.java
+	- DTO(Data Transfer Object), VO(Value Object)
+	- 계층간의 데이터를 전달하는 용도
+
+
+6. DBUtil.java
+	- DB 연결
+
+
+
+
+		//scan.nextLine() vs scan.nextXXX()
+		
+		int num = scan.nextInt();
+		System.out.println(num);
+		
+		int num2 = scan.nextInt();
+		System.out.println(num2);
+		
+		//두번째 숫자를 입력 버퍼로부터 가져가고 입력 버퍼안에는 \r\n이 남아있는 상태
+		
+		//scan.skip("\r\n"); > 정식 방법
+		//scan.nextLine(); > 편법
+		
+		String txt = scan.nextLine(); // 안멈춤? > 공회전 > Skip
+		System.out.println(txt);
+		
+		System.out.println("종료");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

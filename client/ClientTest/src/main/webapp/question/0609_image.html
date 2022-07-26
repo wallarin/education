@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="form1">
+        <h1>고양이</h1>
+        <img src="images/catty01.png" name="cat1">
+        <img src="images/catty02.png" name="cat2">
+        <img src="images/catty03.png" name="cat3">
+        <img src="images/catty04.png" name="cat4">
+        <img src="images/catty05.png" name="cat5">
+    </form>
+
+    <script>
+
+        document.images["cat1"].onmouseover = sizeup;
+        document.images["cat2"].onmouseover = sizeup;
+        document.images["cat3"].onmouseover = sizeup;
+        document.images["cat4"].onmouseover = sizeup;
+        document.images["cat5"].onmouseover = sizeup;
+
+        document.images["cat1"].onclick = sizereturn;
+        document.images["cat2"].onclick = sizereturn;
+        document.images["cat3"].onclick = sizereturn;
+        document.images["cat4"].onclick = sizereturn;
+        document.images["cat5"].onclick = sizereturn;
+
+        function sizeup() {
+            if (event.target.name == "cat1") {
+                document.images["cat1"].width += 5;
+            } else if (event.target.name == "cat2") {
+                document.images["cat2"].width += 5;
+            } else if (event.target.name == "cat3") {
+                document.images["cat3"].width += 5;
+            } else if (event.target.name == "cat4") {
+                document.images["cat4"].width += 5;
+            } else if (event.target.name == "cat5") {
+                document.images["cat5"].width += 5;
+            }
+        }
+
+        function sizereturn() {
+            if (event.target.name == "cat1") {
+                document.images["cat1"].width = 128;
+            } else if (event.target.name == "cat2") {
+                document.images["cat2"].width = 128;
+            } else if (event.target.name == "cat3") {
+                document.images["cat3"].width = 128;
+            } else if (event.target.name == "cat4") {
+                document.images["cat4"].width = 128;
+            } else if (event.target.name == "cat5") {
+                document.images["cat5"].width = 128;
+            }
+        }
+
+        window.onkeydown = keyaction;
+
+        function keyaction(event) {
+            if (event.keyCode > 48 && event.keyCode < 54) {
+                document.images["cat" + (event.keyCode - 48)].width += 5;
+            } else if (event.keyCode == 27) {
+                for (var i=1; i<6; i++) {
+                    document.images["cat" + i].width = 128;
+                }
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>

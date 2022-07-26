@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+
+            CSS 선택자
+            1. :first-child
+                - 가상 클래스
+            2. ::before
+                - 가상 요소
+
+            전후 선택자
+            - 선택한 요소의 앞이나 뒤에 추가로 내용을 생성하는 역할
+            1. ::before = :before
+            2. ::after = :after
+
+        */
+
+        p > span {
+            color: cornflowerblue;
+            font-size: 18px;
+        }
+
+        p > span::before {
+            content: '[';
+            color: navy;
+            font-weight: bold;
+        }
+
+        p > span::after {
+            content: ']';
+            color: navy;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam modi cupiditate, <span>praesentium</span> dolor distinctio vitae debitis enim veritatis temporibus <span>commodi</span> perspiciatis possimus mollitia blanditiis, error, quis quod eveniet saepe? Non dolore recusandae impedit rerum debitis! Maiores velit assumenda corrupti eveniet maxime tenetur <span>veritatis</span> ducimus error. Alias accusantium a repudiandae magni!
+    </p>
+    
+</body>
+</html>

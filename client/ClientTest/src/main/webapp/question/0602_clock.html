@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #clock {
+            width: 700px;
+            height: 700px;
+            border: 30px dashed #AAA;
+            position: relative;
+        }
+
+        #hour, #min, #sec {
+            position: absolute;
+            width: 60px;
+            border-radius: 50px;
+            border: 10px solid gray;
+            transform-origin: center bottom;
+        }
+
+        #hour > div, #min > div, #sec > div {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #hour {
+            background-color: tomato;
+            height: 150px;
+            left: 310px;
+            top: 190px;
+            transition: 19800s all;
+            animation-timing-function: linear;
+        }
+
+        #min {
+            background-color: cornflowerblue;
+            height: 220px;
+            left: 310px;
+            top: 120px;
+            transition: 3300s all;
+            animation-timing-function: linear;
+        }
+
+        #sec {
+            background-color: gold;
+            height: 290px;
+            left: 310px;
+            top: 50px;
+            transition: 55s all;
+            animation-timing-function: linear;
+        }
+
+        #clock:hover #sec {
+            transform: rotate(36000deg);
+        }
+
+        #clock:hover #min {
+            transform: rotate(36000deg);
+        }
+
+        #clock:hover #hour {
+            transform: rotate(36000deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="clock">
+        <div id="hour">
+            <div>Hour</div>
+        </div>
+        <div id="min">
+            <div>Min</div>
+        </div>
+        <div id="sec">
+            <div>Sec</div>
+        </div>
+    </div>
+    
+</body>
+</html>

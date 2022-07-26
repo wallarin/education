@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            color: #777;
+        }
+
+        input[type=text] {
+            outline: none;
+            
+        }
+
+        input[type=button] {
+            color: #777;
+        }
+
+        form > div {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>데이터 입력</h1>
+
+    <form name="form1">
+        <div>
+            <label>이름 : </label>
+            <input type="text" name="txtName" autocomplete="off">
+        </div>
+        <div>
+            <label>나이 : </label>
+            <input type="text" name="txtAge" autocomplete="off">
+        </div>
+        <div>
+            <label>별명 : </label>
+            <input type="text" name="txtNick" autocomplete="off">
+        </div>
+        <input type="button" name="btn1" value="Long">
+        <input type="button" name="btn2" value="Short">
+    </form>
+
+
+    <script>
+
+        document.form1.btn1.onclick = sizeLong;
+        document.form1.btn2.onclick = sizeShort;
+
+        function sizeLong() {
+            document.form1.txtName.size = 50;
+            document.form1.txtAge.size = 50;
+            document.form1.txtNick.size = 50;
+        }
+
+        function sizeShort() {
+            document.form1.txtName.size = 20;
+            document.form1.txtAge.size = 20;
+            document.form1.txtNick.size = 20;
+        }
+
+    </script>
+    
+</body>
+</html>

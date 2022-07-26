@@ -1,0 +1,4 @@
+com.tomato.exerd.preference.IDiagramPreferenceConstants.DIAGRAM_THEME=paper
+com.tomato.exerd.preference.product.lastSelectedProductId=com.tomato.db.cubrid
+eclipse.preferences.version=1
+last-known-version=3.3.21.20220128-1457
