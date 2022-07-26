@@ -54,8 +54,8 @@
   <dd>위의 주소에서는 매출액 조액에 이용되었던 코드와 직원들의 월급관리 코드를 살펴보실 수 있습니다.</dd>
   <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\inventory">재고 관리 코드 보기</a></dt>
   <dd>위의 주소에서는 재고 관리에 이용되었던 재고 조회, 재고 자동 주문 시스템 관리 코드를 살펴보실 수 있습니다.</dd>
-  <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\adminDiagnosis\DiagnosisWrite.java">재고 차감</</dt>
+  <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\adminDiagnosis\DiagnosisWrite.java">재고 차감</a> </dt>
   <dd>위의 주소에서는 재고 차감에 이용되는 코드 <useItems>를 확인 하실 수 있습니다.
-  <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\adminEmployee">직원 관 코드 보기</a></dt>
+  <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\adminEmployee">직원 관리 코드 보기</a></dt>
   <dd>위의 주소에서는 직원 관리에 이용되었던 코드로서 직원 추가/직원 조회 코드를 살펴보실 수 있습니다.</dd>
 </dl>
