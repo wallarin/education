@@ -28,4 +28,7 @@
 
 ### 진행 프로젝트
 
-<img src="../images/ConsoleProject_01.png">
+1. Console Project(JAVA)
+> 소개 : 치과에서 이용 가능한 프로그램으로써 환자는 자신의 진료를 예약관리/이전 진찰 확인 등을 할 수 있고, 관리자는 예약관리/진료관리/병원관리 등의 시스템을 이용할 수 있게 개발되었습니다.
+
+<img src="./images/ConsoleProject_01.png" style="width:250px">
