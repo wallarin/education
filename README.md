@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=soft&color=9bbbd4&height=300&section=header&text=Jaemin%20Git&fontSize=90&animation=fadeIn&fontAlignY=50&desc=%20&descAlignY=62&descAlign=62)
+![header](https://capsule-render.vercel.app/api?type=soft&color=9bbbd4&height=300&section=header&text=Jaemin%20Git&fontSize=90&animation=fadeIn&fontAlignY=50&desc=What's%20Learn%20Langage&descAlignY=82&descAlign=82)
 
 # education
 2020 ~ 2022 공부
