@@ -40,7 +40,7 @@
 > 환자는 예약메뉴 이용 시 원하는 의사를 선택하고 해당 의사의 스케줄에 비어있는 시간을 선택합니다.<br>
 > 이후 치료 목적을 선택 후 최종 예약 형태를 확인 후 예약 최종 결정을 처리하게 됩니다.
 
-<hr>
+***
 해당 시스템에서 제가 맡게 된 부분은 관리자 파트의 직원 정보/매출액/재고 관리 부분입니다.
 
 <img src="./images/ConsoleProject_My_01.png" style="width:250px"><img src="./images/ConsoleProject_My_02.png" style="width:250px">
@@ -48,4 +48,4 @@
 
 매출액을 조회하는 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재고 관리 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;직원 관리 부분입니다.
 
-<a href="">
+<a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin">이동</a>
