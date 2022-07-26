@@ -59,3 +59,8 @@
   <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\adminEmployee">직원 관리 코드 보기</a></dt>
   <dd>위의 주소에서는 직원 관리에 이용되었던 코드로서 직원 추가/직원 조회 코드를 살펴보실 수 있습니다.</dd>
 </dl>
+
+해당 코드들에서 주로 이용된 문법으로 lambda / for문 (+향상된 for문) / if / switch문 / array / File 입·출력 / 함수 를 이용해 프로그램의 코드를 구성했습니다.
+
+***
+2. DataBase Project
