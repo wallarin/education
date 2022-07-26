@@ -27,4 +27,5 @@
 학원에서 위와 같은 과목들을 배웠습니다.
 
 ### 진행 프로젝트
-<img src="https://img.shields.io/badge/Swift-000000?style=flat-square&logo=Swift&logoColor=white"/>
+
+<img src="../images/ConsoleProject_01.png">
