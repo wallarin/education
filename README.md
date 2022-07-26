@@ -17,9 +17,9 @@
 ### 학원
 - JAVA
 - Oracle
-- HTML,CSS,JavaScript(Json)
+- HTML,CSS,JavaScript(JQuery)
 - JDBC
-- Servlet/JSP
+- Servlet/JSP, Ajax
 - Spring(진행중)
 
 학원에서 위와 같은 과목들을 배웠습니다.
