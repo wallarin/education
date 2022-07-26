@@ -1,0 +1,16 @@
+com.project.dentist
+com.project.dentist.admin
+com.project.dentist.admin.adminDiagnosis
+com.project.dentist.admin.adminEmployee
+com.project.dentist.admin.adminOnlineChat
+com.project.dentist.admin.adminSchedule
+com.project.dentist.admin.inventory
+com.project.dentist.admin.sales
+com.project.dentist.dataClass
+com.project.dentist.patient
+com.project.dentist.patient.appointment
+com.project.dentist.patient.counsel
+com.project.dentist.patient.intro
+com.project.dentist.patient.medicalHistory
+com.project.dentist.patient.patientInfo
+com.project.dentist.patient.review
