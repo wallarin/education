@@ -32,6 +32,7 @@
 > 소개 : 치과에서 이용 가능한 프로그램으로써 환자는 자신의 진료를 예약관리/이전 진찰 확인 등을 할 수 있고, 관리자는 예약관리/진료관리/병원관리 등의 시스템을 이용할 수 있게 개발되었습니다.
 
 <img src="./images/ConsoleProject_01.png" style="width:250px">
+
 > 환자는 로그인 or 회원가입 후 서비스를 이용할 수 있으며, 사진에서와 같이 다양한 메뉴를 이용할 수 있습니다.<br>
 > 그 중 예약하기 메뉴에 대한 소개입니다.
 
@@ -39,4 +40,12 @@
 > 환자는 예약메뉴 이용 시 원하는 의사를 선택하고 해당 의사의 스케줄에 비어있는 시간을 선택합니다.<br>
 > 이후 치료 목적을 선택 후 최종 예약 형태를 확인 후 예약 최종 결정을 처리하게 됩니다.
 
+<hr>
+해당 시스템에서 제가 맡게 된 부분은 관리자 파트의 직원 정보/매출액/재고 관리 부분입니다.
 
+<img src="./images/ConsoleProject_My_01.png" style="width:250px"><img src="./images/ConsoleProject_My_02.png" style="width:250px">
+<img src="./images/ConsoleProject_My_03.png" style="width:250px">
+
+매출액을 조회하는 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재고 관리 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;직원 관리 부분입니다.
+
+<a href="">
