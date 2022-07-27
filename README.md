@@ -44,7 +44,7 @@
 해당 시스템에서 제가 맡게 된 부분은 관리자 파트의 직원 정보/매출액/재고 관리 부분입니다.
 
 <details>
-<summary>콘솔 출력 이미지 보기</summary>
+<summary style="color : #ff6347;">콘솔 출력 이미지 보기</summary>
 <div markdown="1">   
 <img src="./images/ConsoleProject_My_01.png" style="width:250px"><img src="./images/ConsoleProject_My_02.png" style="width:250px">
 <img src="./images/ConsoleProject_My_03.png" style="width:250px">
