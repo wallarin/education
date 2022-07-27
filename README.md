@@ -47,7 +47,7 @@
 해당 시스템에서 제가 맡게 된 부분은 관리자 파트의 직원 정보/매출액/재고 관리 부분입니다.
 
 <details>
-<summary style="color : #ff6347;">콘솔 출력 이미지 보기</summary>
+<summary>콘솔 출력 이미지 보기</summary>
 <div markdown="1">   
 <img src="./images/ConsoleProject_My_01.png" style="width:250px"><img src="./images/ConsoleProject_My_02.png" style="width:250px">
 <img src="./images/ConsoleProject_My_03.png" style="width:250px">
@@ -120,10 +120,12 @@
 <a href=".\02_SQL_오라클 프로젝트\ANSI_PLSQL 프로젝트\7. PL-SQL\교사">사용한 코드 보러가기</a>
 
 위의 주소로 이동하면 이용한 코드를 확인할 수 있습니다.
+  
 
+해당 프로젝트에서는 ddl / dml / select / inner join / outer join / sub Query 등을 이용하였습니다.
+
+  
+
+***  
   
 [TOPnbsp;△](#){: .btn .btn--primary }
-  
-  
-  
-
