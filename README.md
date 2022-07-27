@@ -118,7 +118,7 @@
 
 위의 주소로 이동하면 이용한 코드를 확인할 수 있습니다.
 
-<span style="color: red">테스트 글자입니다.</span
+<span style="color: red">테스트 글자입니다.</span>
   
 [TOPnbsp;△](#){: .btn .btn--primary }
   
