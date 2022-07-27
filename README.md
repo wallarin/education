@@ -111,7 +111,7 @@
 위의 부분을 담당하게 되었습니다.
 
 <details>
-  <summary>출력결과 화면 보기</summary>
+  <bold><summary style="font-size: 20px; size: 20px">출력결과 화면 보기</summary></bold>
 <div markdown="1">
   <img src="./images/Oracle_Project_01.png" width="300px;"><img src="./images/Oracle_Project_02.png" width="300px;"><img src="./images/Oracle_Project_03.png" width="300px;">
 </div>
@@ -133,3 +133,6 @@
 > 소개: 국내 숙소 / 렌터카 / 액티비티 예약 관리 프로그램입니다.
   
 [TOPnbsp;△](#){: .btn .btn--primary }
+  
+  
+
