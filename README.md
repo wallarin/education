@@ -64,3 +64,29 @@
 
 ***
 2. DataBase Project
+- Naver Movie
+> 소개: 네이버영화의 정보를 이용해 데이터베이스의 이용될 테이블과 컬럼을 나누는 소규모 작업이였습니다.
+
+<details>
+<summary>네이버영 ERD보기</summary>
+<div markdown="1">     
+
+<img src="./images/NaverMovieERD.png">
+
+</div>
+</details>
+
+- management Project (for Oracle)
+> 소개: 쌍용교육센터의 관리 프로그램을 제작하는 프로젝트였습니다.
+
+<details>
+<summary>교육센터 ERD보기</summary>
+<div markdown="1">     
+
+<img src="./images/NaverMovieERD.png">
+
+</div>
+</details>
+
+
+[TOPnbsp;△](#){: .btn .btn--primary }
