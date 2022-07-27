@@ -113,7 +113,13 @@
   <img src="./images/Oracle_Project_01.png" width="300px;"><img src="./images/Oracle_Project_02.png" width="300px;"><img src="./images/Oracle_Project_03.png" width="300px;">
 </div>
 </details>
+  
+<a href=".\02_SQL_오라클 프로젝트\ANSI_PLSQL 프로젝트\7. PL-SQL\교사">사용한 코드 보러가기</a>
 
+위의 주소로 이동하면 이용한 코드를 확인할 수 있습니다.
+
+<span style="color: red">테스트 글자입니다.</span
+  
 [TOPnbsp;△](#){: .btn .btn--primary }
   
   
