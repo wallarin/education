@@ -91,7 +91,7 @@
 <img src="./images/ERD_01.jpg" width="300px;"><img src="./images/ERD_02.jpg" width="300px;"><img src="./images/ERD_03.jpg" width="300px;">
 
 
-<img src="./images/ERD_04.png" width="300px;">
+<img src="./images/ERD_04.png">
   
 <전체 모습>
 
