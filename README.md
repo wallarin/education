@@ -134,7 +134,7 @@
   
 [TOPnbsp;△](#){: .btn .btn--primary }
   
-  <a href="#">TOP</a>
+  <a href="#" style="float: right">TOP</a>
   
   
 
