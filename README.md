@@ -43,11 +43,16 @@
 ***
 해당 시스템에서 제가 맡게 된 부분은 관리자 파트의 직원 정보/매출액/재고 관리 부분입니다.
 
+<details>
+<summary>콘솔 출력 이미지 보기</summary>
+<div markdown="1">   
 <img src="./images/ConsoleProject_My_01.png" style="width:250px"><img src="./images/ConsoleProject_My_02.png" style="width:250px">
 <img src="./images/ConsoleProject_My_03.png" style="width:250px">
 
 매출액을 조회하는 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재고 관리 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;직원 관리 부분입니다.
 
+</div>
+</details>
 
 <dl>
   <dt><a href=".\01_자바 콘솔프로젝트\07. 소스\ConsoleProject2\src\com\project\dentist\admin\sales">매출 관리 코드 보기</a></dt>
@@ -64,3 +69,49 @@
 
 ***
 2. DataBase Project
+- Naver Movie
+> 소개: 네이버영화의 정보를 이용해 데이터베이스의 이용될 테이블과 컬럼을 나누는 소규모 작업이였습니다.
+
+<details>
+<summary>네이버영 ERD보기</summary>
+<div markdown="1">     
+
+<img src="./images/NaverMovieERD.png" width="250px;">
+
+</div>
+</details>
+
+- Management Project (for Oracle)
+> 소개: 쌍용교육센터의 관리 프로그램을 제작하는 프로젝트였습니다.
+
+<details>
+  <summary>교육센터 ERD보기</summary>
+<div markdown="1">     
+
+<img src="./images/ERD_01.jpg" width="300px;"><img src="./images/ERD_02.jpg" width="300px;"><img src="./images/ERD_03.jpg" width="300px;">
+
+
+<img src="./images/ERD_04.png" width="300px;">
+  
+<전체 모습>
+
+</div>
+</details>
+  
+해당 프로젝트에서 저의 파트는 관리자/교사/학생 파트 중 교사 파트입니다.
+  
+- 내 강의 스케줄 조회하기
+- 성적 입출력
+- 학생 출결 조회
+- 추천도서 관리
+  
+위의 부분을 담당하게 되었습니다.
+
+<details>
+  <summary>출력결과 화면 보기</summary>
+<div markdown="1">
+  <img src="./images/Oracle_Project_01.png" width="300px;"><img src="./images/Oracle_Project_02.png" width="300px;"><img src="./images/Oracle_Project_03.png" width="300px;">
+</div>
+</details>
+
+[TOPnbsp;△](#){: .btn .btn--primary }
