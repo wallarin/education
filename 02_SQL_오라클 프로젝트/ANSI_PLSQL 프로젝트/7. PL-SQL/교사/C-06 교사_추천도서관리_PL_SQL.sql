@@ -1,72 +1,95 @@
--- 과목관련 교재 전체 조회 뷰
-create or replace view vwtblTextBook
+-- 추천도서 전체 조회 > VIEW
+create or replace view vwtblTeachRec
 as
 select 
-    distinct sn.subname_seq as "과목번호",
-    sn.subname as "과목명",
-    tb.name as "교재명"
-from tblSubjectName sn
-    inner join tblSubjectTxt st 
-        on st.subname_seq = sn.subname_seq
-            inner join tblTextBook tb 
-                on st.txtbook_seq = tb.txtbook_seq
-                    order by sn.subname_seq;
+    tr.book_seq as "추천도서번호",
+    tr.rec_name as "추천도서명", 
+    p.name as "출판사", 
+    tr.book_date as "등록일", 
+    t.t_name as "등록 교사", 
+    sn.subname as "연관 과목명" 
+from tblTeachRec tr 
+    inner join tblTeacher t 
+        on tr.teacher_seq = t.teacher_seq 
+            inner join tblSubjectName sn 
+                on tr.subname_seq = sn.subname_seq
+                    inner join tblPublisher p 
+                        on tr.publisher_seq = p.publisher_seq
+                            order by tr.book_seq;
+                          
+                 
+                            
+-- 추천도서 전체 조회하기
+select * from vwtblTeachRec;
 
 
--- 과목관련 교재 전체 조회하기
-select * from vwtblTextBook;
 
 
 
--- 내 강의스케줄 조회하기 프로시저
-create or replace procedure proct_Schedule (
-    pt_name tblteacher.t_name%type,
-    pt_password tblteacher.t_password%type,
+-- 출판사 조회 프로시저 생성
+create or replace procedure procPublisher (
+    pname tblPublisher.name%type,
+    presult out number,
+    pseq out number,
+    poutname out tblPublisher.name%type
+)
+is
+begin
+
+    select publisher_seq, name into pseq, poutname from tblPublisher where name = pname;
+    presult := 1;
+    
+exception
+    when others then
+        presult := 0;
+end procPublisher;
+
+
+
+-- 출판사 조회하기
+declare
+    vresult number;
+    vseq number;
+    vname tblPublisher.name%type;
+begin
+    procPublisher('테스트',vresult ,vseq, vname);
+    if vresult = 1 then
+        dbms_output.put_line('출판사번호 : ' || vseq);
+        dbms_output.put_line('출판사명 : ' || vname);
+    else
+        dbms_output.put_line('해당 출판사가 없습니다. 새로 등록해 주세요');
+    end if;
+end;
+/
+
+
+
+-- 출판사 등록하기 프로시저
+create or replace procedure procnewpub (
+    pname tblPublisher.name%type,
     presult out number
 )
 is
-    p_course_seq tblcourse.course_seq%type;
-    p_course_neme tblcoursename.course_neme%type;
-    p_state varchar2(30);
-    
-    cursor vcursor is select 
-    c.course_seq as "강의번호",
-    n.course_neme as "강의 과정명", 
-    case when sysdate < c.c_start_date then '강의예정'
-    when sysdate between c.c_start_date and c.c_end_date then '강의중'
-    when sysdate > c.c_end_date then '강의종료' end as "강의상태"
-    from tblCourse c 
-        inner join tblcoursename n 
-            on c.cname_seq = n.cname_seq 
-                where c.teacher_seq = 
-                    (select teacher_seq from tblteacher where t_name = pt_name and t_password = pt_password) order by c.c_end_date desc;
 begin
-    open vcursor;
-        dbms_output.put_line('======================================================================================');
-        dbms_output.put_line('강의번호 | ' ||  '                         강의 과정명                         | ' || ' 강의 상태');
-        loop
-            fetch vcursor into p_course_seq, p_course_neme, p_state;
-            exit when vcursor%notfound;
-            dbms_output.put_line('   ' ||rpad(p_course_seq, 5, ' ') || ' | ' ||  rpad(p_course_neme, 60, ' ')  || ' |   ' || rpad(p_state, 10, ' '));
-        end loop;
-        dbms_output.put_line('======================================================================================');
-    close vcursor;
+
+    insert into tblPublisher values ((select max(publisher_seq) +1 from tblPublisher), pname);
     presult := 1;
 exception
     when others then
         presult := 0;
-end proct_Schedule;
+end procnewpub;
 
 
--- 내 강의스케줄 조회하기
+
+-- 출판사 등록하기
 declare
     vresult number;
 begin
-    proct_Schedule('최경숙', 2532102, vresult);
+    procnewpub('테스트', vresult);
     if vresult = 1 then
-        dbms_output.put_line('조회 종료');
+        dbms_output.put_line('출판사 등록에 성공하셨습니다.');
     else
-        dbms_output.put_line('예상치 못한 오류가 발생했습니다.');
+        dbms_output.put_line('출판사 등록에 실패하였습니다.');
     end if;
 end;
 
@@ -74,132 +97,313 @@ end;
 
 
 
--- 내 강의스케줄 강의 선택 조회하기 프로시저
-create or replace procedure proct_csub (
-    pt_name tblteacher.t_name%type,
-    pt_password tblteacher.t_password%type,
-    p_course_seq tblCourse.course_seq%type,
+-- 추천도서 등록하기 프로시저
+create or replace procedure procTeachRecin (
+    p_tname tblteacher.t_name%type,
+    p_tpassword tblteacher.t_password%type,
+    p_bookname tblTeachRec.rec_name%type,
+    p_subname tblSubjectName.subname%type,
+    p_pubname tblPublisher.name%type,
     presult out number
 )
 is
-    psubname_seq tblCSub.subname_seq%type;
-    pcourse_neme tblCourseName.course_neme%type;
-    pc_start_date tblCourse.c_start_date%type;
-    pc_end_date tblCourse.c_end_date%type;
-    psubname tblSubjectName.subname%type;
-    pcsstart_date tblCSub.csstart_date%type;
-    pcsend_date tblCSub.csend_date%type;
-    proom_name tblRoom.room_name%type;
-    pcount number;
-    
-    cursor vcursor is select 
-    distinct s.subname_seq as "과목번호",
-    n.course_neme as "과정명",
-    c.c_start_date as "과정시작일",
-    c.c_end_date as "과정종료일", 
-    sj.subname as "과목명",
-    s.csstart_date as "과목시작일",
-    s.csend_date as "과목종료일",
-    r.room_name "강의실명",
-    (select count(*) from tblSugang where course_seq = p_course_seq) as "수강 인원"
-from tblCourse c 
-    inner join tblCourseName n 
-        on c.cname_seq = n.cname_seq 
-        inner join tblCSub s 
-            on c.course_seq = s.course_seq 
-                inner join tblSubjectName sj 
-                    on s.subname_seq = sj.subname_seq 
-                        inner join tblRoom r 
-                            on c.room_seq = r.room_seq
-                                inner join tblSubjectTxt st 
-                                    on sj.subname_seq = st.subname_seq
-                                        where c.course_seq = p_course_seq and c.teacher_seq = 
-                                            (select teacher_seq from tblteacher where t_name = pt_name and t_password = pt_password)
-                                                order by s.csstart_date asc;
 begin
-    open vcursor;
-        dbms_output.put_line('=================================================================================================================================================================================');
-        dbms_output.put_line('과목번호 | ' || '                            과정명                           | ' || '과정시작일  | ' || '과정종료일  | ' || '      과목명        | ' || '과목시작일  | ' || '과목종료일  | ' || '   강의실명   | ' || '수강인원');
-        loop
-            fetch vcursor into psubname_seq, pcourse_neme, pc_start_date, pc_end_date, psubname, pcsstart_date, pcsend_date, proom_name, pcount;
-            exit when vcursor%notfound;
-            dbms_output.put_line('   ' || rpad(psubname_seq, 5, ' ') || ' | ' || rpad(pcourse_neme, 60, ' ') || ' |  ' || rpad(pc_start_date, 10, ' ')
-            || ' |  ' || rpad(pc_end_date, 10, ' ') || ' |  ' || rpad(psubname, 18, ' ') || ' |  ' || 
-            rpad(pcsstart_date, 10, ' ') || ' |  ' || rpad(pcsend_date, 10, ' ') || ' |    ' || rpad(proom_name, 10, ' ') || ' |    ' || rpad(pcount, 3, ' '));
-        end loop;
-        dbms_output.put_line('=================================================================================================================================================================================');
-    close vcursor;
-    presult := 1;
+    insert into tblTeachRec 
+        values ((select max(book_seq) + 1 from tblTeachRec),
+            (select teacher_seq from tblteacher where t_name = p_tname and t_password = p_tpassword), -- 교사번호 입력 '최경하' / 2532102
+            p_bookname, -- 책 제목 입력
+            sysdate, 
+            (select subname_seq from tblsubjectname where subname = p_subname), -- 과목번호 가져오기  'Java'
+            (select publisher_seq from tblpublisher where name = p_pubname)); -- 출판사 번호 가져오기  '테스트'
+            
+            presult := 1;
+
 exception
     when others then
         presult := 0;
-end proct_csub;
+end procTeachRecin;
 
 
--- 내 강의스케줄 강의 선택 조회하기
+
+
+-- 추천도서 등록하기
 declare
     vresult number;
 begin
-    proct_csub('최경숙', 2532102, 25, vresult);
+    procTeachRecin('최경숙', 2532102, '테스트북', 'Java', '테스트', vresult);
     if vresult = 1 then
-        dbms_output.put_line('조회 종료');
+        dbms_output.put_line('추천도서 등록에 성공하셨습니다.');
     else
-        dbms_output.put_line('예상치 못한 오류가 발생했습니다.');
+        dbms_output.put_line('추천도서 등록에 실패하셨습니다.');
+    end if;
+end;
+
+select * from tblteacher;
+select * from tblteachrec;
+
+
+
+
+-- 추천도서 도서명 수정하기 프로시저
+create or replace procedure procprocTeachRecup1 (
+    p_rec_name tblTeachRec.rec_name%type,
+    p_book_seq tblTeachRec.book_seq%type,
+    presult out number
+)
+is
+begin
+        update tblTeachRec set rec_name = p_rec_name where book_seq = p_book_seq; -- 도서번호 1의 도서명 수정하기
+        presult := 1;
+exception
+    when others then
+        presult := 0;
+end procprocTeachRecup1;
+
+
+
+-- 추천 도서명 수정하기
+declare
+    vresult number;
+begin
+    procprocTeachRecup1('테스트',1 ,vresult);
+    
+    if vresult = 1 then
+        dbms_output.put_line('도서명 수정에 성공하셨습니다.');
+    else
+        dbms_output.put_line('도서명 수정에 실패하셨습니다.');
     end if;
 end;
 
 
 
--- 과목 번호 선택(과정 수강 수강생) 프로시저
-create or replace procedure proct_csa (
-    p_subname_seq tblCSub.subname_seq%type,
-    p_course_seq tblCourse.course_seq%type,
+
+-- 추천도서 연관과목 수정하기 프로시저
+create or replace procedure procprocTeachRecup2 (
+    p_subname tblsubjectname.subname%type,
+    p_book_seq tblTeachRec.book_seq%type,
     presult out number
 )
 is
-    p_name tblMember.m_name%type;
-    p_tel tblMember.m_tel%type;
-    p_registdate tblMember.m_registdate%type;
-    p_progress tblSugang.progress%type;
-    
-    cursor vcursor is select 
-    m.m_name "교육생 이름",
-    m.m_tel "전화번호",
-    m.m_registdate "등록일",
-    su.progress "수강상태"
-from tblCSub cs 
-    inner join tblCourse c 
-        on cs.course_seq = c.course_seq 
-            inner join tblSugang su 
-                on c.course_seq = su.course_seq 
-                    inner join tblMember m 
-                        on su.member_seq = m.member_seq
-                            where cs.subname_seq = p_subname_seq and c.course_seq = p_course_seq;
 begin
-    open vcursor;
-    dbms_output.put_line('=================================================================================================================================================================================');
-    dbms_output.put_line('교육생 이름' || ' |    ' || '전화번호' || '   |    ' || '등록일' || '   |   ' || '수강상태');
-        loop
-            fetch vcursor into p_name, p_tel, p_registdate, p_progress;
-            exit when vcursor%notfound;
-            dbms_output.put_line('   ' || p_name || '  |  ' || p_tel || '  |  ' || p_registdate || '   |   ' || p_progress);
-        end loop;
-    close vcursor;
-    presult := 1;
+        update tblTeachRec set subname_seq = (select subname_seq from tblsubjectname where subname = p_subname) where book_seq = p_book_seq; -- 연관과목 변경하기
+        presult := 1;
 exception
     when others then
         presult := 0;
-end proct_csa;
+end procprocTeachRecup2;
 
 
--- 과목 번호 선택(과정 수강 수강생) 조회하기
+
+-- 추천 도서 연관과목 수정하기
 declare
     vresult number;
 begin
-    proct_csa(9, 25, vresult);
+    procprocTeachRecup2('Oracle',1 ,vresult);
+    
     if vresult = 1 then
-        dbms_output.put_line('조회 종료');
+        dbms_output.put_line('과목 수정에 성공하셨습니다.');
     else
-        dbms_output.put_line('예상치 못한 오류가 발생했습니다.');
+        dbms_output.put_line('과목 수정에 실패하셨습니다.');
     end if;
 end;
+
+
+
+-- 추천도서 출판사 수정하기 프로시저
+create or replace procedure procprocTeachRecup3 (
+    p_publisher tblpublisher.name%type,
+    p_book_seq tblTeachRec.book_seq%type,
+    presult out number
+)
+is
+begin
+        update tblTeachRec set publisher_seq = (select publisher_seq from tblpublisher where name = p_publisher) where book_seq = p_book_seq; -- 출판사 변경하기
+        presult := 1;
+exception
+    when others then
+        presult := 0;
+end procprocTeachRecup3;
+
+
+
+-- 추천 도서 출판사 수정하기
+declare
+    vresult number;
+begin
+    procprocTeachRecup3('비제이퍼블릭',1 ,vresult);
+    
+    if vresult = 1 then
+        dbms_output.put_line('출판사 수정에 성공하셨습니다.');
+    else
+        dbms_output.put_line('출판사 수정에 실패하셨습니다.');
+    end if;
+end;
+
+
+
+
+-- 추천 도서 삭제하기 프로시저
+create or replace procedure procPublisherde (
+    pnum number,
+    presult out number
+)
+is
+begin
+    delete tblTeachRec where book_seq = pnum;
+exception
+    when others then
+        presult := 0;
+end procPublisherde;
+
+
+-- 추천 도서 삭제하기
+declare
+    vresult number;
+begin
+    procPublisherde(51, vresult);
+    if vresult = 1 then
+        dbms_output.put_line('추천도서 삭제에 성공하셨습니다.');
+    else
+        dbms_output.put_line('추천도서 삭제에 실패하셨습니다.');
+    end if;
+end;
+
+
+
+
+create or replace procedure procTecherRecBook(
+
+    pt_name tblTeacher.t_name%type
+)
+is
+    vbookname   tblTeachRec.rec_name%type;
+    vpname      tblPublisher.name%type;
+    vtname      tblTeacher.t_name%type;
+    vsubname    tblSubjectName.subname%type;
+    vcname      tblCourseName.course_neme%type;
+
+    cursor vcursor
+    is
+    select distinct
+        
+        tr.rec_name, -- 책제목,
+        p.name, -- 출판사,
+        t.t_name, -- 교사명,
+        sn.subname, -- 과목명,
+        cn.course_neme -- 과정명
+        
+    from tblTeachRec tr
+        inner join tblTeacher t on tr.teacher_seq = t.teacher_seq 
+            inner join tblPublisher p on tr.publisher_seq = p.publisher_seq
+                inner join tblCourse c on t.teacher_seq = c.teacher_seq
+                    inner join tblCourseName cn on c.cname_seq = cn.cname_seq
+                        inner join tblSubjectName sn on tr.subname_seq = sn.subname_seq
+    
+    where t.t_name = pt_name order by cn.course_neme, sn.subname; --교사이름 입력
+      
+
+begin
+
+    dbms_output.put_line(rpad('교사명', 8, ' ') || ' | ' || 
+                        rpad('과정명', 15, ' ') || ' | ' || 
+                        rpad('과목명', 7, ' ') || ' | ' || 
+                        rpad('추천도서명', 30, ' ') || ' | ' ||
+                        '출판사');
+    
+    dbms_output.put_line('===============================================================================================');
+    
+    open vcursor;
+    loop
+        fetch vcursor into vbookname, vpname, vtname, vsubname, vcname;
+        exit when vcursor%notfound;
+        
+        dbms_output.put_line(' ');
+        dbms_output.put_line(rpad(vtname, 8, ' ') || ' | ' || 
+                    rpad(vcname, 15, ' ') || ' | ' || 
+                    rpad(vsubname, 7, ' ') || ' | ' || 
+                    rpad(vbookname, 30, ' ') || ' | ' ||
+                    vpname);
+        
+    end loop;
+    close vcursor;
+end procTecherRecBook;
+/
+
+set serverout on
+begin
+    procTecherRecBook('송유주');
+end;
+/
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+--2. 과목별로 추천도서 조회하기
+
+create or replace procedure procSubRecBook (
+    psubname tblSubjectName.subname%type
+)
+is
+    vbookname   tblTeachRec.rec_name%type;
+    vpname      tblPublisher.name%type;
+    vtname      tblTeacher.t_name%type;
+    vsubname    tblSubjectName.subname%type;
+    vcname      tblCourseName.course_neme%type;
+
+
+    cursor vcursor
+    is
+    select distinct
+        
+        tr.rec_name, -- 책제목,
+        p.name, -- 출판사,
+        t.t_name, -- 교사명,
+        sn.subname, -- 과목명,
+        cn.course_neme -- 과정명
+        
+    from tblTeachRec tr
+        inner join tblTeacher t on tr.teacher_seq = t.teacher_seq 
+            inner join tblPublisher p on tr.publisher_seq = p.publisher_seq
+                inner join tblCourse c on t.teacher_seq = c.teacher_seq
+                    inner join tblCourseName cn on c.cname_seq = cn.cname_seq
+                        inner join tblSubjectName sn on tr.subname_seq = sn.subname_seq
+    
+    where sn.subname = psubname order by cn.course_neme, sn.subname; --교사이름 입력
+      
+begin
+
+    dbms_output.put_line(
+                        rpad('과목명', 7, ' ') || ' | ' ||
+                        rpad('교사명', 8, ' ') || ' | ' || 
+                        rpad('과정명', 15, ' ') || ' | ' || 
+                        rpad('추천도서명', 30, ' ') || ' | ' ||
+                        '출판사');
+    
+    dbms_output.put_line('===============================================================================================');
+    
+    open vcursor;
+    loop
+        fetch vcursor into vbookname, vpname, vtname, vsubname, vcname;
+        exit when vcursor%notfound;
+        
+        dbms_output.put_line(' ');
+        dbms_output.put_line( 
+                    rpad(vsubname, 7, ' ') || ' | ' ||
+                    rpad(vtname, 8, ' ') || ' | ' ||
+                    rpad(vcname, 15, ' ') || ' | ' || 
+                    rpad(vbookname, 30, ' ') || ' | ' ||
+                    vpname);
+        
+    end loop;
+    close vcursor;
+end procSubRecBook;
+/
+
+
+--실행
+begin
+    procSubRecBook('Oracle');
+end;
+/

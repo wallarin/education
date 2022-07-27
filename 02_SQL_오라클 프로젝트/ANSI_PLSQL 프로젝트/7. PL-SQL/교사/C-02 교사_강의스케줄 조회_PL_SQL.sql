@@ -12,7 +12,7 @@ from tblSubjectName sn
                 on st.txtbook_seq = tb.txtbook_seq
                     order by sn.subname_seq;
 
-
+SET SERVEROUTPUT ON;
 -- 과목관련 교재 전체 조회하기
 select * from vwtblTextBook;
 
