@@ -49,8 +49,8 @@
 <details>
 <summary>콘솔 출력 이미지 보기</summary>
 <div markdown="1">   
-<img src="./images/ConsoleProject_My_01.png" style="width:250px"><img src="./images/ConsoleProject_My_02.png" style="width:250px">
-<img src="./images/ConsoleProject_My_03.png" style="width:250px">
+<img src="./images/ConsoleProject_My_01.png" style="width:330px"><img src="./images/ConsoleProject_My_02.png" style="width:330px">
+<img src="./images/ConsoleProject_My_03.png" style="width:330px">
 
 매출액을 조회하는 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재고 관리 부분입니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;직원 관리 부분입니다.
 
@@ -76,10 +76,10 @@
 > 소개: 네이버영화의 정보를 이용해 데이터베이스의 이용될 테이블과 컬럼을 나누는 소규모 작업이였습니다.
 
 <details>
-<summary>네이버영 ERD보기</summary>
+<summary>네이버영화 ERD보기</summary>
 <div markdown="1">     
 
-<img src="./images/NaverMovieERD.png" width="250px;">
+<img src="./images/NaverMovieERD.png">
 
 </div>
 </details>
@@ -91,7 +91,7 @@
   <summary>교육센터 ERD보기</summary>
 <div markdown="1">     
 
-<img src="./images/ERD_01.jpg" width="300px;"><img src="./images/ERD_02.jpg" width="300px;"><img src="./images/ERD_03.jpg" width="300px;">
+<img src="./images/ERD_01.jpg" width="330px;"><img src="./images/ERD_02.jpg" width="330px;"><img src="./images/ERD_03.jpg" width="330px;">
 
 
 <img src="./images/ERD_04.png">
@@ -113,7 +113,7 @@
 <details>
   <bold><summary style="font-size: 20px; size: 20px">출력결과 화면 보기</summary></bold>
 <div markdown="1">
-  <img src="./images/Oracle_Project_01.png" width="300px;"><img src="./images/Oracle_Project_02.png" width="300px;"><img src="./images/Oracle_Project_03.png" width="300px;">
+  <img src="./images/Oracle_Project_01.png" width="330px;"><img src="./images/Oracle_Project_02.png" width="330px;"><img src="./images/Oracle_Project_03.png" width="330px;">
 </div>
 </details>
   
