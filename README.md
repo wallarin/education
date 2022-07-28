@@ -130,10 +130,30 @@
 
 3. Web Project(Servlet / JSP)
   
-> 소개: 국내 숙소 / 렌터카 / 액티비티 예약 관리 프로그램입니다.
-  
+> 소개: 국내 숙소 / 렌터카 / 액티비티 예약 관리 웹프로젝트입니다.
+
+<details>
+<summary>예약 사이트 ERD보기</summary>
+<div markdown="1">     
+
+<img src="./images/webProject_ERD.JPG">
+
+</div>
+</details>
+
+해당 프로젝트에서 저의 파트는 숙소 예약 파트를 담당했습니다.
+
+<details>
+<summary>구현 이미지 보기</summary>
+<div markdown="1">     
+
+<img src="./images/webProject_01.JPG" width="335px;"><img src="./images/webProject_02.JPG" width="335px;"><img src="./images/webProject_03.JPG" width="335px;">
+<img src="./images/webProject_04.JPG" width="335px;"><img src="./images/webProject_05.JPG" width="335px;"><img src="./images/webProject_06.JPG" width="335px;">
+
+</div>
+</details>
+
+아직 해당 프로젝트는 완벽하게 구현된 상태가 아니지만 현재 다 하지 못한 나머지 업무를 처리중에 있습니다.
+
+
 [TOP△](#)
-
-  
-  
-
