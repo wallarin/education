@@ -150,8 +150,10 @@
 <img src="./images/webProject_01.JPG" width="335px;"><img src="./images/webProject_02.JPG" width="335px;"><img src="./images/webProject_03.JPG" width="335px;">
 <img src="./images/webProject_04.JPG" width="335px;"><img src="./images/webProject_05.JPG" width="335px;"><img src="./images/webProject_06.JPG" width="335px;">
 
-  구현한 자바 코드 > <a href=".\03_TripNow\src\main\java\com\test">이동하기</a>
-
+  구현한 자바 코드 > <a href=".\03_TripNow\src\main\java\com\test\home">이동하기</a>
+  
+  구현한 html 코드 > <a href=".\03_TripNow\src\main\webapp\WEB-INF\views\home">이동하기</a>
+  
 </div>
 </details>
 
